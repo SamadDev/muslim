@@ -55,41 +55,41 @@ class AppTheme {
   );
 
   static final TextStyle _headline1 = TextStyle(
-    color: AppTheme.secondary,
+    color: AppTheme.text,
     fontWeight: FontWeight.w700,
-    fontFamily: 'nrt',
+    fontFamily: 'amir',
     fontSize: 35,
   );
 
   static final TextStyle _headline2 = TextStyle(
-    color: AppTheme.secondary,
+    color: AppTheme.text,
     fontWeight: FontWeight.w700,
     fontFamily: 'nrt',
     fontSize: 25,
   );
 
   static final TextStyle _headline3 = TextStyle(
-    color: AppTheme.text,
+    color: AppTheme.white_think,
     fontWeight: FontWeight.w700,
-    fontFamily: 'nrt',
+    fontFamily: 'amir',
     fontSize: 20,
   );
   static final TextStyle _headline4 = TextStyle(
-    color: AppTheme.text,
+    color: AppTheme.white_think,
     fontWeight: FontWeight.w400,
     fontFamily: 'nrt',
     fontSize: 18,
   );
   static final TextStyle _headline5 = TextStyle(
-    fontFamily: 'nrt',
-    color: AppTheme.text,
+    fontFamily: 'amir',
+    color: AppTheme.white_think,
     fontWeight: FontWeight.w500,
     fontSize: 15,
   );
 
   static final TextStyle _headline6 = TextStyle(
     fontFamily: 'nrt',
-    color: AppTheme.text,
+    color: AppTheme.white_think,
     fontWeight: FontWeight.w500,
     fontSize: 12,
   );
@@ -102,7 +102,7 @@ class AppTheme {
 
   static final TextStyle _subtitle1 = TextStyle(
     fontFamily: 'nrt',
-    color: AppTheme.secondary,
+    color: AppTheme.white,
     fontWeight: FontWeight.w400,
     fontSize: 14,
   );
@@ -110,15 +110,11 @@ class AppTheme {
   static final TextStyle _bodyText1 = TextStyle(
     fontFamily: 'amir',
     color: AppTheme.black.withOpacity(0.8),
-    // fontWeight: FontWeight.w400,
-    // wordSpacing: 6,
     fontSize: 25,
   );
   static final TextStyle _bodyText2 = TextStyle(
     fontFamily: 'noor',
     color: AppTheme.black,
-    // fontWeight: FontWeight.w400,
-    // wordSpacing: 6,
     fontSize: 15,
   );
   static final TextStyle _caption = TextStyle(

@@ -8,10 +8,13 @@ class TafsirServes with ChangeNotifier {
   Tafsir? tafsir;
 
   Future<void> getTaf({index}) async {
-    final String response =
-        await rootBundle.loadString('assets/jsons/tafsir.json');
-    final data = await json.decode(response)['tafsir'][index];
-    tafsir = Tafsir.fromJson(data);
-    notifyListeners();
+    if(tafsir==null) {
+      final String response = await rootBundle.loadString(
+          'assets/jsons/tafsir.json');
+      final data = await json.decode(response)['tafsir'][index];
+      tafsir = Tafsir.fromJson(data);
+      notifyListeners();
+    }else{
+    }
   }
 }

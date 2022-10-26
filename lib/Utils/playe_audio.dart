@@ -1,53 +1,61 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:scroll_to_index/scroll_to_index.dart';
 
-Future<void> play_audio({url, required int index, scrollC, list}) async {
-  try {
-    int audio_index = index;
-    for (int i = index; i <= list.length; i++) {
-    final next_audio = list[audio_index].audio;
+class Audio with ChangeNotifier {
+  AudioPlayer player = AudioPlayer();
+  bool is_play = false;
+  bool state = false;
+
+  void changeState(bool states) {
+    state = states;
+    notifyListeners();
+  }
+
+  Future<void> play_audio({int index = 0, scrollC, list, type}) async {
+    try {
+      changeState(true);
+      is_play = false;
+      player = AudioPlayer();
+      int audio_index = index;
+      String next_audio = list[audio_index].audio;
       audio_index++;
-      final player = AudioPlayer();
       await player.setUrl(next_audio);
       await player.play();
-      scrollC.scrollToIndex(audio_index, preferPosition: AutoScrollPosition.begin);
-    }
-  } catch (e) {
-    print("Connection aborted:");
-  }
-}
-
-class AudioPlayerFunction with ChangeNotifier {
-  final player = AudioPlayer();
-  bool hardStop = false;
-
-  Future<void> playAudio(url, index) async {
-    if (url != null) {
-      try {
-        if (index < 50) {
-          int index_plus = index + 1;
-          // await playAudio(url , index_plus);
-          // await player.setUrl(url);
-          print(index);
-          print(url);
+      await scrollC.scrollToIndex(index + 1);
+      if (is_play == false) {
+        if (index <= list.length - 1) {
+          await play_audio(
+              index: audio_index, scrollC: scrollC, list: list, type: type);
         }
-      } on PlayerException catch (e) {
-      } on PlayerInterruptedException catch (e) {
-      } catch (e) {}
-    } else {}
+        notifyListeners();
+      }
+    } catch (e) {
+      print("Connection aborted:");
+    }
   }
 
-// void dispose() {
-//   player.stop();
-//   player.dispose();
-//   dispose();
-// }
-}
+  Future<void> stopAudio() async {
+    try {
+      is_play = true;
+      changeState(false);
+      await player.pause();
+      notifyListeners();
+    } catch (e) {
+      print(e);
+    }
+  }
 
-///////////////////
+  Future<void> pauseAudio() async {
+    try {
+      await player.pause();
+    } catch (e) {
+      print(e);
+    }
+  }
+}
 
 // final player = AudioPlayer();
+// Ayat? lastAyat;
 //
 // bool hardStop = false;
 //
@@ -117,7 +125,7 @@ class AudioPlayerFunction with ChangeNotifier {
 //     );
 //   }
 // }
-
+//
 // void pauseAudio(Ayat ayat) async {
 //   try {
 //     // print("PAUSE AUDIO...");

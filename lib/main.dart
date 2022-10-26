@@ -5,11 +5,20 @@ import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
-  runApp(const MyApp());
+
+  runApp(const MyApps());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+// void main() {
+//   runApp(DevicePreview(
+//       enabled: true,
+//       tools: [
+//         ...DevicePreview.defaultTools,
+//       ],
+//   builder: (_)=> MyApp()));
+// }
+class MyApps extends StatelessWidget {
+  const MyApps({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +27,11 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => QuranServes()),
         ChangeNotifierProvider(create: (_) => TafsirServes()),
         ChangeNotifierProvider(create: (_) => LocalStorage()),
-        ChangeNotifierProvider(
-          create: (_) => AzkarServer(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => Azkar_title_Server(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => TasbihSever(),
-        ),
+        ChangeNotifierProvider(create: (_)=>Audio(),),
+        ChangeNotifierProvider(create: (_)=>Saved(),),
+        ChangeNotifierProvider(create: (_) => AzkarServer(),),
+        ChangeNotifierProvider(create: (_) => Azkar_title_Server(),),
+        ChangeNotifierProvider(create: (_) => TasbihSever(),),
       ],
       child: Sizer(
           builder: (context, orientation, deviceType)=>

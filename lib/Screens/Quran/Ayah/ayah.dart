@@ -6,8 +6,9 @@ import 'package:scroll_to_index/scroll_to_index.dart';
 
 class AyahScreen extends StatelessWidget {
   final index;
+  final surah;
 
-  AyahScreen({this.index});
+  AyahScreen({this.index, this.surah});
 
   Widget build(BuildContext context) {
     AutoScrollController? controller = AutoScrollController();
@@ -174,32 +175,102 @@ class AyahScreen extends StatelessWidget {
               default:
                 if (snapshot.hasError)
                   return Text('هەلە: تاکیە بەرنامەکە داخەو بیکەرەوە');
-                else
+                else {
                   return Consumer<TafsirServes>(
-                      builder: (ctx, tafsir, _) =>
-                          //todo increase 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ' in the top
-                          // Text(
-                          //   'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
-                          //   style: textTheme(context).bodyText1,
-                          // ),
-                          ListView.builder(
-                              padding: EdgeInsets.only(top: 5, bottom: 5),
-                              primary: false,
-                              shrinkWrap: true,
-                              controller: controller,
-                              itemCount: data.ayahs(index).ayahs!.length,
-                              itemBuilder: (ctx, i) => AutoScrollTag(
-                                highlightColor: Colors.red.withOpacity(0.5),
+                      builder: (ctx, tafsir, _) => Column(
+                            children: [
+                              //todo increase 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ' in the top
+                              // Text(
+                              //   'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
+                              //   style: textTheme(context).bodyText1,
+                              // ),
+                              Expanded(
+                                child: ListView.builder(
+                                    padding: EdgeInsets.only(top: 5, bottom: 5),
+                                    primary: false,
+                                    shrinkWrap: true,
                                     controller: controller,
-                                    index: i,
-                                    key: ValueKey(i),
-                                    child: AyahWidget(
-                                        tafsir: tafsir.tafsir!.ayah![i],
-                                        ayah: data.ayahs(index).ayahs![i],
-                                        list: data.ayahs(index).ayahs,
-                                        index: i,
-                                        controller: controller),
-                                  )));
+                                    itemCount: data.ayahs(index).ayahs!.length,
+                                    itemBuilder: (ctx, i) => AutoScrollTag(
+                                          highlightColor:
+                                              Colors.red.withOpacity(0.5),
+                                          controller: controller,
+                                          index: i,
+                                          key: ValueKey(i),
+                                          child: AyahWidget(
+                                              tafsir: tafsir.tafsir!.ayah![i],
+                                              ayah: data.ayahs(index).ayahs![i],
+                                              list: data.ayahs(index).ayahs,
+                                              index: i,
+                                              surah: surah,
+                                              surah_index: index,
+                                              controller: controller),
+                                        )),
+                              ),
+                              Consumer<Audio>(
+                                builder: (ctx, audio, _) => Container(
+                                  color: AppTheme.secondary.withOpacity(0.2),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 20.0),
+                                    child: Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        GestureDetector(
+                                            onTap: () {
+                                              if (audio.state == false) {
+                                                audio.play_audio(
+                                                    type: 'play',
+                                                    scrollC: controller,
+                                                    list: data
+                                                        .ayahs(index)
+                                                        .ayahs);
+                                              } else {
+                                                audio.stopAudio();
+                                              }
+                                            },
+
+                                            child: audio.state == false
+                                                ? Icon(Icons.play_arrow_rounded)
+                                                :  Icon(Icons.pause)),
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context).pop();
+                                          },
+                                          child: Icon(
+                                            Icons.highlight_remove_outlined,
+                                            color: AppTheme.primary,
+                                            size: 35,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 25,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            audio.stopAudio();
+                                          },
+                                          child: Image.asset(
+                                            'assets/images/bookmark.png',
+                                            width: 25,
+                                            height: 25,
+                                            color: AppTheme.primary,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ));
+                }
             }
           }),
     );
@@ -212,70 +283,131 @@ class AyahWidget extends StatelessWidget {
   final index;
   final controller;
   final list;
+  final surah;
+  final surah_index;
 
   AyahWidget(
       {required this.ayah,
       required this.tafsir,
       required this.index,
+      required this.surah,
+      required this.surah_index,
       required this.controller,
       this.list});
 
   @override
   Widget build(BuildContext context) {
+    final saved = Provider.of<Saved>(context, listen: false);
     final local_storage = Provider.of<LocalStorage>(context);
-    return Padding(
-      padding: const EdgeInsets.only(right: 10, left: 10),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          TextButton(
-              onPressed: () {
-                play_audio(url: ayah.audio, index: index, scrollC: controller,list: list);
-              },
-              child: Icon(Icons.play_arrow)),
-          RichText(
-              text: TextSpan(children: [
-            TextSpan(
-              text: ayah.text,
-              // text: ayah.text!,
-              style: textTheme(context)
-                  .bodyText1!
-                  .copyWith(fontSize: local_storage.quran_font_size),
-            ),
-            WidgetSpan(
-              // baseline: TextBaseline.alphabetic,
-              alignment: PlaceholderAlignment.middle,
-              child: Padding(
-                padding: const EdgeInsets.only(right: 5, left: 5),
-                child: Stack(
-                  alignment: Alignment.bottomCenter,
-                  children: [
-                    SvgPicture.asset(
-                      'assets/icons/ayah.svg',
-                      width: 30,
-                      height: 30,
-                      color: AppTheme.secondary,
+    return GestureDetector(
+      onLongPress: () {
+        showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+                  contentPadding: EdgeInsets.symmetric(horizontal: 15),
+                  alignment: Alignment.center,
+                  backgroundColor: AppTheme.primary,
+                  content: Container(
+                    color: AppTheme.primary,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Audio().play_audio(
+                                index: index, scrollC: controller, list: list);
+                          },
+                          child: Icon(
+                            Icons.play_arrow_rounded,
+                            color: AppTheme.text,
+                            size: 40,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Icon(
+                            Icons.highlight_remove_outlined,
+                            color: AppTheme.text,
+                            size: 35,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 25,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            saved.setSaved(Data(
+                                surah: surah,
+                                index: surah_index.toString(),
+                                ayah: ayah.number));
+                          },
+                          child: Image.asset(
+                            'assets/images/bookmark.png',
+                            width: 25,
+                            height: 25,
+                            color: AppTheme.text,
+                          ),
+                        )
+                      ],
                     ),
-                    Text(ayah.numberInSurah!,
-                        style: textTheme(context).headline5!.copyWith(
-                              color: AppTheme.black,
-                            ))
-                  ],
-                ),
+                  ),
+                ));
+      },
+      child: Padding(
+        padding: const EdgeInsets.only(right: 10, left: 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            RichText(
+                text: TextSpan(children: [
+              TextSpan(
+                text: ayah.text,
+                // text: ayah.text!,
+                style: textTheme(context)
+                    .bodyText1!
+                    .copyWith(fontSize: local_storage.quran_font_size),
               ),
-            )
-          ])),
-          SizedBox(
-            height: 5,
-          ),
-          local_storage.is_kurdish_tafsir
-              ? Text(
-                  tafsir.text!,
-                  style: textTheme(context).bodyText2!.copyWith(
-                      fontSize: local_storage.kurdish_tafsir_font_size),
-                )
-              : SizedBox.shrink()
-        ],
+              WidgetSpan(
+                // baseline: TextBaseline.alphabetic,
+                alignment: PlaceholderAlignment.middle,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 5, left: 5),
+                  child: Stack(
+                    alignment: Alignment.bottomCenter,
+                    children: [
+                      SvgPicture.asset(
+                        'assets/icons/ayah.svg',
+                        width: 30,
+                        height: 30,
+                        color: AppTheme.secondary,
+                      ),
+                      Text(ayah.numberInSurah!,
+                          style: textTheme(context).headline5!.copyWith(
+                                color: AppTheme.black,
+                              ))
+                    ],
+                  ),
+                ),
+              )
+            ])),
+            SizedBox(
+              height: 5,
+            ),
+            local_storage.is_kurdish_tafsir
+                ? Text(
+                    tafsir.text!,
+                    style: textTheme(context).bodyText2!.copyWith(
+                        fontSize: local_storage.kurdish_tafsir_font_size),
+                  )
+                : SizedBox.shrink()
+          ],
+        ),
       ),
     );
   }

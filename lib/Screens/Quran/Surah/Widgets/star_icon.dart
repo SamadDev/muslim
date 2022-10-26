@@ -17,7 +17,7 @@ class StarIcon extends StatelessWidget {
           'assets/images/$image',
           height: 50,
           width: 50,
-          color: AppTheme.secondary,
+          color: AppTheme.text,
         ),
         Text(
           number_ayah.toString(),

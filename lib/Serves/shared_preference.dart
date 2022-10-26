@@ -27,10 +27,10 @@ class LocalStorage with ChangeNotifier {
     preferences.getDouble("arabic_tafsir_font_size");
     preferences.getDouble("english_tafsir_font_size");
     //__for zikr
-    preferences.getBool("zikr_is_kurdish_tafsir")!;
+   zikr_is_kurdish_tafsir= preferences.getBool("zikr_is_kurdish_tafsir")!;
     preferences.getBool("zikr_is_english_tafsir");
-    preferences.getDouble("zikr_font_size");
-    preferences.getDouble("zikr_kurdish_tafsir_font_size");
+    zikr_font_size=preferences.getDouble("zikr_font_size")!;
+   zikr_kurdish_tafsir_font_size= preferences.getDouble("zikr_kurdish_tafsir_font_size")!;
     preferences.getDouble("zikr_english_tafsir_font_size");
     notifyListeners();
   }

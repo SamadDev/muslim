@@ -11,11 +11,15 @@ class AzkarTitleScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 10,left: 10,top: 8,bottom: 8),
+            padding:
+                const EdgeInsets.only(right: 10, left: 10, top: 8, bottom: 8),
             child: IconButton(
                 onPressed: () {},
-                icon: Icon(
-                  (Icons.save),
+                icon: Image.asset(
+                  'assets/images/bookmark.png',
+                  width: 22,
+                  height: 22,
+                  color: AppTheme.secondary,
                 )),
           )
         ],
@@ -42,7 +46,7 @@ class AzkarTitleScreen extends StatelessWidget {
                             hintStyle: Theme.of(context)
                                 .textTheme
                                 .headline6!
-                                .copyWith(color: AppTheme.black3),
+                                .copyWith(color: AppTheme.secondary),
                             border: InputBorder.none,
                             prefixIcon: IconButton(
                                 onPressed: () {},

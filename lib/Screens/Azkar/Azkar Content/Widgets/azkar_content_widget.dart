@@ -47,7 +47,7 @@ class AzkarContentWidget extends StatelessWidget {
               ),
               Text(
                 azkar.ardhikr!,
-                style: textTheme(context).bodyText1!.copyWith(color: AppTheme.white_think,fontFamily: 'noor'),
+                style: textTheme(context).headline3!.copyWith(color: AppTheme.white_think),
               ),
               Divider(color: AppTheme.white_think.withOpacity(0.3),indent: 10,endIndent: 150,),
              local_data.zikr_is_kurdish_tafsir? Text(

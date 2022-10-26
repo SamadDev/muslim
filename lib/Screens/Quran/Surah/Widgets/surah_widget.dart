@@ -9,7 +9,7 @@ class QuranListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>AyahScreen(index:surah.number,)));
+        Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>AyahScreen(index:surah.number,surah: surah.name,)));
       },
       child: Container(
         height: 80,
@@ -17,19 +17,19 @@ class QuranListWidget extends StatelessWidget {
             leading: StarIcon(number_ayah: surah.number,image: 'octagonal_1.svg'),
             title: Text(
               surah.name!,
-              style: textTheme(context).headline2,
+              style: textTheme(context).headline3,
             ),
             subtitle: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  surah.revelationType!,
+                  "150 ئایەت",
                   style: textTheme(context).subtitle1,
                 ),
-                Text(' - '),
+                Text("  -  "),
                 Text(
-                  "150 ئایەت",
+                  surah.revelationType=="Medinan"?"مەدینە":"مەکە",
                   style: textTheme(context).subtitle1,
                 )
               ],
