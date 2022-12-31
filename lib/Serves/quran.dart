@@ -2,13 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:collection/collection.dart';
 import 'package:islamic360/Utils/exports.dart';
 
 class QuranServes with ChangeNotifier {
   List<Quran> _quran = [];
-  List<Quran> _ayah = [];
 
-  List<Quran> get ayah_list => _ayah;
 
   List<Quran> get quran_list => _quran;
 
@@ -24,6 +23,16 @@ class QuranServes with ChangeNotifier {
 
   Quran ayahs(index) {
     return _quran.firstWhere((e) => e.number == index);
+  }
+
+var list=[];
+
+   groupByName(index) {
+      List<Ayahs>? ayah =_quran.firstWhere((e) => e.number == index).ayahs;
+    Map groups = groupBy(ayah!, (Ayahs e) {
+      return e.page;
+    });
+    print(groups);
   }
 
   List<Quran> search_surah_list = [];

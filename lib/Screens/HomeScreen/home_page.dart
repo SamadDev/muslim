@@ -95,7 +95,7 @@ class HomePage extends StatelessWidget {
                         route: AzkarTitleScreen())),
                 Expanded(
                     child: CartIcon(
-                        text: 'رۆژمێری هیجری', icon: '55.svg', route: '')),
+                        text: 'رۆژمێری هیجری', icon: '55.svg', route: HijriDatePicker())),
                 Expanded(
                     child:
                         CartIcon(text: 'مزگەوتەکان', icon: '66.svg', route: ''))

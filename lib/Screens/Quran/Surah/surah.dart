@@ -21,6 +21,7 @@ class SurahScreen extends StatelessWidget {
                 return Consumer<QuranServes>(
                     builder: (ctx, surah, _) =>
                         ListView.separated(
+                            physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                             padding: EdgeInsets.only(top: 5, bottom: 5),
                             separatorBuilder: (ctx, c) =>
                                 Divider(

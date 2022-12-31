@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:islamic360/Utils/exports.dart';
-import 'package:islamic360/test.dart';
+import 'package:islamic360/test1.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
+import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
 
-void main() {
 
+void main()async{
   runApp(const MyApps());
 }
 

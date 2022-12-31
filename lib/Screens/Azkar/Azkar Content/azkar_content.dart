@@ -11,6 +11,7 @@ class AzkarContent extends StatelessWidget {
   Widget build(BuildContext context) {
     final data = Provider.of<AzkarServer>(context, listen: false);
     return Scaffold(
+      backgroundColor: AppTheme.white_think,
       floatingActionButton: FloatingActionButton(onPressed: (){
        final test= Provider.of<LocalStorage>(context,listen: false);
         test.fetch_local();
@@ -158,7 +159,7 @@ class AzkarContent extends StatelessWidget {
               else
                 return Consumer<AzkarServer>(
                     builder: (ctx, azkar, _) => ListView.separated(
-                        padding: EdgeInsets.only(bottom: 5),
+                        padding: EdgeInsets.only(bottom: 5,top: 5),
                         separatorBuilder: (ctx, c) => Divider(
                               color: AppTheme.white.withOpacity(0.1),
                             ),
