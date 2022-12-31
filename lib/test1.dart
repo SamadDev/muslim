@@ -19,7 +19,7 @@ class _AlartScreenState extends State<AlartScreen> {
             value: isOn,
             onChanged: (value) {
               setState(() {
-                isOn = value;
+                isOn = value;//
               });
               if (isOn == true) {
                 AndroidAlarmManager.periodic(
