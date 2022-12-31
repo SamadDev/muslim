@@ -22,7 +22,7 @@ class HelperScreen extends StatelessWidget {
         SizedBox(height: 10,),
         Text(
           text,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.headline6!.copyWith(color: AppTheme.secondary),
         )
       ],
     );

@@ -7,7 +7,7 @@ class SurahScreen extends StatelessWidget {
     final data = Provider.of<QuranServes>(context, listen: false);
     return Scaffold(
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(50), child: CustomAppBarWidget()),
+          preferredSize: Size.fromHeight(55), child: CustomAppBarWidget()),
       body: FutureBuilder(
         future: data.getQuran(),
         builder: (context, snapshot) {
@@ -21,10 +21,11 @@ class SurahScreen extends StatelessWidget {
                 return Consumer<QuranServes>(
                     builder: (ctx, surah, _) =>
                         ListView.separated(
+                            physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                             padding: EdgeInsets.only(top: 5, bottom: 5),
                             separatorBuilder: (ctx, c) =>
                                 Divider(
-                                  color: AppTheme.white.withOpacity(0.1),
+                                  color: AppTheme.white.withOpacity(0.2),
                                 ),
                             itemCount: surah.quran_list.length,
                             itemBuilder: (ctx, i) =>

@@ -7,6 +7,16 @@
       "englishNameTranslation": "The Opening",
       "revelationType": "Meccan",
       "ayahs": [
+        {
+          "number": 0,
+          "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2.mp3",
+          "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+          "numberInSurah": 1,
+          "juz": 1,
+          "page": 1,
+          "hizbQuarter": 1,
+          "sajda": false
+        },
 
         {
           "number": 1,
@@ -160,6 +170,7 @@
         {
           "number": 16,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/16.mp3",
+          
           "text": "يُخَٰدِعُونَ ٱللَّهَ وَٱلَّذِينَ ءَامَنُوا۟ وَمَا يَخْدَعُونَ إِلَّآ أَنفُسَهُمْ وَمَا يَشْعُرُونَ",
           "numberInSurah": 9,
           "juz": 1,
@@ -18155,7 +18166,7 @@
         {
           "number": 1803,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1803.mp3",
-          "text": "بالٓر ۚ تِلْكَ ءَايَٰتُ ٱلْكِتَٰبِ وَقُرْءَانٍۢ مُّبِينٍۢ",
+          "text": "الٓر ۚ تِلْكَ ءَايَٰتُ ٱلْكِتَٰبِ وَقُرْءَانٍۢ مُّبِينٍۢ",
           "numberInSurah": 1,
           "juz": 14,
           "page": 262,
@@ -19154,7 +19165,7 @@
         {
           "number": 1902,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1902.mp3",
-          "text": "بأَتَىٰٓ أَمْرُ ٱللَّهِ فَلَا تَسْتَعْجِلُوهُ ۚ سُبْحَٰنَهُۥ وَتَعَٰلَىٰ عَمَّا يُشْرِكُونَ",
+          "text": "أَتَىٰٓ أَمْرُ ٱللَّهِ فَلَا تَسْتَعْجِلُوهُ ۚ سُبْحَٰنَهُۥ وَتَعَٰلَىٰ عَمَّا يُشْرِكُونَ",
           "numberInSurah": 1,
           "juz": 14,
           "page": 267,
@@ -20447,7 +20458,7 @@
         {
           "number": 2030,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2030.mp3",
-          "text": "بسُبْحَٰنَ ٱلَّذِىٓ أَسْرَىٰ بِعَبْدِهِۦ لَيْلًۭا مِّنَ ٱلْمَسْجِدِ ٱلْحَرَامِ إِلَى ٱلْمَسْجِدِ ٱلْأَقْصَا ٱلَّذِى بَٰرَكْنَا حَوْلَهُۥ لِنُرِيَهُۥ مِنْ ءَايَٰتِنَآ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
+          "text": "سُبْحَٰنَ ٱلَّذِىٓ أَسْرَىٰ بِعَبْدِهِۦ لَيْلًۭا مِّنَ ٱلْمَسْجِدِ ٱلْحَرَامِ إِلَى ٱلْمَسْجِدِ ٱلْأَقْصَا ٱلَّذِى بَٰرَكْنَا حَوْلَهُۥ لِنُرِيَهُۥ مِنْ ءَايَٰتِنَآ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
           "numberInSurah": 1,
           "juz": 15,
           "page": 282,
@@ -21570,7 +21581,7 @@
         {
           "number": 2141,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2141.mp3",
-          "text": "بٱلْحَمْدُ لِلَّهِ ٱلَّذِىٓ أَنزَلَ عَلَىٰ عَبْدِهِ ٱلْكِتَٰبَ وَلَمْ يَجْعَل لَّهُۥ عِوَجَا ۜ",
+          "text": "ٱلْحَمْدُ لِلَّهِ ٱلَّذِىٓ أَنزَلَ عَلَىٰ عَبْدِهِ ٱلْكِتَٰبَ وَلَمْ يَجْعَل لَّهُۥ عِوَجَا ۜ",
           "numberInSurah": 1,
           "juz": 15,
           "page": 293,
@@ -22679,7 +22690,7 @@
         {
           "number": 2251,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2251.mp3",
-          "text": "بكٓهيعٓصٓ",
+          "text": "كٓهيعٓصٓ",
           "numberInSurah": 1,
           "juz": 16,
           "page": 305,
@@ -23672,7 +23683,7 @@
         {
           "number": 2349,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2349.mp3",
-          "text": "بطه",
+          "text": "طه",
           "numberInSurah": 1,
           "juz": 16,
           "page": 312,
@@ -25031,7 +25042,7 @@
         {
           "number": 2484,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2484.mp3",
-          "text": "بٱقْتَرَبَ لِلنَّاسِ حِسَابُهُمْ وَهُمْ فِى غَفْلَةٍۢ مُّعْرِضُونَ",
+          "text": "ٱقْتَرَبَ لِلنَّاسِ حِسَابُهُمْ وَهُمْ فِى غَفْلَةٍۢ مُّعْرِضُونَ",
           "numberInSurah": 1,
           "juz": 17,
           "page": 322,
@@ -26160,7 +26171,7 @@
         {
           "number": 2596,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2596.mp3",
-          "text": "بيَٰٓأَيُّهَا ٱلنَّاسُ ٱتَّقُوا۟ رَبَّكُمْ ۚ إِنَّ زَلْزَلَةَ ٱلسَّاعَةِ شَىْءٌ عَظِيمٌۭ",
+          "text": "يَٰٓأَيُّهَا ٱلنَّاسُ ٱتَّقُوا۟ رَبَّكُمْ ۚ إِنَّ زَلْزَلَةَ ٱلسَّاعَةِ شَىْءٌ عَظِيمٌۭ",
           "numberInSurah": 1,
           "juz": 17,
           "page": 332,
@@ -26957,7 +26968,7 @@
         {
           "number": 2674,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2674.mp3",
-          "text": "بقَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ",
+          "text": "قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ",
           "numberInSurah": 1,
           "juz": 18,
           "page": 342,
@@ -28146,7 +28157,7 @@
         {
           "number": 2792,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2792.mp3",
-          "text": "بسُورَةٌ أَنزَلْنَٰهَا وَفَرَضْنَٰهَا وَأَنزَلْنَا فِيهَآ ءَايَٰتٍۭ بَيِّنَٰتٍۢ لَّعَلَّكُمْ تَذَكَّرُونَ",
+          "text": "سُورَةٌ أَنزَلْنَٰهَا وَفَرَضْنَٰهَا وَأَنزَلْنَا فِيهَآ ءَايَٰتٍۭ بَيِّنَٰتٍۢ لَّعَلَّكُمْ تَذَكَّرُونَ",
           "numberInSurah": 1,
           "juz": 18,
           "page": 350,
@@ -28795,7 +28806,7 @@
         {
           "number": 2856,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2856.mp3",
-          "text": "بتَبَارَكَ ٱلَّذِى نَزَّلَ ٱلْفُرْقَانَ عَلَىٰ عَبْدِهِۦ لِيَكُونَ لِلْعَٰلَمِينَ نَذِيرًا",
+          "text": "تَبَارَكَ ٱلَّذِى نَزَّلَ ٱلْفُرْقَانَ عَلَىٰ عَبْدِهِۦ لِيَكُونَ لِلْعَٰلَمِينَ نَذِيرًا",
           "numberInSurah": 1,
           "juz": 18,
           "page": 359,
@@ -29578,7 +29589,7 @@
         {
           "number": 2933,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2933.mp3",
-          "text": "بطسٓمٓ",
+          "text": "طسٓمٓ",
           "numberInSurah": 1,
           "juz": 19,
           "page": 367,
@@ -31857,7 +31868,7 @@
         {
           "number": 3160,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3160.mp3",
-          "text": "بطسٓ ۚ تِلْكَ ءَايَٰتُ ٱلْقُرْءَانِ وَكِتَابٍۢ مُّبِينٍ",
+          "text": "طسٓ ۚ تِلْكَ ءَايَٰتُ ٱلْقُرْءَانِ وَكِتَابٍۢ مُّبِينٍ",
           "numberInSurah": 1,
           "juz": 19,
           "page": 377,
@@ -32800,7 +32811,7 @@
         {
           "number": 3253,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3253.mp3",
-          "text": "بطسٓمٓ",
+          "text": "طسٓمٓ",
           "numberInSurah": 1,
           "juz": 20,
           "page": 385,
@@ -33689,7 +33700,7 @@
         {
           "number": 3341,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3341.mp3",
-          "text": "بالٓمٓ",
+          "text": "الٓمٓ",
           "numberInSurah": 1,
           "juz": 20,
           "page": 396,
@@ -34388,7 +34399,7 @@
         {
           "number": 3410,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3410.mp3",
-          "text": "بالٓمٓ",
+          "text": "الٓمٓ",
           "numberInSurah": 1,
           "juz": 21,
           "page": 404,
@@ -34997,7 +35008,7 @@
         {
           "number": 3470,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3470.mp3",
-          "text": "بالٓمٓ",
+          "text": "الٓمٓ",
           "numberInSurah": 1,
           "juz": 21,
           "page": 411,
@@ -35346,7 +35357,7 @@
         {
           "number": 3504,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3504.mp3",
-          "text": "بالٓمٓ",
+          "text": "الٓمٓ",
           "numberInSurah": 1,
           "juz": 21,
           "page": 415,
@@ -35659,7 +35670,7 @@
         {
           "number": 3534,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3534.mp3",
-          "text": "بيَٰٓأَيُّهَا ٱلنَّبِىُّ ٱتَّقِ ٱللَّهَ وَلَا تُطِعِ ٱلْكَٰفِرِينَ وَٱلْمُنَٰفِقِينَ ۗ إِنَّ ٱللَّهَ كَانَ عَلِيمًا حَكِيمًۭا",
+          "text": "يَٰٓأَيُّهَا ٱلنَّبِىُّ ٱتَّقِ ٱللَّهَ وَلَا تُطِعِ ٱلْكَٰفِرِينَ وَٱلْمُنَٰفِقِينَ ۗ إِنَّ ٱللَّهَ كَانَ عَلِيمًا حَكِيمًۭا",
           "numberInSurah": 1,
           "juz": 21,
           "page": 418,
@@ -36398,7 +36409,7 @@
         {
           "number": 3607,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3607.mp3",
-          "text": "بٱلْحَمْدُ لِلَّهِ ٱلَّذِى لَهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ وَلَهُ ٱلْحَمْدُ فِى ٱلْءَاخِرَةِ ۚ وَهُوَ ٱلْحَكِيمُ ٱلْخَبِيرُ",
+          "text": "ٱلْحَمْدُ لِلَّهِ ٱلَّذِى لَهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ وَلَهُ ٱلْحَمْدُ فِى ٱلْءَاخِرَةِ ۚ وَهُوَ ٱلْحَكِيمُ ٱلْخَبِيرُ",
           "numberInSurah": 1,
           "juz": 22,
           "page": 428,
@@ -36947,7 +36958,7 @@
         {
           "number": 3661,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3661.mp3",
-          "text": "بٱلْحَمْدُ لِلَّهِ فَاطِرِ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ جَاعِلِ ٱلْمَلَٰٓئِكَةِ رُسُلًا أُو۟لِىٓ أَجْنِحَةٍۢ مَّثْنَىٰ وَثُلَٰثَ وَرُبَٰعَ ۚ يَزِيدُ فِى ٱلْخَلْقِ مَا يَشَآءُ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ",
+          "text": "ٱلْحَمْدُ لِلَّهِ فَاطِرِ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ جَاعِلِ ٱلْمَلَٰٓئِكَةِ رُسُلًا أُو۟لِىٓ أَجْنِحَةٍۢ مَّثْنَىٰ وَثُلَٰثَ وَرُبَٰعَ ۚ يَزِيدُ فِى ٱلْخَلْقِ مَا يَشَآءُ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ",
           "numberInSurah": 1,
           "juz": 22,
           "page": 434,
@@ -37406,7 +37417,7 @@
         {
           "number": 3706,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3706.mp3",
-          "text": "بيسٓ",
+          "text": "يسٓ",
           "numberInSurah": 1,
           "juz": 22,
           "page": 440,
@@ -38245,7 +38256,7 @@
         {
           "number": 3789,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3789.mp3",
-          "text": "بوَٱلصَّٰٓفَّٰتِ صَفًّۭا",
+          "text": "وَٱلصَّٰٓفَّٰتِ صَفًّۭا",
           "numberInSurah": 1,
           "juz": 23,
           "page": 446,
@@ -40074,7 +40085,7 @@
         {
           "number": 3971,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3971.mp3",
-          "text": "بصٓ ۚ وَٱلْقُرْءَانِ ذِى ٱلذِّكْرِ",
+          "text": "صٓ ۚ وَٱلْقُرْءَانِ ذِى ٱلذِّكْرِ",
           "numberInSurah": 1,
           "juz": 23,
           "page": 453,
@@ -40967,7 +40978,7 @@
         {
           "number": 4059,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4059.mp3",
-          "text": "بتَنزِيلُ ٱلْكِتَٰبِ مِنَ ٱللَّهِ ٱلْعَزِيزِ ٱلْحَكِيمِ",
+          "text": "تَنزِيلُ ٱلْكِتَٰبِ مِنَ ٱللَّهِ ٱلْعَزِيزِ ٱلْحَكِيمِ",
           "numberInSurah": 1,
           "juz": 23,
           "page": 458,
@@ -41726,7 +41737,7 @@
         {
           "number": 4134,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4134.mp3",
-          "text": "بحمٓ",
+          "text": "حمٓ",
           "numberInSurah": 1,
           "juz": 24,
           "page": 467,
@@ -42585,7 +42596,7 @@
         {
           "number": 4219,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4219.mp3",
-          "text": "بحمٓ",
+          "text": "حمٓ",
           "numberInSurah": 1,
           "juz": 24,
           "page": 477,
@@ -43138,7 +43149,7 @@
         {
           "number": 4273,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4273.mp3",
-          "text": "بحمٓ",
+          "text": "حمٓ",
           "numberInSurah": 1,
           "juz": 25,
           "page": 483,
@@ -43677,7 +43688,7 @@
         {
           "number": 4326,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4326.mp3",
-          "text": "بحمٓ",
+          "text": "حمٓ",
           "numberInSurah": 1,
           "juz": 25,
           "page": 489,
@@ -44576,7 +44587,7 @@
         {
           "number": 4415,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4415.mp3",
-          "text": "بحمٓ",
+          "text": "حمٓ",
           "numberInSurah": 1,
           "juz": 25,
           "page": 496,
@@ -45175,7 +45186,7 @@
         {
           "number": 4474,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4474.mp3",
-          "text": "بحمٓ",
+          "text": "حمٓ",
           "numberInSurah": 1,
           "juz": 25,
           "page": 499,
@@ -45554,7 +45565,7 @@
         {
           "number": 4511,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4511.mp3",
-          "text": "بحمٓ",
+          "text": "حمٓ",
           "numberInSurah": 1,
           "juz": 26,
           "page": 502,
@@ -45913,7 +45924,7 @@
         {
           "number": 4546,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4546.mp3",
-          "text": "بٱلَّذِينَ كَفَرُوا۟ وَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ أَضَلَّ أَعْمَٰلَهُمْ",
+          "text": "ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ أَضَلَّ أَعْمَٰلَهُمْ",
           "numberInSurah": 1,
           "juz": 26,
           "page": 507,
@@ -46302,7 +46313,7 @@
         {
           "number": 4584,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4584.mp3",
-          "text": "بإِنَّا فَتَحْنَا لَكَ فَتْحًۭا مُّبِينًۭا",
+          "text": "إِنَّا فَتَحْنَا لَكَ فَتْحًۭا مُّبِينًۭا",
           "numberInSurah": 1,
           "juz": 26,
           "page": 511,
@@ -46601,7 +46612,7 @@
         {
           "number": 4613,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4613.mp3",
-          "text": "بيَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تُقَدِّمُوا۟ بَيْنَ يَدَىِ ٱللَّهِ وَرَسُولِهِۦ ۖ وَٱتَّقُوا۟ ٱللَّهَ ۚ إِنَّ ٱللَّهَ سَمِيعٌ عَلِيمٌۭ",
+          "text": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تُقَدِّمُوا۟ بَيْنَ يَدَىِ ٱللَّهِ وَرَسُولِهِۦ ۖ وَٱتَّقُوا۟ ٱللَّهَ ۚ إِنَّ ٱللَّهَ سَمِيعٌ عَلِيمٌۭ",
           "numberInSurah": 1,
           "juz": 26,
           "page": 515,
@@ -46790,7 +46801,7 @@
         {
           "number": 4631,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4631.mp3",
-          "text": "بقٓ ۚ وَٱلْقُرْءَانِ ٱلْمَجِيدِ",
+          "text": "قٓ ۚ وَٱلْقُرْءَانِ ٱلْمَجِيدِ",
           "numberInSurah": 1,
           "juz": 26,
           "page": 518,
@@ -47249,7 +47260,7 @@
         {
           "number": 4676,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4676.mp3",
-          "text": "بوَٱلذَّٰرِيَٰتِ ذَرْوًۭا",
+          "text": "وَٱلذَّٰرِيَٰتِ ذَرْوًۭا",
           "numberInSurah": 1,
           "juz": 26,
           "page": 520,
@@ -47858,7 +47869,7 @@
         {
           "number": 4736,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4736.mp3",
-          "text": "بوَٱلطُّورِ",
+          "text": "وَٱلطُّورِ",
           "numberInSurah": 1,
           "juz": 27,
           "page": 523,
@@ -48357,7 +48368,7 @@
         {
           "number": 4785,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4785.mp3",
-          "text": "بوَٱلنَّجْمِ إِذَا هَوَىٰ",
+          "text": "وَٱلنَّجْمِ إِذَا هَوَىٰ",
           "numberInSurah": 1,
           "juz": 27,
           "page": 526,
@@ -48990,7 +49001,7 @@
         {
           "number": 4847,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4847.mp3",
-          "text": "بٱقْتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلْقَمَرُ",
+          "text": "ٱقْتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلْقَمَرُ",
           "numberInSurah": 1,
           "juz": 27,
           "page": 528,
@@ -49549,7 +49560,7 @@
         {
           "number": 4902,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4902.mp3",
-          "text": "بٱلرَّحْمَٰنُ",
+          "text": "ٱلرَّحْمَٰنُ",
           "numberInSurah": 1,
           "juz": 27,
           "page": 531,
@@ -50338,7 +50349,7 @@
         {
           "number": 4980,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4980.mp3",
-          "text": "بإِذَا وَقَعَتِ ٱلْوَاقِعَةُ",
+          "text": "إِذَا وَقَعَتِ ٱلْوَاقِعَةُ",
           "numberInSurah": 1,
           "juz": 27,
           "page": 534,
@@ -51307,7 +51318,7 @@
         {
           "number": 5076,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5076.mp3",
-          "text": "بسَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+          "text": "سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
           "numberInSurah": 1,
           "juz": 27,
           "page": 537,
@@ -51606,7 +51617,7 @@
         {
           "number": 5105,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5105.mp3",
-          "text": "بقَدْ سَمِعَ ٱللَّهُ قَوْلَ ٱلَّتِى تُجَٰدِلُكَ فِى زَوْجِهَا وَتَشْتَكِىٓ إِلَى ٱللَّهِ وَٱللَّهُ يَسْمَعُ تَحَاوُرَكُمَآ ۚ إِنَّ ٱللَّهَ سَمِيعٌۢ بَصِيرٌ",
+          "text": "قَدْ سَمِعَ ٱللَّهُ قَوْلَ ٱلَّتِى تُجَٰدِلُكَ فِى زَوْجِهَا وَتَشْتَكِىٓ إِلَى ٱللَّهِ وَٱللَّهُ يَسْمَعُ تَحَاوُرَكُمَآ ۚ إِنَّ ٱللَّهَ سَمِيعٌۢ بَصِيرٌ",
           "numberInSurah": 1,
           "juz": 28,
           "page": 542,
@@ -51835,7 +51846,7 @@
         {
           "number": 5127,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5127.mp3",
-          "text": "بسَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+          "text": "سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
           "numberInSurah": 1,
           "juz": 28,
           "page": 545,
@@ -52084,7 +52095,7 @@
         {
           "number": 5151,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5151.mp3",
-          "text": "بيَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تَتَّخِذُوا۟ عَدُوِّى وَعَدُوَّكُمْ أَوْلِيَآءَ تُلْقُونَ إِلَيْهِم بِٱلْمَوَدَّةِ وَقَدْ كَفَرُوا۟ بِمَا جَآءَكُم مِّنَ ٱلْحَقِّ يُخْرِجُونَ ٱلرَّسُولَ وَإِيَّاكُمْ ۙ أَن تُؤْمِنُوا۟ بِٱللَّهِ رَبِّكُمْ إِن كُنتُمْ خَرَجْتُمْ جِهَٰدًۭا فِى سَبِيلِى وَٱبْتِغَآءَ مَرْضَاتِى ۚ تُسِرُّونَ إِلَيْهِم بِٱلْمَوَدَّةِ وَأَنَا۠ أَعْلَمُ بِمَآ أَخْفَيْتُمْ وَمَآ أَعْلَنتُمْ ۚ وَمَن يَفْعَلْهُ مِنكُمْ فَقَدْ ضَلَّ سَوَآءَ ٱلسَّبِيلِ",
+          "text": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تَتَّخِذُوا۟ عَدُوِّى وَعَدُوَّكُمْ أَوْلِيَآءَ تُلْقُونَ إِلَيْهِم بِٱلْمَوَدَّةِ وَقَدْ كَفَرُوا۟ بِمَا جَآءَكُم مِّنَ ٱلْحَقِّ يُخْرِجُونَ ٱلرَّسُولَ وَإِيَّاكُمْ ۙ أَن تُؤْمِنُوا۟ بِٱللَّهِ رَبِّكُمْ إِن كُنتُمْ خَرَجْتُمْ جِهَٰدًۭا فِى سَبِيلِى وَٱبْتِغَآءَ مَرْضَاتِى ۚ تُسِرُّونَ إِلَيْهِم بِٱلْمَوَدَّةِ وَأَنَا۠ أَعْلَمُ بِمَآ أَخْفَيْتُمْ وَمَآ أَعْلَنتُمْ ۚ وَمَن يَفْعَلْهُ مِنكُمْ فَقَدْ ضَلَّ سَوَآءَ ٱلسَّبِيلِ",
           "numberInSurah": 1,
           "juz": 28,
           "page": 549,
@@ -52223,7 +52234,7 @@
         {
           "number": 5164,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5164.mp3",
-          "text": "بسَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+          "text": "سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
           "numberInSurah": 1,
           "juz": 28,
           "page": 551,
@@ -52372,7 +52383,7 @@
         {
           "number": 5178,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5178.mp3",
-          "text": "بيُسَبِّحُ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ٱلْمَلِكِ ٱلْقُدُّوسِ ٱلْعَزِيزِ ٱلْحَكِيمِ",
+          "text": "يُسَبِّحُ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ٱلْمَلِكِ ٱلْقُدُّوسِ ٱلْعَزِيزِ ٱلْحَكِيمِ",
           "numberInSurah": 1,
           "juz": 28,
           "page": 553,
@@ -52491,7 +52502,7 @@
         {
           "number": 5189,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5189.mp3",
-          "text": "بإِذَا جَآءَكَ ٱلْمُنَٰفِقُونَ قَالُوا۟ نَشْهَدُ إِنَّكَ لَرَسُولُ ٱللَّهِ ۗ وَٱللَّهُ يَعْلَمُ إِنَّكَ لَرَسُولُهُۥ وَٱللَّهُ يَشْهَدُ إِنَّ ٱلْمُنَٰفِقِينَ لَكَٰذِبُونَ",
+          "text": "إِذَا جَآءَكَ ٱلْمُنَٰفِقُونَ قَالُوا۟ نَشْهَدُ إِنَّكَ لَرَسُولُ ٱللَّهِ ۗ وَٱللَّهُ يَعْلَمُ إِنَّكَ لَرَسُولُهُۥ وَٱللَّهُ يَشْهَدُ إِنَّ ٱلْمُنَٰفِقِينَ لَكَٰذِبُونَ",
           "numberInSurah": 1,
           "juz": 28,
           "page": 554,
@@ -52610,7 +52621,7 @@
         {
           "number": 5200,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5200.mp3",
-          "text": "بيُسَبِّحُ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ لَهُ ٱلْمُلْكُ وَلَهُ ٱلْحَمْدُ ۖ وَهُوَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ",
+          "text": "يُسَبِّحُ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ لَهُ ٱلْمُلْكُ وَلَهُ ٱلْحَمْدُ ۖ وَهُوَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ",
           "numberInSurah": 1,
           "juz": 28,
           "page": 556,
@@ -52799,7 +52810,7 @@
         {
           "number": 5218,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5218.mp3",
-          "text": "بيَٰٓأَيُّهَا ٱلنَّبِىُّ إِذَا طَلَّقْتُمُ ٱلنِّسَآءَ فَطَلِّقُوهُنَّ لِعِدَّتِهِنَّ وَأَحْصُوا۟ ٱلْعِدَّةَ ۖ وَٱتَّقُوا۟ ٱللَّهَ رَبَّكُمْ ۖ لَا تُخْرِجُوهُنَّ مِنۢ بُيُوتِهِنَّ وَلَا يَخْرُجْنَ إِلَّآ أَن يَأْتِينَ بِفَٰحِشَةٍۢ مُّبَيِّنَةٍۢ ۚ وَتِلْكَ حُدُودُ ٱللَّهِ ۚ وَمَن يَتَعَدَّ حُدُودَ ٱللَّهِ فَقَدْ ظَلَمَ نَفْسَهُۥ ۚ لَا تَدْرِى لَعَلَّ ٱللَّهَ يُحْدِثُ بَعْدَ ذَٰلِكَ أَمْرًۭا",
+          "text": "يَٰٓأَيُّهَا ٱلنَّبِىُّ إِذَا طَلَّقْتُمُ ٱلنِّسَآءَ فَطَلِّقُوهُنَّ لِعِدَّتِهِنَّ وَأَحْصُوا۟ ٱلْعِدَّةَ ۖ وَٱتَّقُوا۟ ٱللَّهَ رَبَّكُمْ ۖ لَا تُخْرِجُوهُنَّ مِنۢ بُيُوتِهِنَّ وَلَا يَخْرُجْنَ إِلَّآ أَن يَأْتِينَ بِفَٰحِشَةٍۢ مُّبَيِّنَةٍۢ ۚ وَتِلْكَ حُدُودُ ٱللَّهِ ۚ وَمَن يَتَعَدَّ حُدُودَ ٱللَّهِ فَقَدْ ظَلَمَ نَفْسَهُۥ ۚ لَا تَدْرِى لَعَلَّ ٱللَّهَ يُحْدِثُ بَعْدَ ذَٰلِكَ أَمْرًۭا",
           "numberInSurah": 1,
           "juz": 28,
           "page": 558,
@@ -52928,7 +52939,7 @@
         {
           "number": 5230,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5230.mp3",
-          "text": "بيَٰٓأَيُّهَا ٱلنَّبِىُّ لِمَ تُحَرِّمُ مَآ أَحَلَّ ٱللَّهُ لَكَ ۖ تَبْتَغِى مَرْضَاتَ أَزْوَٰجِكَ ۚ وَٱللَّهُ غَفُورٌۭ رَّحِيمٌۭ",
+          "text": "يَٰٓأَيُّهَا ٱلنَّبِىُّ لِمَ تُحَرِّمُ مَآ أَحَلَّ ٱللَّهُ لَكَ ۖ تَبْتَغِى مَرْضَاتَ أَزْوَٰجِكَ ۚ وَٱللَّهُ غَفُورٌۭ رَّحِيمٌۭ",
           "numberInSurah": 1,
           "juz": 28,
           "page": 560,
@@ -53057,7 +53068,7 @@
         {
           "number": 5242,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5242.mp3",
-          "text": "بتَبَٰرَكَ ٱلَّذِى بِيَدِهِ ٱلْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ",
+          "text": "تَبَٰرَكَ ٱلَّذِى بِيَدِهِ ٱلْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ",
           "numberInSurah": 1,
           "juz": 29,
           "page": 562,
@@ -53366,7 +53377,7 @@
         {
           "number": 5272,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5272.mp3",
-          "text": "بنٓ ۚ وَٱلْقَلَمِ وَمَا يَسْطُرُونَ",
+          "text": "نٓ ۚ وَٱلْقَلَمِ وَمَا يَسْطُرُونَ",
           "numberInSurah": 1,
           "juz": 29,
           "page": 564,
@@ -53895,7 +53906,7 @@
         {
           "number": 5324,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5324.mp3",
-          "text": "بٱلْحَآقَّةُ",
+          "text": "ٱلْحَآقَّةُ",
           "numberInSurah": 1,
           "juz": 29,
           "page": 566,
@@ -54424,7 +54435,7 @@
         {
           "number": 5376,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5376.mp3",
-          "text": "بسَأَلَ سَآئِلٌۢ بِعَذَابٍۢ وَاقِعٍۢ",
+          "text": "سَأَلَ سَآئِلٌۢ بِعَذَابٍۢ وَاقِعٍۢ",
           "numberInSurah": 1,
           "juz": 29,
           "page": 568,
@@ -54873,7 +54884,7 @@
         {
           "number": 5420,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5420.mp3",
-          "text": "بإِنَّآ أَرْسَلْنَا نُوحًا إِلَىٰ قَوْمِهِۦٓ أَنْ أَنذِرْ قَوْمَكَ مِن قَبْلِ أَن يَأْتِيَهُمْ عَذَابٌ أَلِيمٌۭ",
+          "text": "إِنَّآ أَرْسَلْنَا نُوحًا إِلَىٰ قَوْمِهِۦٓ أَنْ أَنذِرْ قَوْمَكَ مِن قَبْلِ أَن يَأْتِيَهُمْ عَذَابٌ أَلِيمٌۭ",
           "numberInSurah": 1,
           "juz": 29,
           "page": 570,
@@ -55162,7 +55173,7 @@
         {
           "number": 5448,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5448.mp3",
-          "text": "بقُلْ أُوحِىَ إِلَىَّ أَنَّهُ ٱسْتَمَعَ نَفَرٌۭ مِّنَ ٱلْجِنِّ فَقَالُوٓا۟ إِنَّا سَمِعْنَا قُرْءَانًا عَجَبًۭا",
+          "text": "قُلْ أُوحِىَ إِلَىَّ أَنَّهُ ٱسْتَمَعَ نَفَرٌۭ مِّنَ ٱلْجِنِّ فَقَالُوٓا۟ إِنَّا سَمِعْنَا قُرْءَانًا عَجَبًۭا",
           "numberInSurah": 1,
           "juz": 29,
           "page": 572,
@@ -55451,7 +55462,7 @@
         {
           "number": 5476,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5476.mp3",
-          "text": "بيَٰٓأَيُّهَا ٱلْمُزَّمِّلُ",
+          "text": "يَٰٓأَيُّهَا ٱلْمُزَّمِّلُ",
           "numberInSurah": 1,
           "juz": 29,
           "page": 574,
@@ -55660,7 +55671,7 @@
         {
           "number": 5496,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5496.mp3",
-          "text": "بيَٰٓأَيُّهَا ٱلْمُدَّثِّرُ",
+          "text": "يَٰٓأَيُّهَا ٱلْمُدَّثِّرُ",
           "numberInSurah": 1,
           "juz": 29,
           "page": 575,
@@ -56229,7 +56240,7 @@
         {
           "number": 5552,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5552.mp3",
-          "text": "بلَآ أُقْسِمُ بِيَوْمِ ٱلْقِيَٰمَةِ",
+          "text": "لَآ أُقْسِمُ بِيَوْمِ ٱلْقِيَٰمَةِ",
           "numberInSurah": 1,
           "juz": 29,
           "page": 577,
@@ -56638,7 +56649,7 @@
         {
           "number": 5592,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5592.mp3",
-          "text": "بهَلْ أَتَىٰ عَلَى ٱلْإِنسَٰنِ حِينٌۭ مِّنَ ٱلدَّهْرِ لَمْ يَكُن شَيْـًۭٔا مَّذْكُورًا",
+          "text": "هَلْ أَتَىٰ عَلَى ٱلْإِنسَٰنِ حِينٌۭ مِّنَ ٱلدَّهْرِ لَمْ يَكُن شَيْـًۭٔا مَّذْكُورًا",
           "numberInSurah": 1,
           "juz": 29,
           "page": 578,
@@ -56957,7 +56968,7 @@
         {
           "number": 5623,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5623.mp3",
-          "text": "بوَٱلْمُرْسَلَٰتِ عُرْفًۭا",
+          "text": "وَٱلْمُرْسَلَٰتِ عُرْفًۭا",
           "numberInSurah": 1,
           "juz": 29,
           "page": 580,
@@ -57466,7 +57477,7 @@
         {
           "number": 5673,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5673.mp3",
-          "text": "بعَمَّ يَتَسَآءَلُونَ",
+          "text": "عَمَّ يَتَسَآءَلُونَ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 582,
@@ -57875,7 +57886,7 @@
         {
           "number": 5713,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5713.mp3",
-          "text": "بوَٱلنَّٰزِعَٰتِ غَرْقًۭا",
+          "text": "وَٱلنَّٰزِعَٰتِ غَرْقًۭا",
           "numberInSurah": 1,
           "juz": 30,
           "page": 583,
@@ -58344,7 +58355,7 @@
         {
           "number": 5759,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5759.mp3",
-          "text": "بعَبَسَ وَتَوَلَّىٰٓ",
+          "text": "عَبَسَ وَتَوَلَّىٰٓ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 585,
@@ -58773,7 +58784,7 @@
         {
           "number": 5801,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5801.mp3",
-          "text": "بإِذَا ٱلشَّمْسُ كُوِّرَتْ",
+          "text": "إِذَا ٱلشَّمْسُ كُوِّرَتْ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 586,
@@ -59072,7 +59083,7 @@
         {
           "number": 5830,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5830.mp3",
-          "text": "بإِذَا ٱلسَّمَآءُ ٱنفَطَرَتْ",
+          "text": "إِذَا ٱلسَّمَآءُ ٱنفَطَرَتْ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 587,
@@ -59271,7 +59282,7 @@
         {
           "number": 5849,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5849.mp3",
-          "text": "بوَيْلٌۭ لِّلْمُطَفِّفِينَ",
+          "text": "وَيْلٌۭ لِّلْمُطَفِّفِينَ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 587,
@@ -59640,7 +59651,7 @@
         {
           "number": 5885,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5885.mp3",
-          "text": "بإِذَا ٱلسَّمَآءُ ٱنشَقَّتْ",
+          "text": "إِذَا ٱلسَّمَآءُ ٱنشَقَّتْ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 589,
@@ -59903,7 +59914,7 @@
         {
           "number": 5910,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5910.mp3",
-          "text": "بوَٱلسَّمَآءِ ذَاتِ ٱلْبُرُوجِ",
+          "text": "وَٱلسَّمَآءِ ذَاتِ ٱلْبُرُوجِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 590,
@@ -60132,7 +60143,7 @@
         {
           "number": 5932,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5932.mp3",
-          "text": "بوَٱلسَّمَآءِ وَٱلطَّارِقِ",
+          "text": "وَٱلسَّمَآءِ وَٱلطَّارِقِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 591,
@@ -60311,7 +60322,7 @@
         {
           "number": 5949,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5949.mp3",
-          "text": "بسَبِّحِ ٱسْمَ رَبِّكَ ٱلْأَعْلَى",
+          "text": "سَبِّحِ ٱسْمَ رَبِّكَ ٱلْأَعْلَى",
           "numberInSurah": 1,
           "juz": 30,
           "page": 591,
@@ -60510,7 +60521,7 @@
         {
           "number": 5968,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5968.mp3",
-          "text": "بهَلْ أَتَىٰكَ حَدِيثُ ٱلْغَٰشِيَةِ",
+          "text": "هَلْ أَتَىٰكَ حَدِيثُ ٱلْغَٰشِيَةِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 592,
@@ -60779,7 +60790,7 @@
         {
           "number": 5994,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5994.mp3",
-          "text": "بوَٱلْفَجْرِ",
+          "text": "وَٱلْفَجْرِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 593,
@@ -61088,7 +61099,7 @@
         {
           "number": 6024,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6024.mp3",
-          "text": "بلَآ أُقْسِمُ بِهَٰذَا ٱلْبَلَدِ",
+          "text": "لَآ أُقْسِمُ بِهَٰذَا ٱلْبَلَدِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 594,
@@ -61297,7 +61308,7 @@
         {
           "number": 6044,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6044.mp3",
-          "text": "بوَٱلشَّمْسِ وَضُحَىٰهَا",
+          "text": "وَٱلشَّمْسِ وَضُحَىٰهَا",
           "numberInSurah": 1,
           "juz": 30,
           "page": 595,
@@ -61456,7 +61467,7 @@
         {
           "number": 6059,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6059.mp3",
-          "text": "بوَٱلَّيْلِ إِذَا يَغْشَىٰ",
+          "text": "وَٱلَّيْلِ إِذَا يَغْشَىٰ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 595,
@@ -61675,7 +61686,7 @@
         {
           "number": 6080,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6080.mp3",
-          "text": "بوَٱلضُّحَىٰ",
+          "text": "وَٱلضُّحَىٰ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 596,
@@ -61794,7 +61805,7 @@
         {
           "number": 6091,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6091.mp3",
-          "text": "بأَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+          "text": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 596,
@@ -61883,7 +61894,7 @@
         {
           "number": 6099,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6099.mp3",
-          "text": "بّوَٱلتِّينِ وَٱلزَّيْتُونِ",
+          "text": "ّوَٱلتِّينِ وَٱلزَّيْتُونِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 597,
@@ -61972,7 +61983,7 @@
         {
           "number": 6107,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6107.mp3",
-          "text": "بٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ",
+          "text": "ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 597,
@@ -62175,7 +62186,7 @@
         {
           "number": 6126,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6126.mp3",
-          "text": "بّإِنَّآ أَنزَلْنَٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
+          "text": "ّإِنَّآ أَنزَلْنَٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 598,
@@ -62234,7 +62245,7 @@
         {
           "number": 6131,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6131.mp3",
-          "text": "بلَمْ يَكُنِ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَٰبِ وَٱلْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ ٱلْبَيِّنَةُ",
+          "text": "لَمْ يَكُنِ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَٰبِ وَٱلْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ ٱلْبَيِّنَةُ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 598,
@@ -62323,7 +62334,7 @@
         {
           "number": 6139,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6139.mp3",
-          "text": "بإِذَا زُلْزِلَتِ ٱلْأَرْضُ زِلْزَالَهَا",
+          "text": "إِذَا زُلْزِلَتِ ٱلْأَرْضُ زِلْزَالَهَا",
           "numberInSurah": 1,
           "juz": 30,
           "page": 599,
@@ -62412,7 +62423,7 @@
         {
           "number": 6147,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6147.mp3",
-          "text": "بوَٱلْعَٰدِيَٰتِ ضَبْحًۭا",
+          "text": "وَٱلْعَٰدِيَٰتِ ضَبْحًۭا",
           "numberInSurah": 1,
           "juz": 30,
           "page": 599,
@@ -62531,7 +62542,7 @@
         {
           "number": 6158,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6158.mp3",
-          "text": "بٱلْقَارِعَةُ",
+          "text": "ٱلْقَارِعَةُ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 600,
@@ -62650,7 +62661,7 @@
         {
           "number": 6169,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6169.mp3",
-          "text": "بأَلْهَىٰكُمُ ٱلتَّكَاثُرُ",
+          "text": "أَلْهَىٰكُمُ ٱلتَّكَاثُرُ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 600,
@@ -62739,7 +62750,7 @@
         {
           "number": 6177,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6177.mp3",
-          "text": "بوَٱلْعَصْرِ",
+          "text": "وَٱلْعَصْرِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 601,
@@ -62778,7 +62789,7 @@
         {
           "number": 6180,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6180.mp3",
-          "text": "بوَيْلٌۭ لِّكُلِّ هُمَزَةٍۢ لُّمَزَةٍ",
+          "text": "وَيْلٌۭ لِّكُلِّ هُمَزَةٍۢ لُّمَزَةٍ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 601,
@@ -62877,7 +62888,7 @@
         {
           "number": 6189,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6189.mp3",
-          "text": "بأَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَٰبِ ٱلْفِيلِ",
+          "text": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَٰبِ ٱلْفِيلِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 601,
@@ -62936,7 +62947,7 @@
         {
           "number": 6194,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6194.mp3",
-          "text": "بلِإِيلَٰفِ قُرَيْشٍ",
+          "text": "لِإِيلَٰفِ قُرَيْشٍ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 602,
@@ -62985,7 +62996,7 @@
         {
           "number": 6198,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6198.mp3",
-          "text": "بأَرَءَيْتَ ٱلَّذِى يُكَذِّبُ بِٱلدِّينِ",
+          "text": "أَرَءَيْتَ ٱلَّذِى يُكَذِّبُ بِٱلدِّينِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 602,
@@ -63064,7 +63075,7 @@
         {
           "number": 6205,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6205.mp3",
-          "text": "بإِنَّآ أَعْطَيْنَٰكَ ٱلْكَوْثَرَ",
+          "text": "إِنَّآ أَعْطَيْنَٰكَ ٱلْكَوْثَرَ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 602,
@@ -63103,7 +63114,7 @@
         {
           "number": 6208,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6208.mp3",
-          "text": "بقُلْ يَٰٓأَيُّهَا ٱلْكَٰفِرُونَ",
+          "text": "قُلْ يَٰٓأَيُّهَا ٱلْكَٰفِرُونَ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 603,
@@ -63172,7 +63183,7 @@
         {
           "number": 6214,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6214.mp3",
-          "text": "بإِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ",
+          "text": "إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 603,
@@ -63211,7 +63222,7 @@
         {
           "number": 6217,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6217.mp3",
-          "text": "بتَبَّتْ يَدَآ أَبِى لَهَبٍۢ وَتَبَّ",
+          "text": "تَبَّتْ يَدَآ أَبِى لَهَبٍۢ وَتَبَّ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 603,
@@ -63270,7 +63281,7 @@
         {
           "number": 6222,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6222.mp3",
-          "text": "بقُلْ هُوَ ٱللَّهُ أَحَدٌ",
+          "text": "قُلْ هُوَ ٱللَّهُ أَحَدٌ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 604,
@@ -63319,7 +63330,7 @@
         {
           "number": 6226,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6226.mp3",
-          "text": "بقُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ",
+          "text": "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 604,
@@ -63379,7 +63390,7 @@
         {
           "number": 6231,
           "audio": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6231.mp3",
-          "text": "بقُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+          "text": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
           "numberInSurah": 1,
           "juz": 30,
           "page": 604,

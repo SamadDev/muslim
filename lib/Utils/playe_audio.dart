@@ -1,203 +1,115 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:scroll_to_index/scroll_to_index.dart';
 
-Future<void> play_audio({url, required int index, scrollC, list}) async {
-  try {
-    int audio_index = index;
-    for (int i = index; i <= list.length; i++) {
-    final next_audio = list[audio_index].audio;
+class Audio with ChangeNotifier {
+  AudioPlayer player = AudioPlayer();
+  bool state = false;
+  int last_index = 0;
+  int audio_index = 0;
+
+  void changeState(bool states) {
+    state = states;
+    notifyListeners();
+  }
+
+  Future<void> play_audio({int index = 0, scrollC, list, type}) async {
+    try {
+      player = AudioPlayer();
+      if (last_index != 0) {
+        index = last_index - 1;
+        notifyListeners();
+      }
+      changeState(true);
+
+      int audio_index = index;
+      audio_index = last_index;
+      String next_audio = list[audio_index].audio;
       audio_index++;
-      final player = AudioPlayer();
-      await player.setUrl(next_audio);
+
+      player.setUrl(next_audio);
       await player.play();
-      scrollC.scrollToIndex(audio_index, preferPosition: AutoScrollPosition.begin);
-    }
-  } catch (e) {
-    print("Connection aborted:");
-  }
-}
-
-class AudioPlayerFunction with ChangeNotifier {
-  final player = AudioPlayer();
-  bool hardStop = false;
-
-  Future<void> playAudio(url, index) async {
-    if (url != null) {
-      try {
-        if (index < 50) {
-          int index_plus = index + 1;
-          // await playAudio(url , index_plus);
-          // await player.setUrl(url);
+      await scrollC.scrollToIndex(index + 1);
+      if (state == false) {
+        if (index <= list.length - 1) {
           print(index);
-          print(url);
+          print(list.length - 1);
+          last_index++;
+          await play_audio(
+              index: audio_index, scrollC: scrollC, list: list, type: type);
         }
-      } on PlayerException catch (e) {
-      } on PlayerInterruptedException catch (e) {
-      } catch (e) {}
-    } else {}
+        notifyListeners();
+      }
+    } catch (e) {
+      print("Connection aborted:");
+    }
   }
 
-// void dispose() {
-//   player.stop();
-//   player.dispose();
-//   dispose();
-// }
+  Future<void> play_audio_offline(
+      {int index = 0, scrollC, list, type, number}) async {
+    try {
+    //to add 0 00 before number to be the same of audio file name
+      number=number.padLeft(3, '0');
+      if (last_index != 0) {
+        index = last_index;
+        notifyListeners();
+      }
+      changeState(true);
+      player = AudioPlayer();
+      audio_index = index;
+      audio_index++;
+      await player.setAsset(audio_index < 10
+          ? 'assets/audio/${number}00${audio_index.toString()}.mp3'
+          : audio_index < 100
+              ? 'assets/audio/${number}0${audio_index.toString()}.mp3'
+              : 'assets/audio/${number.toString()}${audio_index.toString()}.mp3');
+      await player.play();
+      await scrollC.scrollToIndex(index + 1);
+      print(audio_index.toString() + "_____" + list.length.toString());
+      if (state == true && audio_index < list.length) {
+        last_index++;
+        await play_audio_offline(
+            index: audio_index,
+            scrollC: scrollC,
+            list: list,
+            type: type,
+            number: number);
+        notifyListeners();
+      } else if (state == false) {
+        print('state is false');
+      } else {
+        print("completed");
+        changeState(false);
+        index = 0;
+        last_index = 0;
+        audio_index = 0;
+        player.dispose();
+        notifyListeners();
+      }
+    } catch (e) {
+      print("Connection aborted:");
+    }
+  }
+
+  Future<void> pauseAudio() async {
+    try {
+      changeState(false);
+      await player.pause();
+      notifyListeners();
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  Future<void> stopAudio() async {
+    try {
+      changeState(false);
+      await player.pause();
+      last_index = 0;
+      audio_index = 0;
+      notifyListeners();
+    } catch (e) {
+      print(e);
+    }
+  }
 }
-
-///////////////////
-
-// final player = AudioPlayer();
-//
-// bool hardStop = false;
-//
-// Future<void> playAudio(Surah surah, int index, AutoScrollController scrollC) async {
-//   Ayat ayat = surah.ayat![index];
-//   if (ayat.audio != null) {
-//     try {
-//       await stopAudio(ayat);
-//       hardStop = false;
-//       tabC.animateTo(
-//         114 - surah.id!,
-//         duration: Duration(milliseconds: 500),
-//       );
-//       await Future.delayed(Duration(milliseconds: 500));
-//       scrollC.scrollToIndex(
-//         index + 2,
-//         duration: Duration(milliseconds: 500),
-//         preferPosition: AutoScrollPosition.begin,
-//       );
-//
-//       if (lastAyat != null) {
-//         // SUDAH PERNAH PLAY
-//         // print("STOP AUDIO...");
-//         // print(">> SUDAH PERNAH PLAY");
-//         ayat.kondisiAudio = "stop"; // jaga2 saja
-//         lastAyat!.kondisiAudio = "stop";
-//         await player.stop();
-//         update();
-//       }
-//
-//       lastAyat = ayat;
-//       await player.setUrl(ayat.audio!);
-//       ayat.kondisiAudio = "playing";
-//       update();
-//       // print("SEDANG MULAI MEMUTAR AUDIO...");
-//       await player.play();
-//       // print("STOP AUDIO...");
-//       ayat.kondisiAudio = "stop";
-//       update();
-//
-//       // NEXT AUDIO
-//       if (hardStop == false) {
-//         if (index < surah.totalAyat! - 1) {
-//           await playAudio(surah, index + 1, scrollC);
-//         }
-//       }
-//     } on PlayerException catch (e) {
-//       Get.defaultDialog(
-//         title: "Terjadi Kesalahan",
-//         middleText: e.message.toString(),
-//       );
-//     } on PlayerInterruptedException catch (e) {
-//       Get.defaultDialog(
-//         title: "Terjadi Kesalahan",
-//         middleText: "Connection aborted: ${e.message}",
-//       );
-//     } catch (e) {
-//       Get.defaultDialog(
-//         title: "Terjadi Kesalahan",
-//         middleText: "Tidak dapat play audio.",
-//       );
-//     }
-//   } else {
-//     Get.defaultDialog(
-//       title: "Terjadi Kesalahan",
-//       middleText: "URL Audio tidak ada / tidak dapat diakses.",
-//     );
-//   }
-// }
-
-// void pauseAudio(Ayat ayat) async {
-//   try {
-//     // print("PAUSE AUDIO...");
-//     hardStop = true;
-//     await player.pause();
-//     ayat.kondisiAudio = "pause";
-//     update();
-//   } on PlayerException catch (e) {
-//     Get.defaultDialog(
-//       title: "Terjadi Kesalahan",
-//       middleText: e.message.toString(),
-//     );
-//   } on PlayerInterruptedException catch (e) {
-//     Get.defaultDialog(
-//       title: "Terjadi Kesalahan",
-//       middleText: "Connection aborted: ${e.message}",
-//     );
-//   } catch (e) {
-//     Get.defaultDialog(
-//       title: "Terjadi Kesalahan",
-//       middleText: "Tidak dapat pause audio.",
-//     );
-//   }
-// }
-//
-// void resumeAudio(Surah surah, int index, AutoScrollController scrollC) async {
-//   Ayat ayat = surah.ayat![index];
-//   try {
-//     // print("RESUME AUDIO...");
-//     hardStop = false;
-//     ayat.kondisiAudio = "playing";
-//     update();
-//     await player.play();
-//     ayat.kondisiAudio = "stop";
-//     update();
-//
-//     // NEXT AUDIO
-//     if (hardStop == false) {
-//       if (index < surah.totalAyat! - 1) {
-//         await playAudio(surah, index + 1, scrollC);
-//       }
-//     }
-//   } on PlayerException catch (e) {
-//     Get.defaultDialog(
-//       title: "Terjadi Kesalahan",
-//       middleText: e.message.toString(),
-//     );
-//   } on PlayerInterruptedException catch (e) {
-//     Get.defaultDialog(
-//       title: "Terjadi Kesalahan",
-//       middleText: "Connection aborted: ${e.message}",
-//     );
-//   } catch (e) {
-//     Get.defaultDialog(
-//       title: "Terjadi Kesalahan",
-//       middleText: "Tidak dapat resume audio.",
-//     );
-//   }
-// }
-//
-// Future<void> stopAudio(Ayat ayat) async {
-//   try {
-//     hardStop = true;
-//     await player.stop();
-//     ayat.kondisiAudio = "stop";
-//     update();
-//   } on PlayerException catch (e) {
-//     Get.defaultDialog(
-//       title: "Terjadi Kesalahan",
-//       middleText: e.message.toString(),
-//     );
-//   } on PlayerInterruptedException catch (e) {
-//     Get.defaultDialog(
-//       title: "Terjadi Kesalahan",
-//       middleText: "Connection aborted: ${e.message}",
-//     );
-//   } catch (e) {
-//     Get.defaultDialog(
-//       title: "Terjadi Kesalahan",
-//       middleText: "Tidak dapat stop audio.",
-//     );
-//   }
-// }

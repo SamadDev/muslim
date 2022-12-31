@@ -39,22 +39,41 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: 270,
+              width: double.infinity,
               child: Stack(
                 alignment: Alignment.topCenter,
+                fit: StackFit.passthrough,
                 children: [
                   Image.asset(
                     'assets/images/shape1.png',
-                    height: 230,fit: BoxFit.contain,
-                    width: double.infinity,
+                    height: 230,
+                    fit: BoxFit.contain,
+                    width: MediaQuery.of(context).size.width,
                   ),
-                  Positioned(bottom: 55,child: Text('04:45 asr',style: textTheme(context).headline2,)),
-                  Positioned(bottom: 20,child: Text('Tuesday, 21 May',style: textTheme(context).headline4,)),
-                  Positioned(bottom: 0,child: Text('16 RAMADAN 1443 AH',style: textTheme(context).headline6,))
+                  Positioned(
+                      bottom: 55,
+                      child: Text(
+                        '04:45 asr',
+                        style: textTheme(context).headline2,
+                      )),
+                  Positioned(
+                      bottom: 20,
+                      child: Text(
+                        'Tuesday, 21 May',
+                        style: textTheme(context).headline4,
+                      )),
+                  Positioned(
+                      bottom: 0,
+                      child: Text(
+                        '16 RAMADAN 1443 AH',
+                        style: textTheme(context).headline6,
+                      ))
                 ],
               ),
             ),
-            SizedBox(height: 25,),
+            SizedBox(
+              height: 25,
+            ),
             Row(
               children: [
                 Expanded(
@@ -63,16 +82,20 @@ class HomePage extends StatelessWidget {
                 Expanded(
                     child: CartIcon(text: 'دوعا', icon: '88.svg', route: '')),
                 Expanded(
-                    child: CartIcon(text: 'قورئان', icon: '99.svg', route: SurahScreen()))
+                    child: CartIcon(
+                        text: 'قورئان', icon: '99.svg', route: SurahScreen()))
               ],
             ),
             Row(
               children: [
                 Expanded(
-                    child: CartIcon(text: 'وێردەکان', icon: '44.svg', route: AzkarTitleScreen())),
+                    child: CartIcon(
+                        text: 'وێردەکان',
+                        icon: '44.svg',
+                        route: AzkarTitleScreen())),
                 Expanded(
                     child: CartIcon(
-                        text: 'رۆژمێری هیجری', icon: '55.svg', route: '')),
+                        text: 'رۆژمێری هیجری', icon: '55.svg', route: HijriDatePicker())),
                 Expanded(
                     child:
                         CartIcon(text: 'مزگەوتەکان', icon: '66.svg', route: ''))
@@ -81,23 +104,29 @@ class HomePage extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                    child: CartIcon(text: 'تەسبیح', icon: '11.svg', route: TasbiScreen())),
+                    child: CartIcon(
+                        text: 'تەسبیح', icon: '11.svg', route: TasbiScreen())),
                 Expanded(
-                    child:
-                        CartIcon(text: 'دەربارە', icon: '22.svg', route: '')),
+                    child: CartIcon(
+                        text: 'پرسیار و وڵام', icon: '22.svg', route: '')),
                 Expanded(
-                    child: CartIcon(text: 'قیبلە', icon: '33.svg', route: QiblahCompass()))
+                    child: CartIcon(
+                        text: 'قیبلە', icon: '33.svg', route: QiblahCompass()))
               ],
             ),
             Row(
               children: [
                 Expanded(
-                    child: CartIcon(text: 'تەسبیح', icon: '11.svg', route: TasbiScreen())),
+                    child: CartIcon(
+                        text: 'کتێبخانە',
+                        icon: '11.svg',
+                        route: TasbiScreen())),
                 Expanded(
                     child:
-                    CartIcon(text: 'دەربارە', icon: '22.svg', route: '')),
+                        CartIcon(text: 'دەربارە', icon: '22.svg', route: '')),
                 Expanded(
-                    child: CartIcon(text: 'قیبلە', icon: '33.svg', route: QiblahCompass()))
+                    child: CartIcon(
+                        text: 'زەکات', icon: '33.svg', route: QiblahCompass()))
               ],
             ),
           ],
@@ -119,8 +148,8 @@ class CartIcon extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(1.0),
       child: GestureDetector(
-        onTap: (){
-          Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>route));
+        onTap: () {
+          navigatorRouteAnimation(context: context, page: route);
         },
         child: Container(
             height: 110,
@@ -141,7 +170,9 @@ class CartIcon extends StatelessWidget {
                 ),
                 Text(
                   text,
-                  style: textTheme(context).headline6,
+                  style: textTheme(context)
+                      .headline6!
+                      .copyWith(color: AppTheme.text),
                 )
               ],
             )),
