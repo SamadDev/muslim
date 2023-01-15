@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamic360/Utils/exports.dart';
 
-
 class AzkarTitleWidget extends StatelessWidget {
   final AzkarTitle title;
   final index;
@@ -10,14 +9,24 @@ class AzkarTitleWidget extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        navigatorRouteAnimation(context: context,page: AzkarContent(dihikrId: int.parse(title.num!),title: title.name,));
+      onTap: () {
+        navigatorRouteAnimation(
+            context: context,
+            page: AzkarContent(
+              dihikrId: int.parse(title.num!),
+              title: title.name,
+            ));
       },
-      child: ListTile(
-        leading: StarIcon(image: 'octagonal_1.svg', number_ayah: index + 1),
-        title: Text(
-          title.name!,
-          style: textTheme(context).headline4,
+      child: Container(
+        margin: EdgeInsets.only(right: 10, left: 10),
+        decoration: BoxDecoration(
+            color: AppTheme.white, borderRadius: BorderRadius.circular(10)),
+        child: ListTile(
+          leading: StarIcon(image: 'octagonal_1.svg', number_ayah: index + 1),
+          title: Text(
+            title.name!,
+            style: textTheme(context).headline4,
+          ),
         ),
       ),
     );

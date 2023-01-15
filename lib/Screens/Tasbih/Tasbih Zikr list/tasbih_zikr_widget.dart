@@ -9,7 +9,7 @@ class TasbihZikrListWidget extends StatelessWidget {
   TasbihZikrListWidget({this.tasbih, this.index});
 
   Widget build(BuildContext context) {
-    final data=Provider.of<TasbihSever>(context,listen:false);
+    final data = Provider.of<TasbihSever>(context, listen: false);
     return GestureDetector(
       onTap: () {
         navigatorRouteAnimation(
@@ -20,22 +20,19 @@ class TasbihZikrListWidget extends StatelessWidget {
         data.resetCount();
       },
       child: Container(
-        color: AppTheme.cart,
+        decoration: BoxDecoration(
+            color: AppTheme.white, borderRadius: BorderRadius.circular(10)),
         child: ListTile(
           title: Text(
             tasbih!.zikr!,
-            style: textTheme(context)
-                .bodyText1!
-                .copyWith(color: AppTheme.white_think),
-          ) ,
-          leading: StarIcon(number_ayah: index + 1, image: 'octagonal_1.svg') ,
+            style: textTheme(context).headline3,
+          ),
+          leading: StarIcon(number_ayah: index + 1, image: 'octagonal_1.svg'),
           subtitle: Text(
             "هیچ خودایەک نیەک نیە بەقەد ئەو گەورەبێت",
-            style:
-            textTheme(context).headline5,
+            style: textTheme(context).headline5,
           ),
         ),
-
       ),
     );
   }

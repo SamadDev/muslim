@@ -17,10 +17,18 @@ class TasbiScreen extends StatelessWidget {
               navigatorRouteAnimation(
                   context: context, page: TasbihZikrScreen());
             },
-            icon: Icon(Icons.tonality_outlined,size: 25,)),
-        IconButton(onPressed: () {
-          data.resetCount();
-        }, icon: Icon(Icons.refresh,size: 25,))
+            icon: Icon(
+              Icons.change_circle,
+              size: 35,
+            )),
+        IconButton(
+            onPressed: () {
+              data.resetCount();
+            },
+            icon: Icon(
+              Icons.refresh_outlined,
+              size: 35,
+            ))
       ]),
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,
@@ -34,24 +42,24 @@ class TasbiScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-
               Padding(
-                padding: const EdgeInsets.only(top:35.0,right: 8,left: 8),
+                padding: const EdgeInsets.only(top: 35.0, right: 8, left: 8),
                 child: Container(
                   child: Text(
                     zikr ?? "الستغفر اللە",
-                    style: textTheme(context)
-                        .headline1!
-                        .copyWith(color: AppTheme.white_think, fontFamily: 'noor'),
+                    style: textTheme(context).headline1!.copyWith(
+                        color: AppTheme.secondary, fontFamily: 'noor'),
                   ),
                 ),
               ),
-              SizedBox(height: 15,),
+              SizedBox(
+                height: 15,
+              ),
               Text(
                 "${data.count}",
                 style: textTheme(context)
                     .headline1!
-                    .copyWith(color: AppTheme.white_think),
+                    .copyWith(color: AppTheme.secondary),
               )
             ],
           ),

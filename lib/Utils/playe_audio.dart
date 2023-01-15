@@ -15,6 +15,7 @@ class Audio with ChangeNotifier {
 
   Future<void> play_audio({int index = 0, scrollC, list, type}) async {
     try {
+      print('run');
       player = AudioPlayer();
       if (last_index != 0) {
         index = last_index - 1;
@@ -48,8 +49,8 @@ class Audio with ChangeNotifier {
   Future<void> play_audio_offline(
       {int index = 0, scrollC, list, type, number}) async {
     try {
-    //to add 0 00 before number to be the same of audio file name
-      number=number.padLeft(3, '0');
+      //to add 0 00 before number to be the same of audio file name
+      number = number.padLeft(3, '0');
       if (last_index != 0) {
         index = last_index;
         notifyListeners();

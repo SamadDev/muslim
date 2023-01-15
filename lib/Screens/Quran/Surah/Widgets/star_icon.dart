@@ -5,8 +5,7 @@ import 'package:islamic360/Theme/style.dart';
 class StarIcon extends StatelessWidget {
   final number_ayah;
   final image;
-  StarIcon({this.number_ayah,this.image});
-
+  StarIcon({this.number_ayah, this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,7 @@ class StarIcon extends StatelessWidget {
         ),
         Text(
           number_ayah.toString(),
-          style: textTheme(context).headline6!.copyWith(color: AppTheme.white),
+          style: textTheme(context).headline6,
         )
       ],
     );

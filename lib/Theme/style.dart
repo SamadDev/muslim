@@ -5,39 +5,34 @@ ThemeData colorTheme(BuildContext context) => Theme.of(context);
 TextTheme textTheme(BuildContext context) => Theme.of(context).textTheme;
 
 class AppTheme {
-  static const Color cart = Color(0xff031c20);
-  static const Color primary = Color(0xff032c32);
-  // static const Color cart = Color(0xff002e28);
-  // static const Color primary = Color(0xff003d34);
-  static const Color secondary = Color(0xffeac68e);
-  static const Color text = Color(0xffffe19c);
-  static const Color white_think = Color(0xfffdfbf2);
+  static const Color cart = Color.fromARGB(255, 206, 240, 231);
+  static const Color secondary = Color(0xff2ac391);
+  static const Color primary = Color(0xffe2ecea);
+  static const Color text = Color(0xff2ac391);
+  static const Color grey = Colors.grey;
   static const Color orange = Color(0xfffea41b);
-  static const Color black1 = Color(0xffe1e7ec);
-  static const Color black2 = Color(0xffe4e8eb);
-  static const Color black3 = Color(0xffd2d2d2);
   static const Color black = Colors.black;
-  static Color black4 = Color(0xff3e3e3e).withOpacity(0.2);
   static const Color red = Colors.red;
 
   static Color transparent = Colors.transparent;
-  static const Color white = Colors.white;
+  static const Color white = Color(0xffffffff);
 
   //light theme of the application
   static final ThemeData lightTheme = ThemeData(
       indicatorColor: primary,
       primarySwatch: Colors.teal,
       primaryColorLight: primary,
-      cardColor: AppTheme.black2,
+      cardColor: AppTheme.white,
       scaffoldBackgroundColor: primary,
       backgroundColor: primary,
       brightness: Brightness.light,
       textTheme: lightTextTheme,
       appBarTheme: AppBarTheme(
-        iconTheme: IconThemeData(color: AppTheme.secondary),
-        color: AppTheme.primary,
-        elevation: 0.5,
-      ));
+          iconTheme: IconThemeData(color: AppTheme.secondary),
+          color: AppTheme.primary,
+          elevation: 0.5,
+          titleSpacing: 0,
+          titleTextStyle: _headline2.copyWith(color: secondary)));
 
   //Light dark theme of the application
   static final TextTheme lightTextTheme = TextTheme(
@@ -55,10 +50,10 @@ class AppTheme {
   );
 
   static final TextStyle _headline1 = TextStyle(
-    color: AppTheme.text,
+    color: AppTheme.primary,
     fontWeight: FontWeight.w700,
     fontFamily: 'amir',
-    fontSize: 35,
+    fontSize: 40,
   );
 
   static final TextStyle _headline2 = TextStyle(
@@ -69,48 +64,48 @@ class AppTheme {
   );
 
   static final TextStyle _headline3 = TextStyle(
-    color: AppTheme.white_think,
+    color: AppTheme.black,
     fontWeight: FontWeight.w700,
     fontFamily: 'amir',
     fontSize: 20,
   );
   static final TextStyle _headline4 = TextStyle(
-    color: AppTheme.white_think,
+    color: AppTheme.black,
     fontWeight: FontWeight.w400,
     fontFamily: 'nrt',
-    fontSize: 18,
+    fontSize: 17,
   );
   static final TextStyle _headline5 = TextStyle(
-    fontFamily: 'amir',
-    color: AppTheme.white_think,
+    fontFamily: 'nrt',
+    color: AppTheme.black,
     fontWeight: FontWeight.w500,
     fontSize: 15,
   );
 
   static final TextStyle _headline6 = TextStyle(
     fontFamily: 'nrt',
-    color: AppTheme.white_think,
+    color: AppTheme.grey,
     fontWeight: FontWeight.w500,
     fontSize: 12,
   );
   static final TextStyle _button = TextStyle(
     fontFamily: 'nrt',
-    color: AppTheme.white,
+    color: AppTheme.black,
     fontWeight: FontWeight.w700,
     fontSize: 20,
   );
 
   static final TextStyle _subtitle1 = TextStyle(
     fontFamily: 'nrt',
-    color: AppTheme.white,
+    color: AppTheme.black,
     fontWeight: FontWeight.w400,
     fontSize: 14,
   );
 
   static final TextStyle _bodyText1 = TextStyle(
-    fontFamily: 'amir',
+    fontFamily: 'quran',
     color: AppTheme.black.withOpacity(0.8),
-    fontSize: 25,
+    fontSize: 28,
   );
   static final TextStyle _bodyText2 = TextStyle(
     fontFamily: 'noor',
@@ -119,7 +114,7 @@ class AppTheme {
   );
   static final TextStyle _caption = TextStyle(
     fontFamily: 'nrt',
-    color: AppTheme.black1,
+    color: AppTheme.black,
     fontWeight: FontWeight.w400,
     fontSize: 10,
   );

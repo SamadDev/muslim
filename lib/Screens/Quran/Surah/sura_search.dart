@@ -7,30 +7,28 @@ class SurahSearch extends StatelessWidget {
     final data = Provider.of<QuranServes>(context, listen: false);
     final controller = TextEditingController();
     return Scaffold(
-      appBar: AppBar(actions: [
-        Container(
-          width: 300,
-          child: TextField(
-            controller: controller,
-            textInputAction: TextInputAction.search,
-            style: Theme.of(context).textTheme.headline3,
-            onSubmitted: (value) {
-              data.search_surah(value);
-            },
-            onChanged: (value) {
-              data.search_surah(value);
-            },
-            decoration: InputDecoration(
-              contentPadding: EdgeInsets.only(bottom: 5),
-              border: InputBorder.none,
-              hintStyle: Theme.of(context)
-                  .textTheme
-                  .headline6,
-              hintText: "گەران...",
-            ),
-          ),
-        )
-      ]),
+      appBar: AppBar(
+          title: TextField(
+        cursorColor: AppTheme.black,
+        controller: controller,
+        textInputAction: TextInputAction.search,
+        style: Theme.of(context).textTheme.headline4,
+        onSubmitted: (value) {
+          data.search_surah(value);
+        },
+        onChanged: (value) {
+          data.search_surah(value);
+        },
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.only(bottom: 5),
+          border: InputBorder.none,
+          hintStyle: Theme.of(context)
+              .textTheme
+              .headline4!
+              .copyWith(color: AppTheme.black.withOpacity(0.5)),
+          hintText: "گەران بکە بۆ ناو ژمارە...",
+        ),
+      )),
       body: FutureBuilder(
         future: data.getQuran(),
         builder: (context, snapshot) {
@@ -47,7 +45,7 @@ class SurahSearch extends StatelessWidget {
                                 controller.text.isEmpty
                             ? HelperScreen(
                                 icon: Icons.search,
-                                text: ' گەران بکە بە پێی ناو و ژمارەی سورەت',
+                                text: ' تاکایە کیبۆردی عەرەبی بەکارەبێنە',
                               )
                             : ListView.separated(
                                 padding: EdgeInsets.only(top: 5, bottom: 5),

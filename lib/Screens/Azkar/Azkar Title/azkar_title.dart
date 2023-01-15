@@ -6,11 +6,9 @@ class AzkarTitleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final get = Provider.of<Azkar_title_Server>(context, listen: false);
-    TextEditingController controller=TextEditingController();
-    print(controller.text);
+    TextEditingController controller = TextEditingController();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
         actions: [
           Padding(
             padding:
@@ -27,41 +25,43 @@ class AzkarTitleScreen extends StatelessWidget {
         ],
         title: Text(
           'وێردەکان',
-          style: textTheme(context).headline4,
         ),
       ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 12.0, left: 12),
-            child: Container(
-              decoration: BoxDecoration(
-                  color: AppTheme.white_think,
-                  borderRadius: BorderRadius.circular(15)),
-              child: Consumer<Azkar_title_Server>(
-                  builder: (ctx, data, _) => TextField(
-                    controller:controller,
-                        style: textTheme(context)
-                            .headline6!
-                            .copyWith(color: AppTheme.black.withOpacity(0.7)),
-                        decoration: InputDecoration(
+          Container(
+            padding: EdgeInsets.all(2),
+            margin: EdgeInsets.all(6),
+            decoration: BoxDecoration(
+                color: AppTheme.secondary,
+                borderRadius: BorderRadius.circular(15)),
+            child: Consumer<Azkar_title_Server>(
+                builder: (ctx, data, _) => TextField(
+                      cursorColor: AppTheme.white,
+                      controller: controller,
+                      style: textTheme(context)
+                          .headline4!
+                          .copyWith(color: AppTheme.white),
+                      decoration: InputDecoration(
                           labelStyle: textTheme(context).headline4,
-                            hintText: 'گەڕان بکە بۆ زیکر....',
-                            hintStyle: Theme.of(context).textTheme.headline6!.copyWith(color: AppTheme.cart),
-                            border: InputBorder.none,
-                            prefixIcon: IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.search,
-                                  color: AppTheme.cart,
-                                  size: 30,
-                                )),
-                            contentPadding: EdgeInsets.all(12)),
-                        onChanged: (value) {
-                          data.search_surah(value);
-                        },
-                      )),
-            ),
+                          hintText: 'گەڕان بکە بۆ زیکر....',
+                          hintStyle: Theme.of(context)
+                              .textTheme
+                              .headline4!
+                              .copyWith(color: AppTheme.white),
+                          border: InputBorder.none,
+                          prefixIcon: IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.search,
+                                size: 25,
+                                color: AppTheme.white,
+                              )),
+                          contentPadding: EdgeInsets.all(13)),
+                      onChanged: (value) {
+                        data.search_surah(value);
+                      },
+                    )),
           ),
           FutureBuilder(
             future: get.getAzkarTitle(),
@@ -80,11 +80,13 @@ class AzkarTitleScreen extends StatelessWidget {
                             separatorBuilder: (ctx, c) => Divider(
                                   color: AppTheme.white.withOpacity(0.1),
                                 ),
-                            itemCount: title.search_azkar_title.length == 0||controller.text.isEmpty
+                            itemCount: title.search_azkar_title.length == 0 ||
+                                    controller.text.isEmpty
                                 ? title.azkar_title_list.length
                                 : title.search_azkar_title.length,
                             itemBuilder: (ctx, i) => AzkarTitleWidget(
-                                  title: title.search_azkar_title.length == 0||controller.text.isEmpty
+                                  title: title.search_azkar_title.length == 0 ||
+                                          controller.text.isEmpty
                                       ? title.azkar_title_list[i]
                                       : title.search_azkar_title[i],
                                   index: i,

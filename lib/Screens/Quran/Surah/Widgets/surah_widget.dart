@@ -16,7 +16,10 @@ class QuranListWidget extends StatelessWidget {
                 )));
       },
       child: Container(
-        height: 80,
+        margin: EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+        decoration: BoxDecoration(
+            color: AppTheme.white, borderRadius: BorderRadius.circular(20)),
+        height: 100,
         child: ListTile(
             leading:
                 StarIcon(number_ayah: surah.number, image: 'octagonal_1.svg'),

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:islamic360/Utils/exports.dart';
-import 'package:islamic360/test1.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
-import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
+// import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
 
-
-void main()async{
+void main() async {
   runApp(const MyApps());
 }
 
@@ -28,15 +26,25 @@ class MyApps extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => QuranServes()),
         ChangeNotifierProvider(create: (_) => TafsirServes()),
         ChangeNotifierProvider(create: (_) => LocalStorage()),
-        ChangeNotifierProvider(create: (_)=>Audio(),),
-        ChangeNotifierProvider(create: (_)=>Saved(),),
-        ChangeNotifierProvider(create: (_) => AzkarServer(),),
-        ChangeNotifierProvider(create: (_) => Azkar_title_Server(),),
-        ChangeNotifierProvider(create: (_) => TasbihSever(),),
+        ChangeNotifierProvider(create: (_) => DuaServse()),
+        ChangeNotifierProvider(
+          create: (_) => Audio(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => Saved(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => AzkarServer(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => Azkar_title_Server(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => TasbihSever(),
+        ),
       ],
       child: Sizer(
-          builder: (context, orientation, deviceType)=>
-         MaterialApp(
+        builder: (context, orientation, deviceType) => MaterialApp(
           builder: (ctx, child) {
             return Directionality(
                 textDirection: TextDirection.rtl, child: child!);
@@ -44,7 +52,7 @@ class MyApps extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: AppTheme.lightTheme,
-          home:HomePage(),
+          home: ButtonNavigationScreen(),
         ),
       ),
     );

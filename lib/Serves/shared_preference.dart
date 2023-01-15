@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LocalStorage with ChangeNotifier {
-  bool is_kurdish_tafsir = false;
+  bool is_kurdish_tafsir = true;
   bool is_arabic_tafsir = false;
   bool is_english_tafsir = false;
   double quran_font_size = 25.0;
@@ -22,15 +22,17 @@ class LocalStorage with ChangeNotifier {
     is_kurdish_tafsir = preferences.getBool("is_kurdish_tafsir")!;
     preferences.getBool("is_arabic_tafsir");
     preferences.getBool("is_english_tafsir");
-    quran_font_size = preferences.getDouble("quran_font_size")??25;
-    kurdish_tafsir_font_size= preferences.getDouble("kurdish_tafsir_font_size")??20;
+    quran_font_size = preferences.getDouble("quran_font_size") ?? 25;
+    kurdish_tafsir_font_size =
+        preferences.getDouble("kurdish_tafsir_font_size") ?? 20;
     preferences.getDouble("arabic_tafsir_font_size");
     preferences.getDouble("english_tafsir_font_size");
     //__for zikr
-   zikr_is_kurdish_tafsir= preferences.getBool("zikr_is_kurdish_tafsir")!;
+    zikr_is_kurdish_tafsir = preferences.getBool("zikr_is_kurdish_tafsir")!;
     preferences.getBool("zikr_is_english_tafsir");
-    zikr_font_size=preferences.getDouble("zikr_font_size")!;
-   zikr_kurdish_tafsir_font_size= preferences.getDouble("zikr_kurdish_tafsir_font_size")!;
+    zikr_font_size = preferences.getDouble("zikr_font_size")!;
+    zikr_kurdish_tafsir_font_size =
+        preferences.getDouble("zikr_kurdish_tafsir_font_size")!;
     preferences.getDouble("zikr_english_tafsir_font_size");
     notifyListeners();
   }

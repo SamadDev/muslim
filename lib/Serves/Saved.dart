@@ -26,29 +26,53 @@ class Data {
 }
 
 class Saved with ChangeNotifier {
-  List<Data> _saved_list = [];
-
-  List<Data> get list => _saved_list;
+  Data? data;
+  bool isTafsir = true;
 
   Future<void> getSaved() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    List<dynamic> data = await jsonDecode(preferences.getString('save')!) ?? [];
-    _saved_list = data.map((e) => Data.fromJson(e)).toList();
+    try {
+      SharedPreferences preferences = await SharedPreferences.getInstance();
+      if (preferences.getString('save') != null) {
+        var res = await jsonDecode(preferences.getString('save')!);
+        data = Data.fromJson(res);
+      } else {
+        data = Data(ayah: '1', index: '1', surah: 'ٱلْفَاتِحَةِ');
+      }
+    } catch (e) {
+      print(e);
+    }
     notifyListeners();
   }
 
   Future<void> setSaved(Data value) async {
-    _saved_list.add(value);
     SharedPreferences preferences = await SharedPreferences.getInstance();
-    preferences.setString('save', jsonEncode(_saved_list));
+    preferences.setString('save', jsonEncode(value));
     notifyListeners();
   }
 
-  Future<void> removeSaved(index) async {
-    int i = _saved_list.indexWhere((element) => element.index == index);
-    _saved_list.removeAt(i);
+  Future<void> removeSaved() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
-    preferences.setString('save', jsonEncode(_saved_list));
+    await preferences.remove('save');
+    // preferences.clear();
+    notifyListeners();
+  }
+
+  Future<void> getTafsir() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    final test = preferences.getBool('tafsir') ?? false;
+    print(test);
+  }
+
+  Future<void> setTafsir() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    final test = preferences.setBool('tafsir', isTafsir);
+    print(test);
+  }
+
+  Future<void> removeTafsir() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    await preferences.remove('tafsir');
+    // preferences.clear();
     notifyListeners();
   }
 }

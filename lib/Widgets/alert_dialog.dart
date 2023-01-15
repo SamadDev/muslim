@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:islamic360/Theme/style.dart';
 
 class AlertDialogWidget extends StatelessWidget {
   AlertDialogWidget({this.title, this.child, this.onPress, this.onPress1});
@@ -12,13 +11,16 @@ class AlertDialogWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return StatefulBuilder(builder: (context, setState) {
       return AlertDialog(
-        backgroundColor: AppTheme.primary,
         insetPadding: EdgeInsets.zero,
         contentPadding: EdgeInsets.zero,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
         title: new Text(
           title,
-          style: Theme.of(context).textTheme.headline3!.copyWith(decoration: TextDecoration.underline),
+          style: Theme.of(context).textTheme.headline3!.copyWith(
+              decoration: TextDecoration.underline,
+              fontFamily: 'nrt',
+              // color: AppTheme.black,
+              fontWeight: FontWeight.w500),
         ),
         content: child,
         actions: <Widget>[
@@ -31,23 +33,12 @@ class AlertDialogWidget extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30.0),
                     )),
                   ),
-                  onPressed: onPress,
-                  child: Text("ریسێت",
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text("گەرانەوە",
                       style: Theme.of(context).textTheme.headline4)),
-              SizedBox(
-                width: 5,
-              ),
-              OutlinedButton(
-                style: ButtonStyle(
-                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                ))),
-                child: Text("گەرانەو",
-                    style: Theme.of(context).textTheme.headline5),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              )
+              Spacer()
             ],
           ),
         ],

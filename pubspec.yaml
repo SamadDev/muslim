@@ -42,7 +42,6 @@ dev_dependencies:
   provider:
   shared_preferences:
   flutter_staggered_animations: ^1.1.1
-  carousel_slider:
   flutter_qiblah:
   just_audio:
   scroll_to_index: ^3.0.1
@@ -51,7 +50,8 @@ dev_dependencies:
   audioplayers: ^1.1.1
   syncfusion_flutter_datepicker: ^20.3.52
   android_alarm_manager_plus: ^2.1.0
-  grouped_list: ^5.1.2
+  flutter_snake_navigationbar: ^0.6.1
+  al_downloader: ^1.6.6
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -76,7 +76,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/jsons/
-    - assets/audio/
+    # - assets/audio/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
@@ -124,6 +124,10 @@ flutter:
     - family: amir
       fonts:
         - asset: assets/fonts/Amir.ttf
+
+    - family: quran1
+      fonts:
+        - asset: assets/fonts/quran1.ttf
   #Amir
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

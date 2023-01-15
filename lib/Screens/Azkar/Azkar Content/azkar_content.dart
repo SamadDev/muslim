@@ -9,25 +9,27 @@ class AzkarContent extends StatelessWidget {
   AzkarContent({this.dihikrId, this.title});
 
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     final data = Provider.of<AzkarServer>(context, listen: false);
     return Scaffold(
-      backgroundColor: AppTheme.white_think,
-      floatingActionButton: FloatingActionButton(onPressed: (){
-       final test= Provider.of<LocalStorage>(context,listen: false);
-        test.fetch_local();
-        print(test.zikr_is_kurdish_tafsir);
-      },),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          final test = Provider.of<LocalStorage>(context, listen: false);
+          test.fetch_local();
+        },
+      ),
       appBar: AppBar(
           title: Text(
             title,
-            style: textTheme(context).headline4,
+            style: textTheme(context)
+                .headline4!
+                .copyWith(color: AppTheme.secondary),
           ),
           actions: [
             IconButton(
                 onPressed: () {},
                 icon: Icon(
-                  Icons.save,
-                  color: AppTheme.secondary,
+                  Icons.bookmarks_outlined,
                 )),
             IconButton(
                 onPressed: () {
@@ -36,7 +38,7 @@ class AzkarContent extends StatelessWidget {
                       builder: (ctx) => AlertDialogWidget(
                             title: "رێکخستنەکان",
                             child: Container(
-                              height: 400,
+                              height: size.height * 0.25,
                               child: SingleChildScrollView(
                                 child: Consumer<LocalStorage>(
                                     builder: (ctx, setting, _) => Column(
@@ -45,27 +47,14 @@ class AzkarContent extends StatelessWidget {
                                                 title: Text(
                                                   'پیشاندانی مانای کوردی',
                                                   style: textTheme(context)
-                                                      .headline5,
+                                                      .headline4,
                                                 ),
-                                                value: setting.zikr_is_kurdish_tafsir,
+                                                value: setting
+                                                    .zikr_is_kurdish_tafsir,
                                                 onChanged: (value) {
                                                   setting.change_kurdish_tafisr(
-                                                      value: value,type: 'zikr');
-                                                }),
-
-                                            Divider(
-                                              color: AppTheme.secondary
-                                                  .withOpacity(0.3),
-                                            ),
-                                            SwitchListTile(
-                                                title: Text(
-                                                  'پیشاندانی تەفسیر ئینگلیزی',
-                                                  style: textTheme(context)
-                                                      .headline5,
-                                                ),
-                                                value: setting.zikr_is_english_tafsir,
-                                                onChanged: (value) {
-                                                  setting.change_english_tafisr(value:value,type: "zikr");
+                                                      value: value,
+                                                      type: 'zikr');
                                                 }),
                                             Divider(
                                               color: AppTheme.secondary
@@ -74,13 +63,13 @@ class AzkarContent extends StatelessWidget {
                                             Text(
                                               'قەبارەی نوسینین زیکر',
                                               style:
-                                                  textTheme(context).headline6,
+                                                  textTheme(context).headline5,
                                             ),
                                             Slider(
                                               value: setting.quran_font_size,
                                               onChanged: (value) {
                                                 setting.change_quran_font_size(
-                                                    value: value,type: "zikr");
+                                                    value: value, type: "zikr");
                                               },
                                               min: 10,
                                               max: 100,
@@ -88,7 +77,7 @@ class AzkarContent extends StatelessWidget {
                                             Text(
                                               'قەبارەی نوسینی تەفسیری کوردی',
                                               style:
-                                                  textTheme(context).headline6,
+                                                  textTheme(context).headline5,
                                             ),
                                             Slider(
                                               value: setting
@@ -96,43 +85,11 @@ class AzkarContent extends StatelessWidget {
                                               onChanged: (value) {
                                                 setting
                                                     .change_kurdish_tafsir_font_size(
-                                                        value: value,type:'zikr');
+                                                        value: value,
+                                                        type: 'zikr');
                                               },
                                               label: setting
                                                   .kurdish_tafsir_font_size
-                                                  .toString(),
-                                              min: 10,
-                                              max: 100,
-                                            ),
-                                            Slider(
-                                              value: setting
-                                                  .arabic_tafsir_font_size,
-                                              onChanged: (value) {
-                                                setting
-                                                    .change_arabic_tafsir_font_size(
-                                                        value);
-                                              },
-                                              label: setting
-                                                  .arabic_tafsir_font_size
-                                                  .toString(),
-                                              min: 10,
-                                              max: 50,
-                                            ),
-                                            Text(
-                                              'قەبارەی نوسینین تەفسیری ئینگلێزی',
-                                              style:
-                                                  textTheme(context).headline6,
-                                            ),
-                                            Slider(
-                                              value: setting
-                                                  .english_tafsir_font_size,
-                                              onChanged: (value) {
-                                                setting
-                                                    .change_english_tafsir_font_size(
-                                                        value:value,type: 'zikr');
-                                              },
-                                              label: setting
-                                                  .english_tafsir_font_size
                                                   .toString(),
                                               min: 10,
                                               max: 100,
@@ -145,7 +102,7 @@ class AzkarContent extends StatelessWidget {
                             onPress1: () {},
                           ));
                 },
-                icon: Icon(Icons.settings_outlined)),
+                icon: Icon(Icons.settings)),
           ]),
       body: FutureBuilder(
         future: data.getAzkar(dihikrId: dihikrId),
@@ -159,7 +116,7 @@ class AzkarContent extends StatelessWidget {
               else
                 return Consumer<AzkarServer>(
                     builder: (ctx, azkar, _) => ListView.separated(
-                        padding: EdgeInsets.only(bottom: 5,top: 5),
+                        padding: EdgeInsets.only(bottom: 5, top: 5),
                         separatorBuilder: (ctx, c) => Divider(
                               color: AppTheme.white.withOpacity(0.1),
                             ),

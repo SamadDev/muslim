@@ -13,7 +13,7 @@ class QiblahCompass extends StatefulWidget {
 
 class _QiblahCompassState extends State<QiblahCompass> {
   final _locationStreamController =
-  StreamController<LocationStatus>.broadcast();
+      StreamController<LocationStatus>.broadcast();
 
   get stream => _locationStreamController.stream;
 
@@ -85,9 +85,13 @@ class _QiblahCompassState extends State<QiblahCompass> {
 }
 
 class QiblahCompassWidget extends StatelessWidget {
-  final _compassSvg = SvgPicture.asset('assets/images/compass.svg',color: AppTheme.secondary,);
+  final _compassSvg = SvgPicture.asset(
+    'assets/images/compass.svg',
+    color: AppTheme.secondary,
+  );
   final _needleSvg = SvgPicture.asset(
-    'assets/images/needle.svg',color: AppTheme.black3,
+    'assets/images/needle.svg',
+    color: AppTheme.white,
     fit: BoxFit.contain,
     height: 300,
     alignment: Alignment.center,
