@@ -103,9 +103,8 @@ class AppTheme {
   );
 
   static final TextStyle _bodyText1 = TextStyle(
-    fontFamily: 'quran',
-    color: AppTheme.black.withOpacity(0.8),
-    fontSize: 28,
+    fontFamily: 'amir',
+    fontSize: 30,
   );
   static final TextStyle _bodyText2 = TextStyle(
     fontFamily: 'noor',

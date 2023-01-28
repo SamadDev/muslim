@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:scroll_to_index/scroll_to_index.dart';
 
 class Audio with ChangeNotifier {
   AudioPlayer player = AudioPlayer();
@@ -15,7 +16,6 @@ class Audio with ChangeNotifier {
 
   Future<void> play_audio({int index = 0, scrollC, list, type}) async {
     try {
-      print('run');
       player = AudioPlayer();
       if (last_index != 0) {
         index = last_index - 1;
@@ -30,7 +30,8 @@ class Audio with ChangeNotifier {
 
       player.setUrl(next_audio);
       await player.play();
-      await scrollC.scrollToIndex(index + 1);
+      await scrollC.scrollToIndex(index + 1,
+          preferPosition: AutoScrollPosition.begin);
       if (state == false) {
         if (index <= list.length - 1) {
           print(index);
@@ -89,6 +90,48 @@ class Audio with ChangeNotifier {
       }
     } catch (e) {
       print("Connection aborted:");
+    }
+  }
+
+  Future<void> play_audio_online({int index = 0, scrollC, list, type}) async {
+    try {
+      if (last_index != 0) {
+        index = last_index;
+        notifyListeners();
+        print('last index is $last_index');
+      }
+      print("index is " + index.toString());
+      changeState(true);
+      player = AudioPlayer();
+      audio_index = index;
+      await player.setUrl(list[audio_index].audio);
+      await player.play();
+      audio_index++;
+      await scrollC.scrollToIndex(index + 1,
+          preferPosition: AutoScrollPosition.begin);
+      if (state == true && audio_index < list.length) {
+        print('if ssta is true and audio_index<length of list');
+        last_index++;
+        await play_audio_online(
+          index: audio_index,
+          scrollC: scrollC,
+          list: list,
+          type: type,
+        );
+        notifyListeners();
+      } else if (state == false) {
+        print('state is false');
+      } else {
+        print("completed");
+        changeState(false);
+        index = 0;
+        last_index = 0;
+        audio_index = 0;
+        player.dispose();
+        notifyListeners();
+      }
+    } catch (e) {
+      print("Connection aborted:$e");
     }
   }
 

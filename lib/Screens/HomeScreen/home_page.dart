@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                       'عیشا',
                       style: Theme.of(context)
                           .textTheme
-                          .headline4!
+                          .headline1!
                           .copyWith(color: AppTheme.white, fontSize: 45),
                     ),
                     Text(

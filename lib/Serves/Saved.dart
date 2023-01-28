@@ -27,7 +27,7 @@ class Data {
 
 class Saved with ChangeNotifier {
   Data? data;
-  bool isTafsir = true;
+  bool isTafsir = false;
 
   Future<void> getSaved() async {
     try {

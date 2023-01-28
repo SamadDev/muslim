@@ -47,11 +47,10 @@ dev_dependencies:
   scroll_to_index: ^3.0.1
   sizer: ^2.0.15
   device_preview: ^1.1.0
-  audioplayers: ^1.1.1
   syncfusion_flutter_datepicker: ^20.3.52
   android_alarm_manager_plus: ^2.1.0
   flutter_snake_navigationbar: ^0.6.1
-  al_downloader: ^1.6.6
+  hijri: ^3.0.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -105,9 +104,9 @@ flutter:
       fonts:
         - asset: assets/fonts/quran.ttf
 
-    - family: kufi
+    - family: hafs
       fonts:
-        - asset: assets/fonts/KufiArabic.ttf
+        - asset: assets/fonts/HafsSmart_08.ttf
 
     - family: me_quran
       fonts:

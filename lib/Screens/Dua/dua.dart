@@ -6,7 +6,7 @@ class DuaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final get = Provider.of<DuaServse>(context, listen: false);
-    final size = MediaQuery.of(context).size;
+    // final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text('نزاو پاڕانەوە'),

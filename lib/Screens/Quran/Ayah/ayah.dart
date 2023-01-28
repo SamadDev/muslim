@@ -42,10 +42,9 @@ class _AyahScreenState extends State<AyahScreen> {
                 GestureDetector(
                     onTap: () {
                       if (audio.state == false) {
-                        audio.play_audio_offline(
+                        audio.play_audio_online(
                             type: 'play',
                             scrollC: controller,
-                            number: widget.index,
                             list: data.ayahs(widget.index).ayahs);
                       } else {
                         audio.pauseAudio();
@@ -369,6 +368,7 @@ class _AyahScreenState extends State<AyahScreen> {
   }
 }
 
+///one by one
 class AyahWidget extends StatelessWidget {
   final Ayahs ayah;
   final Ayah tafsir;
@@ -396,7 +396,7 @@ class AyahWidget extends StatelessWidget {
     final local_storage = Provider.of<LocalStorage>(context);
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 3.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: GestureDetector(
         onTap: () {
           showDialog(
@@ -513,6 +513,7 @@ class AyahWidget extends StatelessWidget {
   }
 }
 
+///all to gather
 class AyahTogether extends StatelessWidget {
   final list;
   final verse_count;
@@ -606,38 +607,6 @@ class AyahTogether extends StatelessWidget {
                 ],
               ),
             )
-
-            // RichText(
-            //     text: TextSpan(children: [
-            //   TextSpan(
-            //     text: ayah.text,
-            //     style: textTheme(context)
-            //         .bodyText1!
-            //         .copyWith(fontSize: local_storage.quran_font_size),
-            //   ),
-            //   WidgetSpan(
-            //     // baseline: TextBaseline.alphabetic,
-            //     alignment: PlaceholderAlignment.middle,
-            //     child: Padding(
-            //       padding: const EdgeInsets.only(right: 5, left: 5),
-            //       child: Stack(
-            //         alignment: Alignment.bottomCenter,
-            //         children: [
-            //           SvgPicture.asset(
-            //             'assets/icons/ayah.svg',
-            //             width: 30,
-            //             height: 30,
-            //             color: AppTheme.secondary,
-            //           ),
-            //           Text(ayah.numberInSurah!,
-            //               style: textTheme(context).headline5!.copyWith(
-            //                     color: AppTheme.black,
-            //                   ))
-            //         ],
-            //       ),
-            //     ),
-            //   )
-            // ])),
           ],
         ),
       ),
