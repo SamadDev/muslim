@@ -18,7 +18,8 @@ class AzkarTitleWidget extends StatelessWidget {
             ));
       },
       child: Container(
-        margin: EdgeInsets.only(right: 10, left: 10),
+        margin: EdgeInsets.only(right: 10, left: 10,),
+        padding: EdgeInsets.symmetric(vertical: 8),
         decoration: BoxDecoration(
             color: AppTheme.white, borderRadius: BorderRadius.circular(10)),
         child: ListTile(

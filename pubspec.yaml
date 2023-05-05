@@ -36,8 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+
   flutter_test:
     sdk: flutter
+#  flutter_localizations:
   flutter_svg:
   provider:
   shared_preferences:
@@ -50,7 +52,19 @@ dev_dependencies:
   syncfusion_flutter_datepicker: ^20.3.52
   android_alarm_manager_plus: ^2.1.0
   flutter_snake_navigationbar: ^0.6.1
-  hijri: ^3.0.0
+  dio: ^5.0.0
+  hive: ^2.2.3
+  easy_localization: ^3.0.1
+  syncfusion_flutter_core:
+  hive_flutter: ^1.1.0
+
+  hijri_picker:
+    git:
+      url: https://github.com/SamadDev/kurdish_hirji_date.git
+      ref: main
+
+
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -73,6 +87,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/1024/
     - assets/icons/
     - assets/jsons/
     # - assets/audio/
@@ -127,6 +142,13 @@ flutter:
     - family: quran1
       fonts:
         - asset: assets/fonts/quran1.ttf
+    - family: quran_otf
+      fonts:
+        - asset: assets/fonts/qurn_otf.otf
+#    - family: quran_qrf
+#      fonts:
+#        - asset: assets/fonts/qruan_qrf.otf
+
   #Amir
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

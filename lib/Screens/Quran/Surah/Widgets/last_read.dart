@@ -7,7 +7,6 @@ class LastRead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final data = Provider.of<Saved>(context, listen: false);
-    final size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () {
         navigatorRouteAnimation(
@@ -20,11 +19,9 @@ class LastRead extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(10),
         margin: EdgeInsets.all(10),
-        width: size.width,
-        height: 160,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/mosque1.png'),
+                image: AssetImage('assets/images/mesque2.jpeg'),
                 opacity: 0.1,
                 fit: BoxFit.cover),
             color: AppTheme.secondary,
@@ -42,7 +39,7 @@ class LastRead extends StatelessWidget {
                       'کۆتا خوێندنەوە',
                       style: textTheme(context)
                           .headline4!
-                          .copyWith(color: AppTheme.white, fontSize: 22),
+                          .copyWith(color: AppTheme.white, fontSize: 22,height: 1),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -53,7 +50,7 @@ class LastRead extends StatelessWidget {
                           alignment: Alignment.center,
                           children: [
                             SvgPicture.asset('assets/images/octagonal_1.svg',
-                                height: 50, width: 50, color: AppTheme.white),
+                                height: 50, color: AppTheme.white),
                             Text(
                               data.data!.ayah.toString(),
                               style: textTheme(context)
@@ -65,21 +62,18 @@ class LastRead extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
-                              width: 150,
-                              child: Text(
-                                data.data!.surah!,
-                                style: textTheme(context).headline3!.copyWith(
-                                    fontSize: 30,
-                                    color: AppTheme.white,
-                                    overflow: TextOverflow.ellipsis),
-                              ),
+                            Text(
+                              data.data!.surah!,
+                              style: textTheme(context).headline3!.copyWith(
+                                  fontSize: 30,
+                                  color: AppTheme.white,
+                                  overflow: TextOverflow.ellipsis),
                             ),
                             Text(
                               "ئایەتی ${data.data!.ayah}",
                               style: textTheme(context)
                                   .headline4!
-                                  .copyWith(color: AppTheme.white),
+                                  .copyWith(color: AppTheme.white,height: 1),
                             ),
                           ],
                         ),

@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'package:islamic360/Utils/exports.dart';
 
-class ButtonNavigationScreen extends StatefulWidget {
-  const ButtonNavigationScreen({Key? key}) : super(key: key);
+import '../Screens/Quran/Ayah/aya_png.dart';
+
+class NavigationButtonScreen extends StatefulWidget {
+  const NavigationButtonScreen({Key? key}) : super(key: key);
 
   @override
-  State<ButtonNavigationScreen> createState() => _ButtonNavigationScreenState();
+  State<NavigationButtonScreen> createState() => _NavigationButtonScreenState();
 }
 
-class _ButtonNavigationScreenState extends State<ButtonNavigationScreen> {
+class _NavigationButtonScreenState extends State<NavigationButtonScreen> {
   int currentIndex = 0;
   var snakShape = SnakeShape.circle;
   ShapeBorder? bottomBarShape = const RoundedRectangleBorder(
@@ -24,7 +26,7 @@ class _ButtonNavigationScreenState extends State<ButtonNavigationScreen> {
   List screens = [
     HomePage(),
     SurahScreen(),
-    QiblahCompass(),
+    AyahPng(),
     TasbiScreen(),
   ];
 

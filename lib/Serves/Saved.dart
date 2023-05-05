@@ -27,7 +27,7 @@ class Data {
 
 class Saved with ChangeNotifier {
   Data? data;
-  bool isTafsir = false;
+
 
   Future<void> getSaved() async {
     try {
@@ -57,22 +57,5 @@ class Saved with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> getTafsir() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    final test = preferences.getBool('tafsir') ?? false;
-    print(test);
-  }
 
-  Future<void> setTafsir() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    final test = preferences.setBool('tafsir', isTafsir);
-    print(test);
-  }
-
-  Future<void> removeTafsir() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    await preferences.remove('tafsir');
-    // preferences.clear();
-    notifyListeners();
-  }
 }

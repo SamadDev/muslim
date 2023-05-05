@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:islamic360/Screens/Quran/Ayah/aya_png.dart';
 import 'package:islamic360/Utils/exports.dart';
 import 'package:provider/provider.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
@@ -21,6 +22,7 @@ class _AyahScreenState extends State<AyahScreen> {
     final data = Provider.of<QuranServes>(context, listen: false);
     final tafsir = Provider.of<TafsirServes>(context, listen: false);
     final save = Provider.of<Saved>(context, listen: false);
+    final localStorage = Provider.of<LocalStorage>(context);
 
     return WillPopScope(
       onWillPop: () {
@@ -31,9 +33,7 @@ class _AyahScreenState extends State<AyahScreen> {
       child: Scaffold(
         floatingActionButton: Consumer<Audio>(
           builder: (ctx, audio, _) => Container(
-            decoration: BoxDecoration(
-                color: AppTheme.secondary,
-                borderRadius: BorderRadius.circular(5)),
+            decoration: BoxDecoration(color: AppTheme.secondary, borderRadius: BorderRadius.circular(5)),
             margin: EdgeInsets.only(right: 40, left: 10),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -43,9 +43,7 @@ class _AyahScreenState extends State<AyahScreen> {
                     onTap: () {
                       if (audio.state == false) {
                         audio.play_audio_online(
-                            type: 'play',
-                            scrollC: controller,
-                            list: data.ayahs(widget.index).ayahs);
+                            type: 'play', scrollC: controller, list: data.ayahs(widget.index).ayahs);
                       } else {
                         audio.pauseAudio();
                       }
@@ -79,8 +77,7 @@ class _AyahScreenState extends State<AyahScreen> {
                 GestureDetector(
                   onTap: () async {
                     await save.removeSaved();
-                    await save.setSaved(Data(
-                        ayah: '1', index: widget.index, surah: widget.surah));
+                    await save.setSaved(Data(ayah: '1', index: widget.index, surah: widget.surah));
                     await save.getSaved();
                   },
                   child: Image.asset(
@@ -108,174 +105,120 @@ class _AyahScreenState extends State<AyahScreen> {
                     showModalBottomSheet(
                         context: context,
                         builder: (context) {
-                          return SizedBox(
-                            height: 400,
-                            child: SingleChildScrollView(
-                              child: Consumer<LocalStorage>(
-                                  builder: (ctx, setting, _) => Column(
-                                        children: [
-                                          Text(
-                                            'رێکخستنەکان',
-                                            style: textTheme(context)
-                                                .headline4!
-                                                .copyWith(
-                                                  fontWeight: FontWeight.bold,
-                                                  color: AppTheme.black
-                                                      .withOpacity(0.7),
-                                                  decoration:
-                                                      TextDecoration.underline,
-                                                  fontSize: 30,
-                                                ),
-                                          ),
-                                          // Padding(
-                                          //   padding: const EdgeInsets.all(8.0),
-                                          //   child: Row(
-                                          //     children: [
-                                          //       Expanded(
-                                          //         child: Column(
-                                          //           children: [
-                                          //             ClipRRect(
-                                          //               borderRadius:
-                                          //                   BorderRadius
-                                          //                       .circular(10),
-                                          //               child: Image.asset(
-                                          //                   'assets/images/tafsir.jpeg'),
-                                          //             ),
-                                          //           ],
-                                          //         ),
-                                          //       ),
-                                          //       SizedBox(
-                                          //         width: 10,
-                                          //       ),
-                                          //       Expanded(
-                                          //         child: Column(
-                                          //           children: [
-                                          //             Image.asset(
-                                          //                 'assets/images/tafsir.jpeg')
-                                          //           ],
-                                          //         ),
-                                          //       )
-                                          //     ],
-                                          //   ),
-                                          // ),
-                                          SwitchListTile(
-                                              title: Text(
-                                                'پیشاندانی تەفسیر کوردی',
-                                                style: textTheme(context)
-                                                    .headline4,
+                          return SingleChildScrollView(
+                            padding: EdgeInsets.only(right: 30, left: 30, top: 20, bottom: 10),
+                            child: Consumer<LocalStorage>(
+                                builder: (ctx, setting, _) => Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'رێکخستنەکان',
+                                          style: textTheme(context).headline6!.copyWith(
+                                                fontWeight: FontWeight.bold,
+                                                color: AppTheme.black.withOpacity(0.8),
+                                                fontSize: 20,
                                               ),
-                                              value: setting.is_kurdish_tafsir,
-                                              onChanged: (value) {
-                                                setting.change_kurdish_tafisr(
-                                                    value: value);
-                                              }),
-                                          Divider(
-                                            color: AppTheme.secondary
-                                                .withOpacity(0.3),
-                                          ),
-                                          SwitchListTile(
-                                              title: Text(
-                                                'پیشاندانی تەفسیر عەربی',
-                                                style: textTheme(context)
-                                                    .headline4,
-                                              ),
-                                              value: setting.is_arabic_tafsir,
-                                              onChanged: (value) {
-                                                setting.change_arabic_tafisr();
-                                              }),
-                                          Divider(
-                                            color: AppTheme.secondary
-                                                .withOpacity(0.3),
-                                          ),
-                                          SwitchListTile(
-                                              title: Text(
-                                                'پیشاندانی تەفسیر ئینگلیزی',
-                                                style: textTheme(context)
-                                                    .headline4,
-                                              ),
-                                              value: setting.is_english_tafsir,
-                                              onChanged: (value) {
-                                                setting.change_english_tafisr();
-                                              }),
-                                          Divider(
-                                            height: 45,
-                                            color: AppTheme.secondary
-                                                .withOpacity(0.3),
-                                          ),
-                                          Text(
-                                            'قەبارەی نوسینین قورئان',
-                                            style: textTheme(context).headline4,
-                                          ),
-                                          Slider(
-                                            value: setting.quran_font_size,
+                                        ),
+                                        Row(
+                                          children: [
+                                            PageViewCard(isSelected: setting.pageType == "book", type: "book"),
+                                            PageViewCard(isSelected: setting.pageType == "tafsir", type: "tafsir"),
+                                            PageViewCard(isSelected: setting.pageType == "png", type: "png")
+                                          ],
+                                        ),
+                                        SwitchListTile(
+                                            title: Text(
+                                              'پیشاندانی تەفسیر کوردی',
+                                              style: textTheme(context).headline4,
+                                            ),
+                                            value: setting.is_kurdish_tafsir,
                                             onChanged: (value) {
-                                              setting.change_quran_font_size(
-                                                  value: value);
-                                            },
-                                            min: 20,
-                                            max: 50,
-                                          ),
-                                          Text(
-                                            'قەبارەی نوسینی تەفسیری کوردی',
-                                            style: textTheme(context).headline4,
-                                          ),
-                                          Slider(
-                                            value: setting
-                                                .kurdish_tafsir_font_size,
+                                              setting.change_kurdish_tafisr(value: value);
+                                            }),
+                                        Divider(
+                                          color: AppTheme.secondary.withOpacity(0.3),
+                                        ),
+                                        SwitchListTile(
+                                            title: Text(
+                                              'پیشاندانی تەفسیر عەربی',
+                                              style: textTheme(context).headline4,
+                                            ),
+                                            value: setting.is_arabic_tafsir,
                                             onChanged: (value) {
-                                              setting
-                                                  .change_kurdish_tafsir_font_size(
-                                                      value: value);
-                                            },
-                                            label: setting
-                                                .kurdish_tafsir_font_size
-                                                .toString(),
-                                            min: 15,
-                                            max: 30,
-                                          ),
-                                          Divider(
-                                            color: AppTheme.secondary
-                                                .withOpacity(0.3),
-                                          ),
-                                          Text(
-                                            'قەبارەی نوسینین تەفسیری عەرەبی',
-                                            style: textTheme(context).headline4,
-                                          ),
-                                          Slider(
-                                            value:
-                                                setting.arabic_tafsir_font_size,
+                                              setting.change_arabic_tafisr();
+                                            }),
+                                        Divider(
+                                          color: AppTheme.secondary.withOpacity(0.3),
+                                        ),
+                                        SwitchListTile(
+                                            title: Text(
+                                              'پیشاندانی تەفسیر ئینگلیزی',
+                                              style: textTheme(context).headline4,
+                                            ),
+                                            value: setting.is_english_tafsir,
                                             onChanged: (value) {
-                                              setting
-                                                  .change_arabic_tafsir_font_size(
-                                                      value);
-                                            },
-                                            label: setting
-                                                .arabic_tafsir_font_size
-                                                .toString(),
-                                            min: 10,
-                                            max: 50,
-                                          ),
-                                          Text(
-                                            'قەبارەی نوسینین تەفسیری ئینگلێزی',
-                                            style: textTheme(context).headline4,
-                                          ),
-                                          Slider(
-                                            value: setting
-                                                .english_tafsir_font_size,
-                                            onChanged: (value) {
-                                              setting
-                                                  .change_english_tafsir_font_size(
-                                                      value: value);
-                                            },
-                                            label: setting
-                                                .english_tafsir_font_size
-                                                .toString(),
-                                            min: 10,
-                                            max: 100,
-                                          ),
-                                        ],
-                                      )),
-                            ),
+                                              setting.change_english_tafisr();
+                                            }),
+                                        Divider(
+                                          height: 45,
+                                          color: AppTheme.secondary.withOpacity(0.3),
+                                        ),
+                                        Text(
+                                          'قەبارەی نوسینین قورئان',
+                                          style: textTheme(context).headline4,
+                                        ),
+                                        Slider(
+                                          value: setting.quran_font_size,
+                                          onChanged: (value) {
+                                            setting.change_quran_font_size(value: value);
+                                          },
+                                          min: 20,
+                                          max: 50,
+                                        ),
+                                        Text(
+                                          'قەبارەی نوسینی تەفسیری کوردی',
+                                          style: textTheme(context).headline4,
+                                        ),
+                                        Slider(
+                                          value: setting.kurdish_tafsir_font_size,
+                                          onChanged: (value) {
+                                            setting.change_kurdish_tafsir_font_size(value: value);
+                                          },
+                                          label: setting.kurdish_tafsir_font_size.toString(),
+                                          min: 15,
+                                          max: 30,
+                                        ),
+                                        Divider(
+                                          color: AppTheme.secondary.withOpacity(0.3),
+                                        ),
+                                        Text(
+                                          'قەبارەی نوسینین تەفسیری عەرەبی',
+                                          style: textTheme(context).headline4,
+                                        ),
+                                        Slider(
+                                          value: setting.arabic_tafsir_font_size,
+                                          onChanged: (value) {
+                                            setting.change_arabic_tafsir_font_size(value);
+                                          },
+                                          label: setting.arabic_tafsir_font_size.toString(),
+                                          min: 10,
+                                          max: 50,
+                                        ),
+                                        Text(
+                                          'قەبارەی نوسینین تەفسیری ئینگلێزی',
+                                          style: textTheme(context).headline4,
+                                        ),
+                                        Slider(
+                                          value: setting.english_tafsir_font_size,
+                                          onChanged: (value) {
+                                            setting.change_english_tafsir_font_size(value: value);
+                                          },
+                                          label: setting.english_tafsir_font_size.toString(),
+                                          min: 10,
+                                          max: 100,
+                                        ),
+                                      ],
+                                    )),
                           );
                         });
                   },
@@ -293,10 +236,10 @@ class _AyahScreenState extends State<AyahScreen> {
                   return Center(child: CircularProgressIndicator());
                 default:
                   if (snapshot.hasError)
-                    return Text('هەلە: تاکیە بەرنامەکە داخەو بیکەرەوە');
+                    return Text('هەلە: تکایە بەرنامەکە داخەو بیکەرەوە');
                   else {
                     return Consumer<TafsirServes>(
-                        builder: (ctx, tafsir, _) => save.isTafsir
+                        builder: (ctx, tafsir, _) => localStorage.pageType == "tafsir"
                             ? SingleChildScrollView(
                                 child: Column(children: [
                                   Text(
@@ -304,31 +247,21 @@ class _AyahScreenState extends State<AyahScreen> {
                                     style: textTheme(context).bodyText1,
                                   ),
                                   ListView.separated(
-                                      separatorBuilder: ((context, snap) =>
-                                          Divider()),
-                                      padding:
-                                          EdgeInsets.only(top: 5, bottom: 5),
+                                      separatorBuilder: ((context, snap) => Divider()),
+                                      padding: EdgeInsets.only(top: 5, bottom: 5),
                                       primary: false,
                                       shrinkWrap: true,
                                       controller: controller,
-                                      itemCount: data
-                                          .ayahs(widget.index)
-                                          .ayahs!
-                                          .length,
+                                      itemCount: data.ayahs(widget.index).ayahs!.length,
                                       itemBuilder: (ctx, i) => AutoScrollTag(
-                                            highlightColor:
-                                                Colors.red.withOpacity(0.5),
+                                            highlightColor: Colors.red.withOpacity(0.5),
                                             controller: controller,
                                             index: i,
                                             key: ValueKey(i),
                                             child: AyahWidget(
                                                 tafsir: tafsir.tafsir!.ayah![i],
-                                                ayah: data
-                                                    .ayahs(widget.index)
-                                                    .ayahs![i],
-                                                list: data
-                                                    .ayahs(widget.index)
-                                                    .ayahs,
+                                                ayah: data.ayahs(widget.index).ayahs![i],
+                                                list: data.ayahs(widget.index).ayahs,
                                                 index: i,
                                                 surah: widget.surah,
                                                 surah_index: widget.index,
@@ -337,7 +270,7 @@ class _AyahScreenState extends State<AyahScreen> {
                                 ]),
                               )
                             : SingleChildScrollView(
-                                child: Column(
+                                child: Wrap(
                                   children: [
                                     widget.index == "1"
                                         ? Text(
@@ -352,10 +285,7 @@ class _AyahScreenState extends State<AyahScreen> {
                                           ),
                                     AyahTogether(
                                       list: data.ayahs(widget.index).ayahs,
-                                      verse_count: data
-                                          .ayahs(widget.index)
-                                          .ayahs!
-                                          .length,
+                                      verse_count: data.ayahs(widget.index).ayahs!.length,
                                     ),
                                   ],
                                 ),
@@ -413,10 +343,7 @@ class AyahWidget extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              audio.play_audio(
-                                  index: index,
-                                  scrollC: controller,
-                                  list: list);
+                              audio.play_audio(index: index, scrollC: controller, list: list);
                             },
                             child: Icon(
                               Icons.play_arrow_rounded,
@@ -444,10 +371,7 @@ class AyahWidget extends StatelessWidget {
                           GestureDetector(
                             onTap: () {
                               saved.setSaved(
-                                Data(
-                                    surah: surah,
-                                    index: surah_index.toString(),
-                                    ayah: ayah.number),
+                                Data(surah: surah, index: surah_index.toString(), ayah: ayah.number),
                               );
                             },
                             child: Image.asset(
@@ -469,9 +393,8 @@ class AyahWidget extends StatelessWidget {
                 text: TextSpan(children: [
               TextSpan(
                 text: ayah.text,
-                style: textTheme(context)
-                    .bodyText1!
-                    .copyWith(fontSize: local_storage.quran_font_size),
+                style:
+                    textTheme(context).bodyText1!.copyWith(fontSize: local_storage.quran_font_size, letterSpacing: 1),
               ),
               WidgetSpan(
                 // baseline: TextBaseline.alphabetic,
@@ -502,8 +425,7 @@ class AyahWidget extends StatelessWidget {
             local_storage.is_kurdish_tafsir
                 ? Text(
                     tafsir.text!,
-                    style: textTheme(context).headline4!.copyWith(
-                        fontSize: local_storage.kurdish_tafsir_font_size),
+                    style: textTheme(context).headline4!.copyWith(fontSize: local_storage.kurdish_tafsir_font_size),
                   )
                 : SizedBox.shrink()
           ],
@@ -594,8 +516,8 @@ class AyahTogether extends StatelessWidget {
                 children: [
                   for (var i = 0; i <= count - 1; i++) ...{
                     TextSpan(
-                      text: '' + list[i].text + '',
-                      style: textTheme(context).bodyText1,
+                      text: list[i].text.split(" ").join(" "),
+                      style: textTheme(context).bodyText1!.copyWith(wordSpacing: -4),
                     ),
                     WidgetSpan(
                         alignment: PlaceholderAlignment.middle,
@@ -608,6 +530,39 @@ class AyahTogether extends StatelessWidget {
               ),
             )
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class PageViewCard extends StatelessWidget {
+  final type;
+  final image;
+  final bool? isSelected;
+  PageViewCard({this.type, this.isSelected, this.image});
+
+  @override
+  Widget build(BuildContext context) {
+    print(type);
+    print(isSelected);
+    return Expanded(
+      child: InkWell(
+        onTap: () {if(type=="png"){
+          navigatorRouteAnimation(context: context,page: AyahPng());
+        }
+          Provider.of<LocalStorage>(context, listen: false).setPageViewType(type);
+        },
+        child: Container(
+          margin: EdgeInsets.all(10),
+          decoration:
+              BoxDecoration(border: Border.all(width: 3, color: isSelected! ? AppTheme.secondary : AppTheme.transparent)),
+          child: Image.asset(
+            'assets/images/tafsir.jpeg',
+            fit: BoxFit.fill,
+            width: 140,
+            height: 140,
+          ),
         ),
       ),
     );

@@ -52,7 +52,7 @@ class DuaWidget extends StatelessWidget {
         ),
         Text(
           dua.dua!,
-          style: textTheme(context).bodyText1,
+          style: textTheme(context).bodyText1!.copyWith(fontSize: 20),
         ),
       ]),
     );

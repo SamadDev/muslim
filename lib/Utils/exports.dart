@@ -44,6 +44,7 @@ export 'package:islamic360/Widgets/clip_path.dart';
 export 'package:islamic360/Screens/Dua/dua.dart';
 export 'package:islamic360/Modules/dua.dart';
 export 'package:islamic360/Serves/dua.dart';
+export 'package:islamic360/Serves/translate.dart';
 export 'package:islamic360/Screens/Dua/Widgets/dua_content.dart';
 export 'package:islamic360/Screens/Dua/Widgets/customAppBar.dart';
 export 'package:islamic360/Screens/Dua/Widgets/customAppBar.dart';

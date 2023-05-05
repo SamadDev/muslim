@@ -78,7 +78,8 @@ class AzkarTitleScreen extends StatelessWidget {
                         child: ListView.separated(
                             padding: EdgeInsets.only(top: 5, bottom: 5),
                             separatorBuilder: (ctx, c) => Divider(
-                                  color: AppTheme.white.withOpacity(0.1),
+                              height: 6,
+                                  color: AppTheme.white.withOpacity(1),
                                 ),
                             itemCount: title.search_azkar_title.length == 0 ||
                                     controller.text.isEmpty

@@ -23,16 +23,17 @@ class AppTheme {
       primarySwatch: Colors.teal,
       primaryColorLight: primary,
       cardColor: AppTheme.white,
-      scaffoldBackgroundColor: primary,
+      scaffoldBackgroundColor: Color(0xffeeeeee),
       backgroundColor: primary,
       brightness: Brightness.light,
       textTheme: lightTextTheme,
       appBarTheme: AppBarTheme(
-          iconTheme: IconThemeData(color: AppTheme.secondary),
-          color: AppTheme.primary,
-          elevation: 0.5,
+          iconTheme: IconThemeData(color: AppTheme.white),
+          color: secondary,
+          centerTitle: false,
+          elevation: 0,
           titleSpacing: 0,
-          titleTextStyle: _headline2.copyWith(color: secondary)));
+          titleTextStyle: _headline2.copyWith(color: primary, fontSize: 18)));
 
   //Light dark theme of the application
   static final TextTheme lightTextTheme = TextTheme(

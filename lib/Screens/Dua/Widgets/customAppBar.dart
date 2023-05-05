@@ -41,13 +41,13 @@ class CustomDuaAppBar extends StatelessWidget {
                       'قُالُ اللَّهُ تَبَارَكَ وَتَعَالَى',
                       style: textTheme(context)
                           .bodyText2!
-                          .copyWith(fontFamily: 'amir', fontSize: 18),
+                          .copyWith(fontFamily: 'amir', fontSize: 18,height: 1),
                     ),
                     Text(
                       "وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ",
                       style: textTheme(context)
                           .bodyText1!
-                          .copyWith(fontFamily: 'amir'),
+                          .copyWith(fontFamily: 'amir',fontSize: 23),
                     ),
                   ]),
               Expanded(

@@ -9,6 +9,7 @@ class LocalStorage with ChangeNotifier {
   double kurdish_tafsir_font_size = 18;
   double arabic_tafsir_font_size = 16;
   double english_tafsir_font_size = 14;
+  String pageType = "tafsir";
 
   //__for azkar
   bool zikr_is_kurdish_tafsir = false;
@@ -169,4 +170,32 @@ class LocalStorage with ChangeNotifier {
       notifyListeners();
     }
   }
+  //page type view
+  Future<void> getTafsir() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    final test = preferences.getString('tafsir') ?? 'tafsir';
+    print(test);
+  }
+
+  Future<void> setTafsir(value) async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    final test = preferences.setString('tafsir', value);
+    print(test);
+  }
+
+  Future<void> removeTafsir() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    await preferences.remove('tafsir');
+    // preferences.clear();
+    notifyListeners();
+  }
+
+  void setPageViewType(value) {
+    pageType = value;
+    setTafsir(value);
+    print("___________________");
+    print(pageType);
+    notifyListeners();
+  }
+
 }

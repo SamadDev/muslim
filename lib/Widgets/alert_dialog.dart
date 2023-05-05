@@ -16,11 +16,7 @@ class AlertDialogWidget extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
         title: new Text(
           title,
-          style: Theme.of(context).textTheme.headline3!.copyWith(
-              decoration: TextDecoration.underline,
-              fontFamily: 'nrt',
-              // color: AppTheme.black,
-              fontWeight: FontWeight.w500),
+          style: Theme.of(context).textTheme.headline5!.copyWith( fontWeight: FontWeight.w600),
         ),
         content: child,
         actions: <Widget>[
@@ -36,8 +32,7 @@ class AlertDialogWidget extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: Text("گەرانەوە",
-                      style: Theme.of(context).textTheme.headline4)),
+                  child: Text("باشە", style: Theme.of(context).textTheme.headline4)),
               Spacer()
             ],
           ),

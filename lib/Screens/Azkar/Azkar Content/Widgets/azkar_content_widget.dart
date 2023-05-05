@@ -11,55 +11,51 @@ class AzkarContentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final local_data = Provider.of<LocalStorage>(context);
     return Padding(
-      padding: const EdgeInsets.only(top: 8, bottom: 8, right: 5, left: 5),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      padding: EdgeInsets.only(top: 5, bottom: 5, right: 8, left: 8),
+      child: Stack(
+        alignment: Alignment.bottomCenter,
         children: [
-          Container(
-            height: 35,
-            width: double.infinity,
-            color: AppTheme.secondary,
-            child: Align(
-                alignment: Alignment.centerRight,
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.copy,
-                        color: AppTheme.primary,
-                      ),
-                    ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.share,
-                          color: AppTheme.primary,
-                        )),
-                  ],
-                )),
+          Card(
+            margin: EdgeInsets.only(bottom: 18),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            shadowColor: AppTheme.grey,
+            elevation: 1,
+            child: Container(
+              width: Responsive.sH(context),
+              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    azkar.ardhikr!,
+                    style: textTheme(context).bodyText1!.copyWith(fontWeight: FontWeight.w500, fontSize: 24),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  local_data.zikr_is_kurdish_tafsir
+                      ? Padding(
+                          padding: EdgeInsets.only(bottom: 12.0),
+                          child: Text(azkar.krdhikr!, style: textTheme(context).headline4),
+                        )
+                      : SizedBox.shrink(),
+                ],
+              ),
+            ),
           ),
-          Text(
-            azkar.ardhikr!,
-            style: textTheme(context)
-                .headline3!
-                .copyWith(fontWeight: FontWeight.w500, fontSize: 25),
-          ),
-          local_data.zikr_is_kurdish_tafsir
-              ? Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Divider(
-                      color: AppTheme.secondary.withOpacity(0.3),
-                      indent: 10,
-                      height: 20,
-                      endIndent: 150,
-                    ),
-                    Text(azkar.krdhikr!, style: textTheme(context).headline4),
-                  ],
+          azkar.count == null
+              ? SizedBox.shrink()
+              : PhysicalModel(
+                  elevation: 2,
+                  shape: BoxShape.circle,
+                  color: AppTheme.white,
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 45,
+                    height: 45,
+                    child: Text("${azkar.count}", style: textTheme(context).headline5!.copyWith(color: AppTheme.text)),
+                  ),
                 )
-              : SizedBox.shrink(),
-          Divider(),
         ],
       ),
     );

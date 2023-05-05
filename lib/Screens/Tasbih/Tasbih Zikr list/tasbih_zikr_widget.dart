@@ -25,13 +25,9 @@ class TasbihZikrListWidget extends StatelessWidget {
         child: ListTile(
           title: Text(
             tasbih!.zikr!,
-            style: textTheme(context).headline3,
+            style: textTheme(context).bodyText1!.copyWith(fontSize: 20),
           ),
           leading: StarIcon(number_ayah: index + 1, image: 'octagonal_1.svg'),
-          subtitle: Text(
-            "هیچ خودایەک نیەک نیە بەقەد ئەو گەورەبێت",
-            style: textTheme(context).headline5,
-          ),
         ),
       ),
     );

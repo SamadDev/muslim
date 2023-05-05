@@ -26,19 +26,18 @@ class _PageViewWidgetState extends State<PageViewWidget> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Container(
-      padding: EdgeInsets.only(top: 20, left: 20, right: 20, bottom: 10),
-      margin: EdgeInsets.only(
-        top: size.height * 0.3,
-        right: 20,
-        left: 20,
-      ),
-      decoration: BoxDecoration(
-          color: AppTheme.white, borderRadius: BorderRadius.circular(35)),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Expanded(
+    return Column(
+      children: [
+        Expanded(
+          child: Container(
+            padding: EdgeInsets.only(top: 10, left: 25, right: 25, bottom: 10),
+            margin: EdgeInsets.only(
+              top: size.height * 0.36,
+              right: 20,
+              left: 20,
+            ),
+            decoration: BoxDecoration(
+                color: AppTheme.white, borderRadius: BorderRadius.circular(35)),
             child: PageView.builder(
                 controller: _pageViewController,
                 onPageChanged: (int index) {
@@ -51,22 +50,22 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                   return pages[index];
                 }),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List<Widget>.generate(
-                pages.length,
-                (index) => Padding(
-                      padding: const EdgeInsets.only(right: 8.0, left: 8),
-                      child: CircleAvatar(
-                        radius: 5,
-                        backgroundColor: _activePage == index
-                            ? AppTheme.black
-                            : AppTheme.grey,
-                      ),
-                    )),
-          )
-        ],
-      ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: List<Widget>.generate(
+              pages.length,
+                  (index) => Padding(
+                padding: const EdgeInsets.only(top: 12,bottom: 5,right: 8.0, left: 8),
+                child: CircleAvatar(
+                  radius: 5,
+                  backgroundColor: _activePage == index
+                      ? AppTheme.black
+                      : AppTheme.grey,
+                ),
+              )),
+        )
+      ],
     );
   }
 }
