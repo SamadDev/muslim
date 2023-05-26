@@ -9,7 +9,7 @@ class CustomAppBarWidget extends StatelessWidget {
       // elevation: 5,
       title: Text(
         'سورەت',
-        style: textTheme(context).headline2!.copyWith(fontSize: 23),
+        style: textTheme(context).headline2!.copyWith(fontSize: 23,color: AppTheme.white),
       ),
       actions: [
         Padding(
@@ -26,7 +26,7 @@ class CustomAppBarWidget extends StatelessWidget {
                 'assets/images/search.png',
                 width: 21,
                 height: 21,
-                color: AppTheme.text,
+
               )),
         )
       ],

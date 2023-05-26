@@ -35,38 +35,11 @@ class AzkarContent extends StatelessWidget {
                                                   'پیشاندانی مانای کوردی',
                                                   style: textTheme(context).headline4,
                                                 ),
+                                                activeColor: AppTheme.secondary,
                                                 value: setting.zikr_is_kurdish_tafsir,
                                                 onChanged: (value) {
                                                   setting.change_kurdish_tafisr(value: value, type: 'zikr');
                                                 }),
-                                            // Divider(
-                                            //   color: AppTheme.secondary.withOpacity(0.3),
-                                            // ),
-                                            // Text(
-                                            //   'قەبارەی نوسینین زیکر',
-                                            //   style: textTheme(context).headline5,
-                                            // ),
-                                            // Slider(
-                                            //   value: setting.quran_font_size,
-                                            //   onChanged: (value) {
-                                            //     setting.change_quran_font_size(value: value, type: "zikr");
-                                            //   },
-                                            //   min: 10,
-                                            //   max: 100,
-                                            // ),
-                                            // Text(
-                                            //   'قەبارەی نوسینی تەفسیری کوردی',
-                                            //   style: textTheme(context).headline5,
-                                            // ),
-                                            // Slider(
-                                            //   value: setting.kurdish_tafsir_font_size,
-                                            //   onChanged: (value) {
-                                            //     setting.change_kurdish_tafsir_font_size(value: value, type: 'zikr');
-                                            //   },
-                                            //   label: setting.kurdish_tafsir_font_size.toString(),
-                                            //   min: 10,
-                                            //   max: 100,
-                                            // ),
                                           ],
                                         )),
                               ),

@@ -34,7 +34,7 @@ class AzkarTitleScreen extends StatelessWidget {
             margin: EdgeInsets.all(6),
             decoration: BoxDecoration(
                 color: AppTheme.secondary,
-                borderRadius: BorderRadius.circular(15)),
+                borderRadius: BorderRadius.circular(4)),
             child: Consumer<Azkar_title_Server>(
                 builder: (ctx, data, _) => TextField(
                       cursorColor: AppTheme.white,

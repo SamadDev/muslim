@@ -12,7 +12,7 @@ class LocalStorage with ChangeNotifier {
   String pageType = "tafsir";
 
   //__for azkar
-  bool zikr_is_kurdish_tafsir = false;
+  bool zikr_is_kurdish_tafsir = true;
   bool zikr_is_english_tafsir = false;
   double zikr_font_size = 25.0;
   double zikr_kurdish_tafsir_font_size = 18;
@@ -29,7 +29,7 @@ class LocalStorage with ChangeNotifier {
     preferences.getDouble("arabic_tafsir_font_size");
     preferences.getDouble("english_tafsir_font_size");
     //__for zikr
-    zikr_is_kurdish_tafsir = preferences.getBool("zikr_is_kurdish_tafsir")!;
+
     preferences.getBool("zikr_is_english_tafsir");
     zikr_font_size = preferences.getDouble("zikr_font_size")!;
     zikr_kurdish_tafsir_font_size =
@@ -38,7 +38,13 @@ class LocalStorage with ChangeNotifier {
     notifyListeners();
   }
 
-  set_is_kurdish_tafsir({value, type}) async {
+  get_kurdish_tafsir_zikr({value, type}) async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    zikr_is_kurdish_tafsir = preferences.getBool("zikr_is_kurdish_tafsir")!;
+
+  }
+
+  set_kurdish_tafsir_zikr({value, type}) async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     if (type == 'zikr') {
       print('if tafsir is zikr');
@@ -102,15 +108,13 @@ class LocalStorage with ChangeNotifier {
   }
 
   change_kurdish_tafisr({value, type}) {
-    print(type);
     if (type == 'zikr') {
-      print('set to $value zikr');
       zikr_is_kurdish_tafsir = value;
-      set_is_kurdish_tafsir(value: value, type: 'zikr');
+      set_kurdish_tafsir_zikr(value: value, type: 'zikr');
       notifyListeners();
     } else {
       is_kurdish_tafsir = value;
-      set_is_kurdish_tafsir(value: value);
+      set_kurdish_tafsir_zikr(value: value);
       notifyListeners();
     }
   }

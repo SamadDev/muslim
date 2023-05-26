@@ -53,7 +53,7 @@ class AzkarContentWidget extends StatelessWidget {
                     alignment: Alignment.center,
                     width: 45,
                     height: 45,
-                    child: Text("${azkar.count}", style: textTheme(context).headline5!.copyWith(color: AppTheme.text)),
+                    child: Text("${azkar.count}", style: textTheme(context).headline5!.copyWith(color: AppTheme.black)),
                   ),
                 )
         ],

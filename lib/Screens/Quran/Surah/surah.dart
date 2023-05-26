@@ -12,51 +12,46 @@ class SurahScreen extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: Size.fromHeight(55), child: CustomAppBarWidget()),
+      appBar: PreferredSize(preferredSize: Size.fromHeight(55), child: CustomAppBarWidget()),
       body: FutureBuilder(
         future: getData(),
-        builder: (context, snapshot) =>
-            snapshot.connectionState == ConnectionState.waiting
-                ? Center(child: CircularProgressIndicator())
-                : CustomScrollView(
-                    slivers: [
-                      SliverAppBar(
-                        snap: false,
-                        pinned: false,
-                        floating: true,
-                        leading: SizedBox(),
-                        expandedHeight: 170,
-                        flexibleSpace: FlexibleSpaceBar(background: LastRead()),
-                      ),
-                      SliverList(
-                        delegate: SliverChildBuilderDelegate(
-                            (context, i) => QuranListWidget(
-                                  surah: data.quran_list[i],
-                                ),
-                            childCount: data.quran_list.length),
-                      ),
-                    ],
+        builder: (context, snapshot) => snapshot.connectionState == ConnectionState.waiting
+            ? Center(child: CircularProgressIndicator())
+            : CustomScrollView(
+                slivers: [
+                  SliverAppBar(
+                    snap: false,
+                    pinned: false,
+                    floating: false,
+                    leading: SizedBox(),
+                    expandedHeight: 170,
+                    flexibleSpace: FlexibleSpaceBar(background: LastRead()),
                   ),
+                  SliverList(
+                    delegate: SliverChildBuilderDelegate(
+                        (context, i) => QuranListWidget(
+                              surah: data.quran_list[i],
+                            ),
+                        childCount: data.quran_list.length),
+                  ),
+                ],
+              ),
       ),
     );
   }
 }
 
-
-
-
 // FutureBuilder(
 //         future: data.getQuran(),
-        // builder: (context, snapshot) {
-        //   switch (snapshot.connectionState) {
-        //     case ConnectionState.waiting:
-        //       return Center(child: CircularProgressIndicator());
-        //     default:
-        //       if (snapshot.hasError)
-        //         return Text('هەلە: تاکیە بەرنامەکە داخەو بیکەرەوە');
-        //       else
-        //         return SingleChildScrollView(
+// builder: (context, snapshot) {
+//   switch (snapshot.connectionState) {
+//     case ConnectionState.waiting:
+//       return Center(child: CircularProgressIndicator());
+//     default:
+//       if (snapshot.hasError)
+//         return Text('هەلە: تاکیە بەرنامەکە داخەو بیکەرەوە');
+//       else
+//         return SingleChildScrollView(
 //                   child: Column(
 //                     children: [
 //                       LastRead(),

@@ -24,16 +24,16 @@ class DuaScreen extends StatelessWidget {
                         floating: false,
                         leading: SizedBox(),
                         expandedHeight: 220,
-                        flexibleSpace:
-                            FlexibleSpaceBar(background: CustomDuaAppBar()),
+                        flexibleSpace: FlexibleSpaceBar(background: CustomDuaAppBar()),
                       ),
                       SliverList(
                         delegate: SliverChildBuilderDelegate(
                           (context, i) => DuaWidget(
                             dua: get.dua[i],
                           ),
+                          childCount: get.dua.length
                         ),
-                      )
+                      ),
                     ],
                   ),
       ),

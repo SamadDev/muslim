@@ -5,13 +5,13 @@ ThemeData colorTheme(BuildContext context) => Theme.of(context);
 TextTheme textTheme(BuildContext context) => Theme.of(context).textTheme;
 
 class AppTheme {
-  static const Color cart = Color.fromARGB(255, 206, 240, 231);
-  static const Color secondary = Color(0xff2ac391);
-  static const Color primary = Color(0xffe2ecea);
-  static const Color text = Color(0xff2ac391);
+  static const Color cart = Colors.white;
+  static const Color secondary = Color(0xff1b9c85);
+  static const Color primary = Color(0xfff6f1eb);
+
   static const Color grey = Colors.grey;
   static const Color orange = Color(0xfffea41b);
-  static const Color black = Colors.black;
+  static const Color black = Colors.black54;
   static const Color red = Colors.red;
 
   static Color transparent = Colors.transparent;
@@ -20,11 +20,9 @@ class AppTheme {
   //light theme of the application
   static final ThemeData lightTheme = ThemeData(
       indicatorColor: primary,
-      primarySwatch: Colors.teal,
       primaryColorLight: primary,
       cardColor: AppTheme.white,
-      scaffoldBackgroundColor: Color(0xffeeeeee),
-      backgroundColor: primary,
+      scaffoldBackgroundColor: primary,
       brightness: Brightness.light,
       textTheme: lightTextTheme,
       appBarTheme: AppBarTheme(
@@ -58,9 +56,9 @@ class AppTheme {
   );
 
   static final TextStyle _headline2 = TextStyle(
-    color: AppTheme.text,
+    color: AppTheme.black,
     fontWeight: FontWeight.w700,
-    fontFamily: 'nrt',
+    // fontFamily: 'nrt',
     fontSize: 25,
   );
 
@@ -73,7 +71,7 @@ class AppTheme {
   static final TextStyle _headline4 = TextStyle(
     color: AppTheme.black,
     fontWeight: FontWeight.w400,
-    fontFamily: 'nrt',
+    // fontFamily: 'nrt',
     fontSize: 17,
   );
   static final TextStyle _headline5 = TextStyle(
@@ -84,20 +82,20 @@ class AppTheme {
   );
 
   static final TextStyle _headline6 = TextStyle(
-    fontFamily: 'nrt',
+    // fontFamily: 'nrt',
     color: AppTheme.grey,
     fontWeight: FontWeight.w500,
     fontSize: 12,
   );
   static final TextStyle _button = TextStyle(
-    fontFamily: 'nrt',
+    // fontFamily: 'nrt',
     color: AppTheme.black,
     fontWeight: FontWeight.w700,
     fontSize: 20,
   );
 
   static final TextStyle _subtitle1 = TextStyle(
-    fontFamily: 'nrt',
+    // fontFamily: 'nrt',
     color: AppTheme.black,
     fontWeight: FontWeight.w400,
     fontSize: 14,
@@ -113,7 +111,7 @@ class AppTheme {
     fontSize: 15,
   );
   static final TextStyle _caption = TextStyle(
-    fontFamily: 'nrt',
+    // fontFamily: 'nrt',
     color: AppTheme.black,
     fontWeight: FontWeight.w400,
     fontSize: 10,

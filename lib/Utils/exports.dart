@@ -36,7 +36,6 @@ export 'package:islamic360/Screens/Qibla/location_error_widget.dart';
 export 'package:islamic360/Utils/playe_audio.dart';
 export 'package:islamic360/Serves/Saved.dart';
 export 'package:islamic360/Screens/Quran/Surah/surah_saved.dart';
-export 'package:islamic360/Screens/Hijri/hijri_calendart.dart';
 export 'package:islamic360/Utils/button_navigation.dart';
 export 'package:islamic360/Screens/HomeScreen/Widget/page_view.dart';
 export 'package:islamic360/Screens/Quran/Surah/Widgets/last_read.dart';

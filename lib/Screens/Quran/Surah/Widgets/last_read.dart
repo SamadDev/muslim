@@ -20,12 +20,8 @@ class LastRead extends StatelessWidget {
         padding: EdgeInsets.all(10),
         margin: EdgeInsets.all(10),
         decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/images/mesque2.jpeg'),
-                opacity: 0.1,
-                fit: BoxFit.cover),
-            color: AppTheme.secondary,
-            borderRadius: BorderRadius.circular(20)),
+            image: DecorationImage(image: AssetImage('assets/images/mesque2.jpeg'), opacity: 0.1, fit: BoxFit.cover),
+            color: AppTheme.secondary),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,9 +33,7 @@ class LastRead extends StatelessWidget {
                   children: [
                     Text(
                       'کۆتا خوێندنەوە',
-                      style: textTheme(context)
-                          .headline4!
-                          .copyWith(color: AppTheme.white, fontSize: 22,height: 1),
+                      style: textTheme(context).headline4!.copyWith(color: AppTheme.white, fontSize: 22, height: 1),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -49,13 +43,10 @@ class LastRead extends StatelessWidget {
                         Stack(
                           alignment: Alignment.center,
                           children: [
-                            SvgPicture.asset('assets/images/octagonal_1.svg',
-                                height: 50, color: AppTheme.white),
+                            SvgPicture.asset('assets/images/octagonal_1.svg', height: 50, color: AppTheme.white),
                             Text(
                               data.data!.ayah.toString(),
-                              style: textTheme(context)
-                                  .headline6!
-                                  .copyWith(color: AppTheme.white),
+                              style: textTheme(context).headline6!.copyWith(color: AppTheme.white),
                             ),
                           ],
                         ),
@@ -64,16 +55,13 @@ class LastRead extends StatelessWidget {
                           children: [
                             Text(
                               data.data!.surah!,
-                              style: textTheme(context).headline3!.copyWith(
-                                  fontSize: 30,
-                                  color: AppTheme.white,
-                                  overflow: TextOverflow.ellipsis),
+                              style: textTheme(context)
+                                  .headline3!
+                                  .copyWith(fontSize: 30, color: AppTheme.white, overflow: TextOverflow.ellipsis),
                             ),
                             Text(
                               "ئایەتی ${data.data!.ayah}",
-                              style: textTheme(context)
-                                  .headline4!
-                                  .copyWith(color: AppTheme.white,height: 1),
+                              style: textTheme(context).headline4!.copyWith(color: AppTheme.white, height: 1),
                             ),
                           ],
                         ),
@@ -84,6 +72,8 @@ class LastRead extends StatelessWidget {
             Container(
               child: Image.asset(
                 'assets/images/quran_book.png',
+                height: 120,
+                width: 100,
               ),
             )
           ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:islamic360/Screens/Qibla/qibla_compass.dart';
+import 'package:islamic360/Screens/Hijri/hijri_calendart.dart';
 import 'package:islamic360/Utils/exports.dart';
 import 'package:sizer/sizer.dart';
 
@@ -12,146 +12,89 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       extendBody: true,
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: AppTheme.transparent,
-        elevation: 0,
-        title: Row(
-          children: [
-            Icon(
-              Icons.location_on_outlined,
-              color: AppTheme.secondary,
-            ),
-            Text(
-              '.......',
-              style: textTheme(context).headline4,
-            ),
-          ],
-        ),
-      ),
-      body: Stack(
-        children: [
-          Stack(
-            alignment: Alignment.topCenter,
-            children: [
-              ClipPath(
-                clipper: ClipPathClass(),
-                child: Container(
-                  height: size.height * 0.55,
-                  decoration: BoxDecoration(
-                      color: AppTheme.secondary,
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/mesque2.jpeg'), fit: BoxFit.cover, opacity: 0.1)),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 40),
+
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            snap: false,
+            pinned: false,
+            floating: false,
+            leading: SizedBox(),
+            expandedHeight: size.height * 0.45,
+            flexibleSpace: FlexibleSpaceBar(
+                background: Container(
+              height: size.height * 0.45,
+              margin: EdgeInsets.only(bottom: 5),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8)),
+                  color: AppTheme.red,
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/header2.png'),
+                    fit: BoxFit.cover,
+                    filterQuality: FilterQuality.high,
+                  )),
+            )),
+          ),
+          SliverList(
+              delegate: SliverChildListDelegate([
+            Padding(
+              padding: EdgeInsets.only(right: 8, left: 8),
+              child: SingleChildScrollView(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
-                      'عیشا',
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline1!
-                          .copyWith(color: AppTheme.white, fontSize: 45, height: 1.6),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Text(
-                      'چوارشەمە - 12 - 2022',
-                      style: textTheme(context).headline4!.copyWith(color: AppTheme.white, fontSize: 20, height: 1),
+                    CartIcon(
+                      text: 'قورئان',
+                      icon: '99.svg',
+                      route: SurahScreen(),
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                border: Border.all(color: AppTheme.primary, width: 0.25),
-                                borderRadius: BorderRadius.circular(30)),
-                            // margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                            height: 9.h,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text('دەسپێک',
-                                    style: textTheme(context).headline4!.copyWith(fontSize: 20, color: AppTheme.white)),
-                                Text('12:41',
-                                    style: textTheme(context).headline4!.copyWith(fontSize: 20, color: AppTheme.white))
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                border: Border.all(color: AppTheme.primary, width: 0.25),
-                                borderRadius: BorderRadius.circular(30)),
-                            margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                            height: 9.h,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text('کۆتا',
-                                    style: textTheme(context).headline4!.copyWith(fontSize: 20, color: AppTheme.white)),
-                                Text('3:41',
-                                    style: textTheme(context).headline4!.copyWith(fontSize: 20, color: AppTheme.white))
-                              ],
-                            ),
-                          ),
-                        )
+                        Expanded(child: CartIcon(text: 'کاتی بانگ', icon: '77.svg', route: '')),
+                        Expanded(child: CartIcon(text: 'دوعا', icon: '88.svg', route: DuaScreen())),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(child: CartIcon(text: 'وێردەکان', icon: '44.svg', route: AzkarTitleScreen())),
+                        Expanded(child: CartIcon(text: 'رۆژمێری هیجری', icon: '55.svg', route: HijriDatePicker())),
+                        // Expanded(child: CartIcon(text: 'مزگەوتەکان', icon: '66.svg', route: ''))
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(child: CartIcon(text: 'مزگەوتەکان', icon: '66.svg', route: '')),
+                        Expanded(child: CartIcon(text: 'قیبلە', icon: '33.svg', route: QiblahCompass()))
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(child: CartIcon(text: 'تەسبیح', icon: '11.svg', route: TasbiScreen())),
+                        Expanded(child: CartIcon(text: 'پرسیار و وڵام', icon: '22.svg', route: '')),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(child: CartIcon(text: 'کاتی بانگ', icon: '77.svg', route: '')),
+                        Expanded(child: CartIcon(text: 'کتێبخانە', icon: '11.svg', route: TasbiScreen())),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(child: CartIcon(text: 'دەربارە', icon: '22.svg', route: '')),
+                        Expanded(child: CartIcon(text: 'زەکات', icon: '33.svg', route: QiblahCompass()))
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(child: CartIcon(text: 'مزگەوتەکان', icon: '66.svg', route: '')),
+                        Expanded(child: CartIcon(text: 'قیبلە', icon: '33.svg', route: QiblahCompass()))
                       ],
                     )
                   ],
                 ),
               ),
-            ],
-          ),
-          PageViewWidget(
-            list: [
-              SingleChildScrollView(
-                child: Column(children: [
-                  Row(
-                    children: [
-                      Expanded(child: CartIcon(text: 'کاتی بانگ', icon: '77.svg', route: '')),
-                      Expanded(child: CartIcon(text: 'دوعا', icon: '88.svg', route: DuaScreen())),
-                      Expanded(child: CartIcon(text: 'قورئان', icon: '99.svg', route: SurahScreen()))
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(child: CartIcon(text: 'وێردەکان', icon: '44.svg', route: AzkarTitleScreen())),
-                      Expanded(child: CartIcon(text: 'رۆژمێری هیجری', icon: '55.svg', route: HijriDatePicker())),
-                      Expanded(child: CartIcon(text: 'مزگەوتەکان', icon: '66.svg', route: ''))
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(child: CartIcon(text: 'تەسبیح', icon: '11.svg', route: TasbiScreen())),
-                      Expanded(child: CartIcon(text: 'پرسیار و وڵام', icon: '22.svg', route: '')),
-                      Expanded(child: CartIcon(text: 'قیبلە', icon: '33.svg', route: QiblahCompass()))
-                    ],
-                  ),
-                ]),
-              ),
-              SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(child: CartIcon(text: 'کتێبخانە', icon: '11.svg', route: TasbiScreen())),
-                        Expanded(child: CartIcon(text: 'دەربارە', icon: '22.svg', route: '')),
-                        Expanded(child: CartIcon(text: 'زەکات', icon: '33.svg', route: QiblahCompass()))
-                      ],
-                    ),
-                  ],
-                ),
-              )
-            ],
-          )
+            ),
+          ]))
         ],
       ),
     );
@@ -162,39 +105,49 @@ class CartIcon extends StatelessWidget {
   final icon;
   final text;
   final route;
+  final width;
 
-  CartIcon({required this.text, required this.icon, required this.route});
+  CartIcon({required this.text, required this.icon, required this.route, this.width});
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return GestureDetector(
-      onTap: () {
-        navigatorRouteAnimation(context: context, page: route);
-      },
-      child: Column(
-        children: [
-          Container(
-            height: 65,
-            width: 65,
-            alignment: Alignment.center,
-            margin: EdgeInsets.only(right: 10, left: 10, bottom: 5, top: 10),
-            decoration: BoxDecoration(color: AppTheme.cart, borderRadius: BorderRadius.circular(15)),
-            child: SvgPicture.asset(
-              "assets/icons/$icon",
-              width: 4.5.w,
-              height: 4.5.h,
-              color: AppTheme.secondary,
+    return Padding(
+      padding: const EdgeInsets.all(2.0),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(8),
+        onTap: () {
+          navigatorRouteAnimation(context: context, page: route);
+        },
+        child: Card(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          child: Container(
+            margin: EdgeInsets.all(8),
+            height: 85,
+            decoration: BoxDecoration(color: AppTheme.cart, borderRadius: BorderRadius.circular(8)),
+            child: Row(
+              children: [
+                Container(
+                  height: 50,
+                  width: 50,
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.only(right: 8, left: 8, bottom: 5, top: 10),
+                  decoration:
+                      BoxDecoration(color: AppTheme.secondary.withOpacity(0.1), borderRadius: BorderRadius.circular(8)),
+                  child: SvgPicture.asset(
+                    "assets/icons/$icon",
+                    width: 4.w,
+                    height: 4.h,
+                    color: AppTheme.secondary,
+                  ),
+                ),
+                Text(
+                  text,maxLines: 2,
+                  style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 13.sp),
+                )
+              ],
             ),
           ),
-          Text(
-            text,
-            style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 12.sp),
-          ),
-          SizedBox(
-            height: 10,
-          )
-        ],
+        ),
       ),
     );
   }

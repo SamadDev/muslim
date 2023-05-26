@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 class Audio with ChangeNotifier {
@@ -27,18 +27,14 @@ class Audio with ChangeNotifier {
       audio_index = last_index;
       String next_audio = list[audio_index].audio;
       audio_index++;
-
-      player.setUrl(next_audio);
-      await player.play();
-      await scrollC.scrollToIndex(index + 1,
-          preferPosition: AutoScrollPosition.begin);
+      player.play(UrlSource(next_audio));
+      await scrollC.scrollToIndex(index + 1, preferPosition: AutoScrollPosition.begin);
       if (state == false) {
         if (index <= list.length - 1) {
           print(index);
           print(list.length - 1);
           last_index++;
-          await play_audio(
-              index: audio_index, scrollC: scrollC, list: list, type: type);
+          await play_audio(index: audio_index, scrollC: scrollC, list: list, type: type);
         }
         notifyListeners();
       }
@@ -47,8 +43,7 @@ class Audio with ChangeNotifier {
     }
   }
 
-  Future<void> play_audio_offline(
-      {int index = 0, scrollC, list, type, number}) async {
+  Future<void> play_audio_offline({int index = 0, scrollC, list, type, number}) async {
     try {
       //to add 0 00 before number to be the same of audio file name
       number = number.padLeft(3, '0');
@@ -60,22 +55,17 @@ class Audio with ChangeNotifier {
       player = AudioPlayer();
       audio_index = index;
       audio_index++;
-      await player.setAsset(audio_index < 10
+      await player.play(UrlSource(audio_index < 10
           ? 'assets/audio/${number}00${audio_index.toString()}.mp3'
           : audio_index < 100
               ? 'assets/audio/${number}0${audio_index.toString()}.mp3'
-              : 'assets/audio/${number.toString()}${audio_index.toString()}.mp3');
-      await player.play();
+              : 'assets/audio/${number.toString()}${audio_index.toString()}.mp3'));
+
       await scrollC.scrollToIndex(index + 1);
       print(audio_index.toString() + "_____" + list.length.toString());
       if (state == true && audio_index < list.length) {
         last_index++;
-        await play_audio_offline(
-            index: audio_index,
-            scrollC: scrollC,
-            list: list,
-            type: type,
-            number: number);
+        await play_audio_offline(index: audio_index, scrollC: scrollC, list: list, type: type, number: number);
         notifyListeners();
       } else if (state == false) {
         print('state is false');
@@ -104,11 +94,9 @@ class Audio with ChangeNotifier {
       changeState(true);
       player = AudioPlayer();
       audio_index = index;
-      await player.setUrl(list[audio_index].audio);
-      await player.play();
+      await player.play(UrlSource(list[audio_index].audio));
       audio_index++;
-      await scrollC.scrollToIndex(index + 1,
-          preferPosition: AutoScrollPosition.begin);
+      await scrollC.scrollToIndex(index + 1, preferPosition: AutoScrollPosition.begin);
       if (state == true && audio_index < list.length) {
         print('if ssta is true and audio_index<length of list');
         last_index++;

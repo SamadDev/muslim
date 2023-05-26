@@ -92,8 +92,7 @@ class _AyahScreenState extends State<AyahScreen> {
           ),
         ),
         appBar: AppBar(
-            leading: IconButton(
-              icon: Icon(Icons.arrow_back),
+            leading: BackButton(
               onPressed: () {
                 audio.stopAudio();
                 Navigator.of(context).pop();
@@ -226,7 +225,7 @@ class _AyahScreenState extends State<AyahScreen> {
             ],
             title: Text(
               data.ayahs(widget.index).name!,
-              style: textTheme(context).headline3,
+              style: textTheme(context).headline3!.copyWith(color: AppTheme.white),
             )),
         body: FutureBuilder(
             future: tafsir.getTaf(index: int.parse(widget.index) - 1),
@@ -347,7 +346,7 @@ class AyahWidget extends StatelessWidget {
                             },
                             child: Icon(
                               Icons.play_arrow_rounded,
-                              color: AppTheme.text,
+                              color: AppTheme.black,
                               size: 40,
                             ),
                           ),
@@ -361,7 +360,7 @@ class AyahWidget extends StatelessWidget {
                             },
                             child: Icon(
                               Icons.highlight_remove_outlined,
-                              color: AppTheme.text,
+                              color: AppTheme.black,
                               size: 35,
                             ),
                           ),
@@ -378,7 +377,7 @@ class AyahWidget extends StatelessWidget {
                               'assets/images/bookmark.png',
                               width: 25,
                               height: 25,
-                              color: AppTheme.text,
+                              color: AppTheme.black,
                             ),
                           )
                         ],
@@ -394,7 +393,7 @@ class AyahWidget extends StatelessWidget {
               TextSpan(
                 text: ayah.text,
                 style:
-                    textTheme(context).bodyText1!.copyWith(fontSize: local_storage.quran_font_size, letterSpacing: 1),
+                    textTheme(context).bodyText1!.copyWith(fontSize: local_storage.quran_font_size,),
               ),
               WidgetSpan(
                 // baseline: TextBaseline.alphabetic,
@@ -466,7 +465,7 @@ class AyahTogether extends StatelessWidget {
                           },
                           child: Icon(
                             Icons.play_arrow_rounded,
-                            color: AppTheme.text,
+                            color: AppTheme.black,
                             size: 40,
                           ),
                         ),
@@ -479,7 +478,7 @@ class AyahTogether extends StatelessWidget {
                           },
                           child: Icon(
                             Icons.highlight_remove_outlined,
-                            color: AppTheme.text,
+                            color: AppTheme.black,
                             size: 35,
                           ),
                         ),
@@ -497,7 +496,7 @@ class AyahTogether extends StatelessWidget {
                             'assets/images/bookmark.png',
                             width: 25,
                             height: 25,
-                            color: AppTheme.text,
+                            color: AppTheme.black,
                           ),
                         )
                       ],
