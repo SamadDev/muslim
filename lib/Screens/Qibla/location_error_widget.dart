@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic360/Theme/style.dart';
 
 class LocationErrorWidget extends StatelessWidget {
   final String? error;
@@ -9,27 +10,25 @@ class LocationErrorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const box = SizedBox(height: 32);
-    const errorColor = Color(0xffb00020);
-
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           const Icon(
             Icons.location_off,
-            size: 150,
-            color: errorColor,
+            size: 120,
+            color: AppTheme.secondary,
           ),
-          box,
+          SizedBox(height: 20,),
           Text(
-            error!,
-            style:
-            const TextStyle(color: errorColor, fontWeight: FontWeight.bold),
+            error!,style: textTheme(context).headline5,
           ),
-          box,
+          SizedBox(height: 30,),
           ElevatedButton(
-            child: const Text("Retry"),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppTheme.secondary,padding: EdgeInsets.symmetric(horizontal: 10,)
+            ),
+            child:  Text("هەوڵدانەوە",style: textTheme(context).headline5!.copyWith(color: AppTheme.primary)),
             onPressed: () {
               if (callback != null) callback!();
             },

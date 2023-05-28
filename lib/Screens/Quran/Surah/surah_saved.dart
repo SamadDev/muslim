@@ -1,7 +1,7 @@
 // import 'package:flutter/material.dart';
 // import 'package:islamic360/Utils/exports.dart';
 // import 'package:provider/provider.dart';
-
+//
 // class SurahSaved extends StatelessWidget {
 //   Widget build(BuildContext context) {
 //     final data = Provider.of<Saved>(context, listen: false);
@@ -33,12 +33,12 @@
 //     );
 //   }
 // }
-
+//
 // class SurahSavedWidget extends StatelessWidget {
 //   final Data data;
-
+//
 //   SurahSavedWidget({required this.data});
-
+//
 //   @override
 //   Widget build(BuildContext context) {
 //     final provider = Provider.of<Saved>(context);

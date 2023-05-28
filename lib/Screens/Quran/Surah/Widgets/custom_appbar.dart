@@ -5,8 +5,6 @@ class CustomAppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       titleSpacing: 0,
-
-      // elevation: 5,
       title: Text(
         'سورەت',
         style: textTheme(context).headline2!.copyWith(fontSize: 23,color: AppTheme.white),
@@ -26,7 +24,7 @@ class CustomAppBarWidget extends StatelessWidget {
                 'assets/images/search.png',
                 width: 21,
                 height: 21,
-
+                color: AppTheme.white,
               )),
         )
       ],

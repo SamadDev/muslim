@@ -19,19 +19,24 @@ class AppTheme {
 
   //light theme of the application
   static final ThemeData lightTheme = ThemeData(
-      indicatorColor: primary,
-      primaryColorLight: primary,
-      cardColor: AppTheme.white,
-      scaffoldBackgroundColor: primary,
-      brightness: Brightness.light,
-      textTheme: lightTextTheme,
-      appBarTheme: AppBarTheme(
-          iconTheme: IconThemeData(color: AppTheme.white),
-          color: secondary,
-          centerTitle: false,
-          elevation: 0,
-          titleSpacing: 0,
-          titleTextStyle: _headline2.copyWith(color: primary, fontSize: 18)));
+    indicatorColor: primary,
+    primaryColorLight: primary,
+    cardColor: AppTheme.white,
+    scaffoldBackgroundColor: primary,
+    brightness: Brightness.light,
+    textTheme: lightTextTheme,
+    appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(color: AppTheme.white),
+      color: secondary,
+      centerTitle: false,
+      elevation: 0,
+      titleSpacing: 0,
+      titleTextStyle: _headline2.copyWith(
+        color: primary,
+        fontSize: 18,
+      ),
+    ),
+  );
 
   //Light dark theme of the application
   static final TextTheme lightTextTheme = TextTheme(
@@ -95,25 +100,16 @@ class AppTheme {
   );
 
   static final TextStyle _subtitle1 = TextStyle(
-    // fontFamily: 'nrt',
-    color: AppTheme.black,
-    fontWeight: FontWeight.w400,
-    fontSize: 14,
-  );
+      // fontFamily: 'nrt',
+      color: AppTheme.black,
+      fontWeight: FontWeight.w400,
+      fontSize: 14);
 
-  static final TextStyle _bodyText1 = TextStyle(
-    fontFamily: 'amir',
-    fontSize: 30,
-  );
-  static final TextStyle _bodyText2 = TextStyle(
-    fontFamily: 'noor',
-    color: AppTheme.black,
-    fontSize: 15,
-  );
+  static final TextStyle _bodyText1 = TextStyle(fontFamily: 'amir', fontSize: 30);
+  static final TextStyle _bodyText2 = TextStyle(fontFamily: 'noor', color: AppTheme.black, fontSize: 15);
   static final TextStyle _caption = TextStyle(
-    // fontFamily: 'nrt',
-    color: AppTheme.black,
-    fontWeight: FontWeight.w400,
-    fontSize: 10,
-  );
+      // fontFamily: 'nrt',
+      color: AppTheme.black,
+      fontWeight: FontWeight.w400,
+      fontSize: 10);
 }

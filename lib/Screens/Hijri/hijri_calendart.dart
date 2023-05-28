@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islamic360/Utils/exports.dart';
-import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 import 'package:hijri_picker/hijri_picker.dart';
 import 'package:hijri/hijri_calendar.dart';
 import 'package:intl/intl.dart';

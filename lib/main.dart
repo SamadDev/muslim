@@ -13,18 +13,7 @@ class MyApps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => QuranServes()),
-        ChangeNotifierProvider(create: (_) => TafsirServes()),
-        ChangeNotifierProvider(create: (_) => LocalStorage()),
-        ChangeNotifierProvider(create: (_) => DuaServse()),
-        ChangeNotifierProvider(create: (_) => Translate()),
-        ChangeNotifierProvider(create: (_) => Audio()),
-        ChangeNotifierProvider(create: (_) => Saved()),
-        ChangeNotifierProvider(create: (_) => AzkarServer()),
-        ChangeNotifierProvider(create: (_) => Azkar_title_Server()),
-        ChangeNotifierProvider(create: (_) => TasbihSever()),
-      ],
+      providers: providers,
       child: Sizer(
         builder: (context, orientation, deviceType) => MaterialApp(
           builder: (ctx, child) {
@@ -33,7 +22,7 @@ class MyApps extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: AppTheme.lightTheme,
-          home: HomePage(),
+          home: SplashScreen(),
         ),
       ),
     );

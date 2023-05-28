@@ -44,6 +44,8 @@ class Audio with ChangeNotifier {
   }
 
   Future<void> play_audio_offline({int index = 0, scrollC, list, type, number}) async {
+    print("____________________play audio offline______________");
+
     try {
       //to add 0 00 before number to be the same of audio file name
       number = number.padLeft(3, '0');
@@ -53,13 +55,15 @@ class Audio with ChangeNotifier {
       }
       changeState(true);
       player = AudioPlayer();
+      print("audio");
       audio_index = index;
       audio_index++;
+      print("assets/audio/quran_mp3${number}00${audio_index.toString()}.mp3");
       await player.play(UrlSource(audio_index < 10
-          ? 'assets/audio/${number}00${audio_index.toString()}.mp3'
+          ? 'assets/audio/quran_mp3${number}00${audio_index.toString()}.mp3'
           : audio_index < 100
-              ? 'assets/audio/${number}0${audio_index.toString()}.mp3'
-              : 'assets/audio/${number.toString()}${audio_index.toString()}.mp3'));
+              ? 'assets/audio/quran_mp3/${number}0${audio_index.toString()}.mp3'
+              : 'assets/audio/quran_mp3/${number.toString()}${audio_index.toString()}.mp3'));
 
       await scrollC.scrollToIndex(index + 1);
       print(audio_index.toString() + "_____" + list.length.toString());
@@ -85,6 +89,7 @@ class Audio with ChangeNotifier {
 
   Future<void> play_audio_online({int index = 0, scrollC, list, type}) async {
     try {
+      print("____________________play audio online______________");
       if (last_index != 0) {
         index = last_index;
         notifyListeners();
@@ -94,6 +99,7 @@ class Audio with ChangeNotifier {
       changeState(true);
       player = AudioPlayer();
       audio_index = index;
+      print(list[audio_index].audio);
       await player.play(UrlSource(list[audio_index].audio));
       audio_index++;
       await scrollC.scrollToIndex(index + 1, preferPosition: AutoScrollPosition.begin);

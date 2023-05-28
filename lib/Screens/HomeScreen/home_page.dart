@@ -8,11 +8,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-
     return Scaffold(
       extendBody: true,
       extendBodyBehindAppBar: true,
-
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -25,13 +23,11 @@ class HomePage extends StatelessWidget {
                 background: Container(
               height: size.height * 0.45,
               margin: EdgeInsets.only(bottom: 5),
-              decoration: BoxDecoration(
+              decoration: BoxDecoration(color: AppTheme.primary,
                   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8)),
-                  color: AppTheme.red,
                   image: DecorationImage(
                     image: AssetImage('assets/images/header2.png'),
                     fit: BoxFit.cover,
-                    filterQuality: FilterQuality.high,
                   )),
             )),
           ),

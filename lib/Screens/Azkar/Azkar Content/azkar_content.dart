@@ -15,7 +15,7 @@ class AzkarContent extends StatelessWidget {
       appBar: AppBar(
           title: Text(
             title,
-            style: textTheme(context).headline4!.copyWith(color: AppTheme.secondary),
+            style: textTheme(context).headline4!.copyWith(color: AppTheme.primary),
           ),
           actions: [
             IconButton(
@@ -38,7 +38,7 @@ class AzkarContent extends StatelessWidget {
                                                 activeColor: AppTheme.secondary,
                                                 value: setting.zikr_is_kurdish_tafsir,
                                                 onChanged: (value) {
-                                                  setting.change_kurdish_tafisr(value: value, type: 'zikr');
+                                                  setting.set_tafsir_visibility(value: value, type: 'zikr');
                                                 }),
                                           ],
                                         )),

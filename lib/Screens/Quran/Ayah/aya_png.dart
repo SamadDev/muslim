@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islamic360/Theme/style.dart';
+import 'package:islamic360/Utils/exports.dart';
 
 class AyahPng extends StatelessWidget {
   @override
@@ -15,20 +15,20 @@ class AyahPng extends StatelessWidget {
           backgroundColor: AppTheme.transparent,
         ),
         body: Column(
-          children: [
-            Expanded(
-              child: PageView(
-                controller: PageController(viewportFraction: 1),
-                scrollDirection: Axis.horizontal,
-                children: imageList.map((image) {
-                  return Image.asset(
-                    image,
-                    fit: BoxFit.fill,
-                  );
-                }).toList(),
-              ),
-            ),
-          ],
-        ));
+      children: [
+        Expanded(
+          child: PageView(
+            controller: PageController(viewportFraction: 1),
+            scrollDirection: Axis.horizontal,
+            children: imageList.map((image) {
+              return Image.asset(
+                image,
+                fit: BoxFit.contain,
+              );
+            }).toList(),
+          ),
+        ),
+      ],
+    ));
   }
 }

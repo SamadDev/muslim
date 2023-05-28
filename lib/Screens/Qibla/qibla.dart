@@ -26,7 +26,9 @@ class _QiblahCompassState extends State<QiblahCompass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("قیبلەنما"),
+      ),
       body: Container(
         alignment: Alignment.center,
         padding: const EdgeInsets.all(8.0),
