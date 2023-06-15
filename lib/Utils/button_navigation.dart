@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'package:islamic360/Utils/exports.dart';
 
-import '../Screens/Quran/Ayah/aya_png.dart';
+import '../Screens/Quran/Ayah/aya_book.dart';
 
 class NavigationButtonScreen extends StatefulWidget {
   const NavigationButtonScreen({Key? key}) : super(key: key);

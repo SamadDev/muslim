@@ -46,7 +46,7 @@ class SplashWidget extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 100.0,horizontal: 30),
+            padding: EdgeInsets.symmetric(vertical: 140.0,horizontal: 50),
             child: Image.asset('assets/images/bsmila.png',color: AppTheme.white,fit: BoxFit.contain,),
           )
         ],

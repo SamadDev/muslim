@@ -14,22 +14,19 @@ class HomePage extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            backgroundColor: AppTheme.primary,
             snap: false,
             pinned: false,
             floating: false,
             leading: SizedBox(),
-            expandedHeight: size.height * 0.45,
-            flexibleSpace: FlexibleSpaceBar(
-                background: Container(
-              height: size.height * 0.45,
-              margin: EdgeInsets.only(bottom: 5),
-              decoration: BoxDecoration(color: AppTheme.primary,
-                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8)),
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/header2.png'),
-                    fit: BoxFit.cover,
-                  )),
-            )),
+            expandedHeight: size.height * 0.40,
+            flexibleSpace: SizedBox(
+              height: size.height * 0.46,
+              child: Image.asset(
+                'assets/images/header2.png',
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           SliverList(
               delegate: SliverChildListDelegate([
@@ -124,7 +121,7 @@ class CartIcon extends StatelessWidget {
               children: [
                 Container(
                   height: 50,
-                  width: 50,
+                  width: 45,
                   alignment: Alignment.center,
                   margin: EdgeInsets.only(right: 8, left: 8, bottom: 5, top: 10),
                   decoration:
@@ -137,7 +134,8 @@ class CartIcon extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  text,maxLines: 2,
+                  text,
+                  maxLines: 2,
                   style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 13.sp),
                 )
               ],

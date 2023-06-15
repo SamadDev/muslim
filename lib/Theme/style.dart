@@ -8,6 +8,7 @@ class AppTheme {
   static const Color cart = Colors.white;
   static const Color secondary = Color(0xff1b9c85);
   static const Color primary = Color(0xfff6f1eb);
+  static const quran_text_background = Color(0x52f7e4cd);
 
   static const Color grey = Colors.grey;
   static const Color orange = Color(0xfffea41b);

@@ -2,7 +2,7 @@ import 'package:islamic360/Utils/exports.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:provider/provider.dart';
 
-List<SingleChildWidget> providers=[
+List<SingleChildWidget> providers = [
   ChangeNotifierProvider(create: (_) => QuranServes()),
   ChangeNotifierProvider(create: (_) => TafsirServes()),
   ChangeNotifierProvider(create: (_) => LocalStorage()),
@@ -13,4 +13,5 @@ List<SingleChildWidget> providers=[
   ChangeNotifierProvider(create: (_) => AzkarServer()),
   ChangeNotifierProvider(create: (_) => Azkar_title_Server()),
   ChangeNotifierProvider(create: (_) => TasbihSever()),
+  ChangeNotifierProvider(create: (_) => GlyphService()),
 ];

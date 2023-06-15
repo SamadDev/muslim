@@ -27,14 +27,13 @@ class Data {
 
 class Saved with ChangeNotifier {
   Data? data;
-
-
   Future<void> getSaved() async {
     try {
       SharedPreferences preferences = await SharedPreferences.getInstance();
       if (preferences.getString('save') != null) {
         var res = await jsonDecode(preferences.getString('save')!);
         data = Data.fromJson(res);
+        print(res);
       } else {
         data = Data(ayah: '1', index: '1', surah: 'ٱلْفَاتِحَةِ');
       }
@@ -46,16 +45,14 @@ class Saved with ChangeNotifier {
 
   Future<void> setSaved(Data value) async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
-    preferences.setString('save', jsonEncode(value));
+    final res = preferences.setString('save', jsonEncode(value));
+    print(res);
     notifyListeners();
   }
 
   Future<void> removeSaved() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     await preferences.remove('save');
-    // preferences.clear();
     notifyListeners();
   }
-
-
 }
