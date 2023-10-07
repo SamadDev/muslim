@@ -45,6 +45,6 @@ export 'package:islamic360/Serves/dua.dart';
 export 'package:islamic360/Serves/translate.dart';
 export 'package:islamic360/Screens/Dua/Widgets/dua_content.dart';
 export 'package:islamic360/Screens/Dua/Widgets/customAppBar.dart';
-export 'package:islamic360/Screens/Dua/Widgets/customAppBar.dart';
+export 'package:islamic360/Screens/Quran/Ayah/aya_book.dart';
 export 'package:islamic360/Modules/glyph.dart';
 export 'package:islamic360/Serves/glyph.dart';

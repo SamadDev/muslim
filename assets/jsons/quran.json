@@ -4,6 +4,7 @@
       "number": 1,
       "name": "ٱلْفَاتِحَةِ",
       "englishName": "Al-Faatiha",
+       "page": 1,
       "englishNameTranslation": "The Opening",
       "revelationType": "Meccan",
       "ayahs": [
@@ -83,6 +84,7 @@
     {
       "number": 2,
       "name": "البَقَرَةِ",
+       "page": 2,
       "englishName": "Al-Baqara",
       "englishNameTranslation": "The Cow",
       "revelationType": "Medinan",
@@ -2953,6 +2955,7 @@
     {
       "number": 3,
       "name": "آلِ عِمۡرَانَ",
+      "page": 50,
       "englishName": "Aal-i-Imraan",
       "englishNameTranslation": "The Family of Imraan",
       "revelationType": "Medinan",
@@ -4960,7 +4963,7 @@
       ]
     },
     {
-      "number": 4,
+      "number": 4, "page": 77,
       "name": "النِّسَاءِ",
       "englishName": "An-Nisaa",
       "englishNameTranslation": "The Women",
@@ -6730,7 +6733,7 @@
     },
     {
       "number": 5,
-      "name": "المَائـِدَةِ",
+      "name": "المَائـِدَةِ", "page": 106,
       "englishName": "Al-Maaida",
       "englishNameTranslation": "The Table",
       "revelationType": "Medinan",
@@ -7940,6 +7943,7 @@
     {
       "number": 6,
       "name": "الأَنۡعَامِ",
+      "page":128,
       "englishName": "Al-An'aam",
       "englishNameTranslation": "The Cattle",
       "revelationType": "Meccan",
@@ -9599,6 +9603,7 @@
     {
       "number": 7,
       "name": "الأَعۡرَافِ",
+        "page":151,
       "englishName": "Al-A'raaf",
       "englishNameTranslation": "The Heights",
       "revelationType": "Meccan",
@@ -11673,6 +11678,7 @@
       "number": 8,
       "name": "الأَنفَالِ",
       "englishName": "Al-Anfaal",
+        "page":177,
       "englishNameTranslation": "The Spoils of War",
       "revelationType": "Medinan",
       "ayahs": [
@@ -12431,6 +12437,7 @@
     {
       "number": 9,
       "name": "التَّوۡبَةِ",
+        "page":187,
       "englishName": "At-Tawba",
       "englishNameTranslation": "The Repentance",
       "revelationType": "Medinan",
@@ -13730,6 +13737,7 @@
     {
       "number": 10,
       "name": "يُونُسَ",
+        "page":208,
       "englishName": "Yunus",
       "englishNameTranslation": "Jonas",
       "revelationType": "Meccan",
@@ -14830,6 +14838,7 @@
       "number": 11,
       "name": "هُودٍ",
       "englishName": "Hud",
+        "page":221,
       "englishNameTranslation": "Hud",
       "revelationType": "Meccan",
       "ayahs": [
@@ -16069,6 +16078,7 @@
       "number": 12,
       "name": "يُوسُفَ",
       "englishName": "Yusuf",
+        "page":235,
       "englishNameTranslation": "Joseph",
       "revelationType": "Meccan",
       "ayahs": [
@@ -17187,6 +17197,7 @@
     {
       "number": 13,
       "name": "الرَّعۡدِ",
+        "page":249,
       "englishName": "Ar-Ra'd",
       "englishNameTranslation": "The Thunder",
       "revelationType": "Medinan",
@@ -17630,6 +17641,7 @@
     {
       "number": 14,
       "name": "إِبۡرَاهِيمَ",
+        "page":255,
       "englishName": "Ibrahim",
       "englishNameTranslation": "Abraham",
       "revelationType": "Meccan",
@@ -18160,6 +18172,7 @@
       "number": 15,
       "name": "الحِجۡرِ",
       "englishName": "Al-Hijr",
+        "page":262,
       "englishNameTranslation": "The Rock",
       "revelationType": "Meccan",
       "ayahs": [
@@ -19159,6 +19172,7 @@
       "number": 16,
       "name": "النَّحۡلِ",
       "englishName": "An-Nahl",
+        "page":267,
       "englishNameTranslation": "The Bee",
       "revelationType": "Meccan",
       "ayahs": [
@@ -20452,6 +20466,7 @@
       "number": 17,
       "name": "الإِسۡرَاءِ",
       "englishName": "Al-Israa",
+        "page":282,
       "englishNameTranslation": "The Night Journey",
       "revelationType": "Meccan",
       "ayahs": [
@@ -21575,6 +21590,7 @@
       "number": 18,
       "name": "الكَهۡفِ",
       "englishName": "Al-Kahf",
+        "page":293,
       "englishNameTranslation": "The Cave",
       "revelationType": "Meccan",
       "ayahs": [
@@ -22683,6 +22699,7 @@
     {
       "number": 19,
       "name": "مَرۡيَمَ",
+        "page":305,
       "englishName": "Maryam",
       "englishNameTranslation": "Mary",
       "revelationType": "Meccan",
@@ -23676,6 +23693,7 @@
     {
       "number": 20,
       "name": "طه",
+        "page":312,
       "englishName": "Taa-Haa",
       "englishNameTranslation": "Taa-Haa",
       "revelationType": "Meccan",
@@ -25035,6 +25053,7 @@
     {
       "number": 21,
       "name": "الأَنبِيَاءِ",
+        "page":322,
       "englishName": "Al-Anbiyaa",
       "englishNameTranslation": "The Prophets",
       "revelationType": "Meccan",
@@ -26164,6 +26183,7 @@
     {
       "number": 22,
       "name": "الحَجِّ",
+        "page":332,
       "englishName": "Al-Hajj",
       "englishNameTranslation": "The Pilgrimage",
       "revelationType": "Medinan",
@@ -26961,6 +26981,7 @@
     {
       "number": 23,
       "name": "المُؤۡمِنُونَ",
+        "page":342,
       "englishName": "Al-Muminoon",
       "englishNameTranslation": "The Believers",
       "revelationType": "Meccan",
@@ -28151,6 +28172,7 @@
       "number": 24,
       "name": "النُّورِ",
       "englishName": "An-Noor",
+        "page":350,
       "englishNameTranslation": "The Light",
       "revelationType": "Medinan",
       "ayahs": [
@@ -28799,6 +28821,7 @@
     {
       "number": 25,
       "name": "الفُرۡقَانِ",
+        "page":359,
       "englishName": "Al-Furqaan",
       "englishNameTranslation": "The Criterion",
       "revelationType": "Meccan",
@@ -29582,6 +29605,7 @@
     {
       "number": 26,
       "name": "الشُّعَرَاءِ",
+        "page":367,
       "englishName": "Ash-Shu'araa",
       "englishNameTranslation": "The Poets",
       "revelationType": "Meccan",
@@ -31861,6 +31885,7 @@
     {
       "number": 27,
       "name": "النَّمۡلِ",
+        "page":377,
       "englishName": "An-Naml",
       "englishNameTranslation": "The Ant",
       "revelationType": "Meccan",
@@ -32804,6 +32829,7 @@
     {
       "number": 28,
       "name": "القَصَصِ",
+        "page":385,
       "englishName": "Al-Qasas",
       "englishNameTranslation": "The Stories",
       "revelationType": "Meccan",
@@ -33693,6 +33719,7 @@
     {
       "number": 29,
       "name": "العَنكَبُوتِ",
+        "page":396,
       "englishName": "Al-Ankaboot",
       "englishNameTranslation": "The Spider",
       "revelationType": "Meccan",
@@ -34392,6 +34419,7 @@
     {
       "number": 30,
       "name": "الرُّومِ",
+        "page":404,
       "englishName": "Ar-Room",
       "englishNameTranslation": "The Romans",
       "revelationType": "Meccan",
@@ -35001,6 +35029,7 @@
     {
       "number": 31,
       "name": "لُقۡمَانَ",
+         "page":411,
       "englishName": "Luqman",
       "englishNameTranslation": "Luqman",
       "revelationType": "Meccan",
@@ -35350,6 +35379,7 @@
     {
       "number": 32,
       "name": "السَّجۡدَةِ",
+         "page":415,
       "englishName": "As-Sajda",
       "englishNameTranslation": "The Prostration",
       "revelationType": "Meccan",
@@ -35663,6 +35693,7 @@
     {
       "number": 33,
       "name": "الأَحۡزَابِ",
+         "page":418,
       "englishName": "Al-Ahzaab",
       "englishNameTranslation": "The Clans",
       "revelationType": "Medinan",
@@ -36402,6 +36433,7 @@
     {
       "number": 34,
       "name": "سَبَإٍ",
+         "page":428,
       "englishName": "Saba",
       "englishNameTranslation": "Sheba",
       "revelationType": "Meccan",
@@ -36951,6 +36983,7 @@
     {
       "number": 35,
       "name": "فَاطِرٍ",
+         "page":434,
       "englishName": "Faatir",
       "englishNameTranslation": "The Originator",
       "revelationType": "Meccan",
@@ -37410,6 +37443,7 @@
     {
       "number": 36,
       "name": "يسٓ",
+         "page":440,
       "englishName": "Yaseen",
       "englishNameTranslation": "Yaseen",
       "revelationType": "Meccan",
@@ -38249,6 +38283,7 @@
     {
       "number": 37,
       "name": "الصَّافَّاتِ",
+         "page":446,
       "englishName": "As-Saaffaat",
       "englishNameTranslation": "Those drawn up in Ranks",
       "revelationType": "Meccan",
@@ -40078,6 +40113,7 @@
     {
       "number": 38,
       "name": "صٓ",
+         "page":453,
       "englishName": "Saad",
       "englishNameTranslation": "The letter Saad",
       "revelationType": "Meccan",
@@ -40971,6 +41007,7 @@
     {
       "number": 39,
       "name": "الزُّمَرِ",
+         "page":458,
       "englishName": "Az-Zumar",
       "englishNameTranslation": "The Groups",
       "revelationType": "Meccan",
@@ -41730,6 +41767,7 @@
     {
       "number": 40,
       "name": "غَافِرٍ",
+         "page":467,
       "englishName": "Ghafir",
       "englishNameTranslation": "The Forgiver",
       "revelationType": "Meccan",
@@ -42589,6 +42627,7 @@
     {
       "number": 41,
       "name": "فُصِّلَتۡ",
+         "page":477,
       "englishName": "Fussilat",
       "englishNameTranslation": "Explained in detail",
       "revelationType": "Meccan",
@@ -43142,6 +43181,7 @@
     {
       "number": 42,
       "name": "الشُّورَىٰ",
+         "page":483,
       "englishName": "Ash-Shura",
       "englishNameTranslation": "Consultation",
       "revelationType": "Meccan",
@@ -43681,6 +43721,7 @@
     {
       "number": 43,
       "name": "الزُّخۡرُفِ",
+         "page":489,
       "englishName": "Az-Zukhruf",
       "englishNameTranslation": "Ornaments of gold",
       "revelationType": "Meccan",
@@ -44580,6 +44621,7 @@
     {
       "number": 44,
       "name": "الدُّخَانِ",
+         "page":496,
       "englishName": "Ad-Dukhaan",
       "englishNameTranslation": "The Smoke",
       "revelationType": "Meccan",
@@ -45179,6 +45221,7 @@
     {
       "number": 45,
       "name": "الجَاثِيَةِ",
+         "page":499,
       "englishName": "Al-Jaathiya",
       "englishNameTranslation": "Crouching",
       "revelationType": "Meccan",
@@ -45558,6 +45601,7 @@
     {
       "number": 46,
       "name": "الأَحۡقَافِ",
+         "page":502,
       "englishName": "Al-Ahqaf",
       "englishNameTranslation": "The Dunes",
       "revelationType": "Meccan",
@@ -45917,6 +45961,7 @@
     {
       "number": 47,
       "name": "مُحَمَّدٍ",
+          "page":507,
       "englishName": "Muhammad",
       "englishNameTranslation": "Muhammad",
       "revelationType": "Medinan",
@@ -46306,6 +46351,7 @@
     {
       "number": 48,
       "name": "الفَتۡحِ",
+          "page":511,
       "englishName": "Al-Fath",
       "englishNameTranslation": "The Victory",
       "revelationType": "Medinan",
@@ -46605,6 +46651,7 @@
     {
       "number": 49,
       "name": "الحُجُرَاتِ",
+          "page":515,
       "englishName": "Al-Hujuraat",
       "englishNameTranslation": "The Inner Apartments",
       "revelationType": "Medinan",
@@ -46794,6 +46841,7 @@
     {
       "number": 50,
       "name": "قٓ",
+          "page":518,
       "englishName": "Qaaf",
       "englishNameTranslation": "The letter Qaaf",
       "revelationType": "Meccan",
@@ -47253,6 +47301,7 @@
     {
       "number": 51,
       "name": "الذَّارِيَاتِ",
+          "page":520,
       "englishName": "Adh-Dhaariyat",
       "englishNameTranslation": "The Winnowing Winds",
       "revelationType": "Meccan",
@@ -47862,6 +47911,7 @@
     {
       "number": 52,
       "name": "الطُّورِ",
+          "page":523,
       "englishName": "At-Tur",
       "englishNameTranslation": "The Mount",
       "revelationType": "Meccan",
@@ -48994,6 +49044,7 @@
     {
       "number": 54,
       "name": "القَمَرِ",
+          "page":528,
       "englishName": "Al-Qamar",
       "englishNameTranslation": "The Moon",
       "revelationType": "Meccan",
@@ -49552,7 +49603,7 @@
     },
     {
       "number": 55,
-      "name": "الرَّحۡمَٰن",
+      "name": "الرَّحۡمَٰن",    "page":531,
       "englishName": "Ar-Rahmaan",
       "englishNameTranslation": "The Beneficent",
       "revelationType": "Medinan",
@@ -50342,6 +50393,7 @@
     {
       "number": 56,
       "name": "الوَاقِعَةِ",
+          "page":534,
       "englishName": "Al-Waaqia",
       "englishNameTranslation": "The Inevitable",
       "revelationType": "Meccan",
@@ -51311,6 +51363,7 @@
     {
       "number": 57,
       "name": "الحَدِيدِ",
+          "page":537,
       "englishName": "Al-Hadid",
       "englishNameTranslation": "The Iron",
       "revelationType": "Medinan",
@@ -51610,6 +51663,7 @@
     {
       "number": 58,
       "name": "المُجَادلَةِ",
+          "page":542,
       "englishName": "Al-Mujaadila",
       "englishNameTranslation": "The Pleading Woman",
       "revelationType": "Medinan",
@@ -51839,6 +51893,7 @@
     {
       "number": 59,
       "name": "الحَشۡرِ",
+          "page":545,
       "englishName": "Al-Hashr",
       "englishNameTranslation": "The Exile",
       "revelationType": "Medinan",
@@ -52088,6 +52143,7 @@
     {
       "number": 60,
       "name": "المُمۡتَحنَةِ",
+          "page":549,
       "englishName": "Al-Mumtahana",
       "englishNameTranslation": "She that is to be examined",
       "revelationType": "Medinan",
@@ -52227,6 +52283,7 @@
     {
       "number": 61,
       "name": "الصَّفِّ",
+          "page":551,
       "englishName": "As-Saff",
       "englishNameTranslation": "The Ranks",
       "revelationType": "Medinan",
@@ -52376,6 +52433,7 @@
     {
       "number": 62,
       "name": "الجُمُعَةِ",
+          "page":553,
       "englishName": "Al-Jumu'a",
       "englishNameTranslation": "Friday",
       "revelationType": "Medinan",
@@ -52495,6 +52553,7 @@
     {
       "number": 63,
       "name": "المُنَافِقُونَ",
+          "page":554,
       "englishName": "Al-Munaafiqoon",
       "englishNameTranslation": "The Hypocrites",
       "revelationType": "Medinan",
@@ -52614,6 +52673,7 @@
     {
       "number": 64,
       "name": "التَّغَابُنِ",
+          "page":556,
       "englishName": "At-Taghaabun",
       "englishNameTranslation": "Mutual Disillusion",
       "revelationType": "Medinan",
@@ -52803,6 +52863,7 @@
     {
       "number": 65,
       "name": "الطَّلَاقِ",
+          "page":558,
       "englishName": "At-Talaaq",
       "englishNameTranslation": "Divorce",
       "revelationType": "Medinan",
@@ -52932,6 +52993,7 @@
     {
       "number": 66,
       "name": "التَّحۡرِيمِ",
+          "page":560,
       "englishName": "At-Tahrim",
       "englishNameTranslation": "The Prohibition",
       "revelationType": "Medinan",
@@ -53061,6 +53123,7 @@
     {
       "number": 67,
       "name": "المُلۡكِ",
+          "page":562,
       "englishName": "Al-Mulk",
       "englishNameTranslation": "The Sovereignty",
       "revelationType": "Meccan",
@@ -53370,6 +53433,7 @@
     {
       "number": 68,
       "name": "القَلَمِ",
+          "page":564,
       "englishName": "Al-Qalam",
       "englishNameTranslation": "The Pen",
       "revelationType": "Meccan",
@@ -53899,6 +53963,7 @@
     {
       "number": 69,
       "name": "الحَاقَّةِ",
+          "page":566,
       "englishName": "Al-Haaqqa",
       "englishNameTranslation": "The Reality",
       "revelationType": "Meccan",
@@ -54428,6 +54493,7 @@
     {
       "number": 70,
       "name": "المَعَارِجِ",
+          "page":568,
       "englishName": "Al-Ma'aarij",
       "englishNameTranslation": "The Ascending Stairways",
       "revelationType": "Meccan",
@@ -54877,6 +54943,7 @@
     {
       "number": 71,
       "name": "نُوحٍ",
+          "page":570,
       "englishName": "Nooh",
       "englishNameTranslation": "Noah",
       "revelationType": "Meccan",
@@ -55166,6 +55233,7 @@
     {
       "number": 72,
       "name": "الجِنِّ",
+          "page":572,
       "englishName": "Al-Jinn",
       "englishNameTranslation": "The Jinn",
       "revelationType": "Meccan",
@@ -55455,6 +55523,7 @@
     {
       "number": 73,
       "name": "المُزَّمِّلِ",
+          "page":574,
       "englishName": "Al-Muzzammil",
       "englishNameTranslation": "The Enshrouded One",
       "revelationType": "Meccan",
@@ -55664,6 +55733,7 @@
     {
       "number": 74,
       "name": "المُدَّثِّرِ",
+          "page":575,
       "englishName": "Al-Muddaththir",
       "englishNameTranslation": "The Cloaked One",
       "revelationType": "Meccan",
@@ -56233,6 +56303,7 @@
     {
       "number": 75,
       "name": "القِيَامَةِ",
+          "page":577,
       "englishName": "Al-Qiyaama",
       "englishNameTranslation": "The Resurrection",
       "revelationType": "Meccan",
@@ -56642,6 +56713,7 @@
     {
       "number": 76,
       "name": "الإِنسَانِ",
+          "page":578,
       "englishName": "Al-Insaan",
       "englishNameTranslation": "Man",
       "revelationType": "Medinan",
@@ -56961,6 +57033,7 @@
     {
       "number": 77,
       "name": "المُرۡسَلَاتِ",
+          "page":580,
       "englishName": "Al-Mursalaat",
       "englishNameTranslation": "The Emissaries",
       "revelationType": "Meccan",
@@ -57470,6 +57543,7 @@
     {
       "number": 78,
       "name": "النَّبَإِ",
+          "page":582,
       "englishName": "An-Naba",
       "englishNameTranslation": "The Announcement",
       "revelationType": "Meccan",
@@ -57879,6 +57953,7 @@
     {
       "number": 79,
       "name": "النَّازِعَاتِ",
+          "page":583,
       "englishName": "An-Naazi'aat",
       "englishNameTranslation": "Those who drag forth",
       "revelationType": "Meccan",
@@ -58348,6 +58423,7 @@
     {
       "number": 80,
       "name": "عَبَسَ",
+          "page":585,
       "englishName": "Abasa",
       "englishNameTranslation": "He frowned",
       "revelationType": "Meccan",
@@ -58777,6 +58853,7 @@
     {
       "number": 81,
       "name": "التَّكۡوِيرِ",
+          "page":586,
       "englishName": "At-Takwir",
       "englishNameTranslation": "The Overthrowing",
       "revelationType": "Meccan",
@@ -59076,6 +59153,7 @@
     {
       "number": 82,
       "name": "الانفِطَارِ",
+          "page":587,
       "englishName": "Al-Infitaar",
       "englishNameTranslation": "The Cleaving",
       "revelationType": "Meccan",
@@ -59275,6 +59353,7 @@
     {
       "number": 83,
       "name": "المُطَفِّفِينَ",
+          "page":587,
       "englishName": "Al-Mutaffifin",
       "englishNameTranslation": "Defrauding",
       "revelationType": "Meccan",
@@ -59644,6 +59723,7 @@
     {
       "number": 84,
       "name": "الانشِقَاقِ",
+          "page":589,
       "englishName": "Al-Inshiqaaq",
       "englishNameTranslation": "The Splitting Open",
       "revelationType": "Meccan",
@@ -59907,6 +59987,7 @@
     {
       "number": 85,
       "name": "البُرُوجِ",
+          "page":590,
       "englishName": "Al-Burooj",
       "englishNameTranslation": "The Constellations",
       "revelationType": "Meccan",
@@ -60136,6 +60217,7 @@
     {
       "number": 86,
       "name": "الطَّارِقِ",
+          "page":591,
       "englishName": "At-Taariq",
       "englishNameTranslation": "The Morning Star",
       "revelationType": "Meccan",
@@ -60315,6 +60397,7 @@
     {
       "number": 87,
       "name": "الأَعۡلَىٰ",
+          "page":591,
       "englishName": "Al-A'laa",
       "englishNameTranslation": "The Most High",
       "revelationType": "Meccan",
@@ -60514,6 +60597,7 @@
     {
       "number": 88,
       "name": "الغَاشِيَةِ",
+          "page":592,
       "englishName": "Al-Ghaashiya",
       "englishNameTranslation": "The Overwhelming",
       "revelationType": "Meccan",
@@ -60783,6 +60867,7 @@
     {
       "number": 89,
       "name": "الفَجۡرِ",
+          "page":593,
       "englishName": "Al-Fajr",
       "englishNameTranslation": "The Dawn",
       "revelationType": "Meccan",
@@ -61092,6 +61177,7 @@
     {
       "number": 90,
       "name": "البَلَدِ",
+          "page":594,
       "englishName": "Al-Balad",
       "englishNameTranslation": "The City",
       "revelationType": "Meccan",
@@ -61301,6 +61387,7 @@
     {
       "number": 91,
       "name": "الشَّمۡسِ",
+          "page":595,
       "englishName": "Ash-Shams",
       "englishNameTranslation": "The Sun",
       "revelationType": "Meccan",
@@ -61460,6 +61547,7 @@
     {
       "number": 92,
       "name": "اللَّيۡلِ",
+          "page":595,
       "englishName": "Al-Lail",
       "englishNameTranslation": "The Night",
       "revelationType": "Meccan",
@@ -61679,6 +61767,7 @@
     {
       "number": 93,
       "name": "الضُّحَىٰ",
+          "page":596,
       "englishName": "Ad-Dhuhaa",
       "englishNameTranslation": "The Morning Hours",
       "revelationType": "Meccan",
@@ -61798,6 +61887,7 @@
     {
       "number": 94,
       "name": "الشَّرۡحِ",
+          "page":596,
       "englishName": "Ash-Sharh",
       "englishNameTranslation": "The Consolation",
       "revelationType": "Meccan",
@@ -61887,6 +61977,7 @@
     {
       "number": 95,
       "name": "التِّينِ",
+          "page":597,
       "englishName": "At-Tin",
       "englishNameTranslation": "The Fig",
       "revelationType": "Meccan",
@@ -61976,6 +62067,7 @@
     {
       "number": 96,
       "name": "العَلَقِ",
+          "page":597,
       "englishName": "Al-Alaq",
       "englishNameTranslation": "The Clot",
       "revelationType": "Meccan",
@@ -62179,6 +62271,7 @@
     {
       "number": 97,
       "name": "القَدۡرِ",
+          "page":598,
       "englishName": "Al-Qadr",
       "englishNameTranslation": "The Power, Fate",
       "revelationType": "Meccan",
@@ -62238,6 +62331,7 @@
     {
       "number": 98,
       "name": "البَيِّنَةِ",
+          "page":598,
       "englishName": "Al-Bayyina",
       "englishNameTranslation": "The Evidence",
       "revelationType": "Medinan",
@@ -62327,6 +62421,7 @@
     {
       "number": 99,
       "name": "الزَّلۡزَلَةِ",
+          "page":599,
       "englishName": "Az-Zalzala",
       "englishNameTranslation": "The Earthquake",
       "revelationType": "Medinan",
@@ -62416,6 +62511,7 @@
     {
       "number": 100,
       "name": "العَادِيَاتِ",
+          "page":599,
       "englishName": "Al-Aadiyaat",
       "englishNameTranslation": "The Chargers",
       "revelationType": "Meccan",
@@ -62535,6 +62631,7 @@
     {
       "number": 101,
       "name": "القَارِعَةِ",
+          "page":600,
       "englishName": "Al-Qaari'a",
       "englishNameTranslation": "The Calamity",
       "revelationType": "Meccan",
@@ -62654,6 +62751,7 @@
     {
       "number": 102,
       "name": "التَّكَاثُرِ",
+       "page":600,
       "englishName": "At-Takaathur",
       "englishNameTranslation": "Competition",
       "revelationType": "Meccan",
@@ -62743,6 +62841,7 @@
     {
       "number": 103,
       "name": "العَصۡرِ",
+       "page":601,
       "englishName": "Al-Asr",
       "englishNameTranslation": "The Declining Day, Epoch",
       "revelationType": "Meccan",
@@ -62782,6 +62881,7 @@
     {
       "number": 104,
       "name": "الهُمَزَةِ",
+       "page":601,
       "englishName": "Al-Humaza",
       "englishNameTranslation": "The Traducer",
       "revelationType": "Meccan",
@@ -62881,6 +62981,7 @@
     {
       "number": 105,
       "name": "الفِيلِ",
+       "page":601,
       "englishName": "Al-Fil",
       "englishNameTranslation": "The Elephant",
       "revelationType": "Meccan",
@@ -62940,6 +63041,7 @@
     {
       "number": 106,
       "name": "قُرَيۡشٍ",
+       "page":602,
       "englishName": "Quraish",
       "englishNameTranslation": "Quraysh",
       "revelationType": "Meccan",
@@ -62989,6 +63091,7 @@
     {
       "number": 107,
       "name": "المَاعُونِ",
+       "page":602,
       "englishName": "Al-Maa'un",
       "englishNameTranslation": "Almsgiving",
       "revelationType": "Meccan",
@@ -63068,6 +63171,7 @@
     {
       "number": 108,
       "name": "الكَوۡثَرِ",
+       "page":602,
       "englishName": "Al-Kawthar",
       "englishNameTranslation": "Abundance",
       "revelationType": "Meccan",
@@ -63107,6 +63211,7 @@
     {
       "number": 109,
       "name": "الكَافِرُونَ",
+       "page":603,
       "englishName": "Al-Kaafiroon",
       "englishNameTranslation": "The Disbelievers",
       "revelationType": "Meccan",
@@ -63176,6 +63281,7 @@
     {
       "number": 110,
       "name": "النَّصۡرِ",
+       "page":603,
       "englishName": "An-Nasr",
       "englishNameTranslation": "Divine Support",
       "revelationType": "Medinan",
@@ -63215,6 +63321,7 @@
     {
       "number": 111,
       "name": "المَسَدِ",
+       "page":603,
       "englishName": "Al-Masad",
       "englishNameTranslation": "The Palm Fibre",
       "revelationType": "Meccan",
@@ -63274,6 +63381,7 @@
     {
       "number": 112,
       "name": "الإِخۡلَاصِ",
+       "page":604,
       "englishName": "Al-Ikhlaas",
       "englishNameTranslation": "Sincerity",
       "revelationType": "Meccan",
@@ -63323,6 +63431,7 @@
     {
       "number": 113,
       "name": "الفَلَقِ",
+       "page":604,
       "englishName": "Al-Falaq",
       "englishNameTranslation": "The Dawn",
       "revelationType": "Meccan",
@@ -63383,6 +63492,7 @@
     {
       "number": 114,
       "name": "النَّاسِ",
+       "page": 604,
       "englishName": "An-Naas",
       "englishNameTranslation": "Mankind",
       "revelationType": "Meccan",

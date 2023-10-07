@@ -26,7 +26,7 @@ class _NavigationButtonScreenState extends State<NavigationButtonScreen> {
   List screens = [
     HomePage(),
     SurahScreen(),
-    AyahPng(),
+    SurahScreen(),
     TasbiScreen(),
   ];
 

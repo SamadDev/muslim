@@ -43,6 +43,22 @@ class Saved with ChangeNotifier {
     notifyListeners();
   }
 
+  Future<void> getPageSaved() async {
+    try {
+      SharedPreferences preferences = await SharedPreferences.getInstance();
+      if (preferences.getString('page') != null) {
+        var res = await jsonDecode(preferences.getString('save')!);
+        data = Data.fromJson(res);
+        print(res);
+      } else {
+        data = Data(ayah: '1', index: '1', surah: 'ٱلْفَاتِحَةِ');
+      }
+    } catch (e) {
+      print(e);
+    }
+    notifyListeners();
+  }
+
   Future<void> setSaved(Data value) async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     final res = preferences.setString('save', jsonEncode(value));
@@ -53,6 +69,19 @@ class Saved with ChangeNotifier {
   Future<void> removeSaved() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     await preferences.remove('save');
+    notifyListeners();
+  }
+
+  Future<void> setPageSaved(Data value) async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    final res = preferences.setString('page', jsonEncode(value));
+    print(res);
+    notifyListeners();
+  }
+
+  Future<void> removePageSaved() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    await preferences.remove('page');
     notifyListeners();
   }
 }

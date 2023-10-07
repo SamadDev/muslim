@@ -1,14 +1,14 @@
 class GlyphModule {
-  int? ayahNumber;
-  int? glyphId;
-  int? lineNumber;
-  int? maxX;
-  int? maxY;
-  int? minX;
-  int? minY;
-  int? pageNumber;
-  int? position;
-  int? suraNumber;
+  String? ayahNumber;
+  String? glyphId;
+  String? lineNumber;
+  String? maxX;
+  String? maxY;
+  String? minX;
+  String? minY;
+  String? pageNumber;
+  String? position;
+  String? suraNumber;
 
   GlyphModule(
       {this.ayahNumber,

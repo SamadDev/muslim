@@ -6,9 +6,11 @@ class SurahScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final data = Provider.of<QuranServes>(context, listen: false);
     final saved = Provider.of<Saved>(context, listen: false);
+    final localStorage= Provider.of<LocalStorage>(context, listen: false);
     Future<void> getData() async {
       await data.getQuran();
       await saved.getSaved();
+      await localStorage.fetch_local();
     }
 
     return Scaffold(
@@ -41,39 +43,3 @@ class SurahScreen extends StatelessWidget {
   }
 }
 
-// FutureBuilder(
-//         future: data.getQuran(),
-// builder: (context, snapshot) {
-//   switch (snapshot.connectionState) {
-//     case ConnectionState.waiting:
-//       return Center(child: CircularProgressIndicator());
-//     default:
-//       if (snapshot.hasError)
-//         return Text('هەلە: تاکیە بەرنامەکە داخەو بیکەرەوە');
-//       else
-//         return SingleChildScrollView(
-//                   child: Column(
-//                     children: [
-//                       LastRead(),
-//                       Expanded(
-//                         child: Consumer<QuranServes>(
-//                             builder: (ctx, surah, _) => ListView.separated(
-//                                 shrinkWrap: true,
-//                                 primary: true,
-//                                 physics: BouncingScrollPhysics(
-//                                     parent: AlwaysScrollableScrollPhysics()),
-//                                 padding: EdgeInsets.only(top: 5, bottom: 5),
-//                                 separatorBuilder: (ctx, c) => Divider(
-//                                       color: AppTheme.white.withOpacity(0.2),
-//                                     ),
-//                                 itemCount: surah.quran_list.length,
-//                                 itemBuilder: (ctx, i) => QuranListWidget(
-//                                       surah: surah.quran_list[i],
-//                                     ))),
-//                       ),
-//                     ],
-//                   ),
-//                 );
-//           }
-//         },
-//       ),

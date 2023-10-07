@@ -1,5 +1,6 @@
 class Quran {
   String? number;
+  String? page;
   String? name;
   String? englishName;
   String? englishNameTranslation;
@@ -9,6 +10,7 @@ class Quran {
   Quran(
       {this.number,
       this.name,
+      this.page,
       this.englishName,
       this.englishNameTranslation,
       this.revelationType,
@@ -17,6 +19,7 @@ class Quran {
   Quran.fromJson(json) {
     number = json['number'].toString();
     name = json['name'];
+    page = json['page'].toString();
     englishName = json['englishName'];
     englishNameTranslation = json['englishNameTranslation'];
     revelationType = json['revelationType'];

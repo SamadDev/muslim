@@ -24,10 +24,11 @@ class AyahScreen extends StatelessWidget {
         return Future.value(false);
       },
       child: Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: Consumer<Audio>(
           builder: (ctx, audio, _) => Container(
             decoration: BoxDecoration(color: AppTheme.secondary, borderRadius: BorderRadius.circular(5)),
-            margin: EdgeInsets.only(right: 40, left: 10),
+            margin: EdgeInsets.only(right: 20, left: 20),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -48,10 +49,12 @@ class AyahScreen extends StatelessWidget {
                     child: audio.state == false
                         ? Icon(
                             Icons.play_arrow_rounded,
+                            size: 37,
                             color: AppTheme.white,
                           )
                         : Icon(
                             Icons.pause,
+                            size: 37,
                             color: AppTheme.white,
                           )),
                 SizedBox(
@@ -65,7 +68,7 @@ class AyahScreen extends StatelessWidget {
                   child: Icon(
                     Icons.highlight_remove_outlined,
                     color: AppTheme.primary,
-                    size: 35,
+                    size: 30,
                   ),
                 ),
                 SizedBox(
@@ -79,7 +82,7 @@ class AyahScreen extends StatelessWidget {
                   },
                   child: Image.asset(
                     'assets/images/bookmark.png',
-                    width: 25,
+                    width: 20,
                     height: 25,
                     color: AppTheme.primary,
                   ),
@@ -107,29 +110,32 @@ class AyahScreen extends StatelessWidget {
                             children: [
                               Text(
                                 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
-                                style: textTheme(context).bodyText1,
+                                style: textTheme(context).bodyLarge,
                               ),
                               Consumer<TafsirServes>(
-                                  builder: (ctx, tafsir, _) => ListView.separated(
-                                      separatorBuilder: ((context, snap) => Divider()),
-                                      padding: EdgeInsets.only(top: 5, bottom: 5),
-                                      primary: false,
-                                      shrinkWrap: true,
-                                      itemCount: data.ayahs(index).ayahs!.length - 1,
-                                      itemBuilder: (ctx, i) => AutoScrollTag(
-                                            highlightColor: Colors.red.withOpacity(0.5),
-                                            controller: controller,
-                                            index: i,
-                                            key: ValueKey(i),
-                                            child: AyahWidget(
-                                                tafsir: tafsir.tafsir!.ayah![i],
-                                                ayah: data.ayahs(index).ayahs![i],
-                                                list: data.ayahs(index).ayahs,
-                                                index: i,
-                                                surah: surah,
-                                                surah_index: index,
-                                                controller: controller),
-                                          ))),
+                                builder: (ctx, tafsir, _) => ListView.separated(
+                                  separatorBuilder: ((context, snap) => Divider()),
+                                  padding: EdgeInsets.only(top: 5, bottom: 5),
+                                  primary: false,
+                                  shrinkWrap: true,
+                                  itemCount: data.ayahs(index).ayahs!.length - 1,
+                                  itemBuilder: (ctx, i) => AutoScrollTag(
+                                    highlightColor: Colors.red.withOpacity(0.5),
+                                    controller: controller,
+                                    index: i,
+                                    key: ValueKey(i),
+                                    child: AyahWidget(
+                                      tafsir: tafsir.tafsir!.ayah![i],
+                                      ayah: data.ayahs(index).ayahs![i],
+                                      list: data.ayahs(index).ayahs,
+                                      index: i,
+                                      surah: surah,
+                                      surah_index: index,
+                                      controller: controller,
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ))
@@ -173,17 +179,11 @@ class AyahSliverAppBar extends StatelessWidget {
                                     children: [
                                       Text(
                                         'رێکخستنەکان',
-                                        style: textTheme(context).headline6!.copyWith(
+                                        style: textTheme(context).titleLarge!.copyWith(
                                               fontWeight: FontWeight.bold,
                                               color: AppTheme.black.withOpacity(0.8),
                                               fontSize: 20,
                                             ),
-                                      ),
-                                      Row(
-                                        children: [
-                                          PageViewCard(isSelected: setting.pageView == "tafsir", type: "tafsir"),
-                                          PageViewCard(isSelected: setting.pageView == "png", type: "png")
-                                        ],
                                       ),
                                       Divider(
                                         color: AppTheme.secondary.withOpacity(0.3),
@@ -194,7 +194,7 @@ class AyahSliverAppBar extends StatelessWidget {
                                           activeColor: AppTheme.secondary,
                                           title: Text(
                                             'پیشاندانی تەفسیر کوردی',
-                                            style: textTheme(context).headline4,
+                                            style: textTheme(context).headlineMedium,
                                           ),
                                           value: setting.is_kurdish_tafsir,
                                           onChanged: (value) {
@@ -207,7 +207,7 @@ class AyahSliverAppBar extends StatelessWidget {
                                       ),
                                       Text(
                                         'قەبارەی نوسینین قورئان',
-                                        style: textTheme(context).headline4,
+                                        style: textTheme(context).headlineMedium,
                                       ),
                                       Slider(
                                         divisions: 5,
@@ -222,7 +222,7 @@ class AyahSliverAppBar extends StatelessWidget {
                                       ),
                                       Text(
                                         'قەبارەی نوسینی تەفسیری کوردی',
-                                        style: textTheme(context).headline4,
+                                        style: textTheme(context).headlineMedium,
                                       ),
                                       Slider(
                                         divisions: 5,
@@ -244,7 +244,7 @@ class AyahSliverAppBar extends StatelessWidget {
           ],
           title: Text(
             surahName,
-            style: textTheme(context).headline3!.copyWith(color: AppTheme.white),
+            style: textTheme(context).displaySmall!.copyWith(color: AppTheme.white),
           )),
     );
   }
@@ -332,7 +332,7 @@ class AyahWidget extends StatelessWidget {
                                 GestureDetector(
                                   onTap: () async {
                                     await saved.setSaved(
-                                      Data(surah: surah, index: surah_index.toString(), ayah: ayah.number),
+                                      Data(surah: surah, index: surah_index.toString(), ayah: ayah.numberInSurah),
                                     );
                                     await saved.getSaved();
                                     Navigator.of(context).pop();
@@ -350,13 +350,13 @@ class AyahWidget extends StatelessWidget {
                         )));
           },
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               RichText(
                   text: TextSpan(children: [
                 TextSpan(
                   text: ayah.text,
-                  style: textTheme(context).bodyText1!.copyWith(
+                  style: textTheme(context).bodyLarge!.copyWith(
                         fontSize: local_storage.quran_font_size,
                       ),
                 ),
@@ -374,7 +374,7 @@ class AyahWidget extends StatelessWidget {
                           color: AppTheme.secondary,
                         ),
                         Text(ayah.numberInSurah!,
-                            style: textTheme(context).headline5!.copyWith(
+                            style: textTheme(context).headlineSmall!.copyWith(
                                   color: AppTheme.black,
                                 ))
                       ],
@@ -389,7 +389,8 @@ class AyahWidget extends StatelessWidget {
               local_storage.is_kurdish_tafsir
                   ? Text(
                       tafsir.text!,
-                      style: textTheme(context).headline4!.copyWith(fontSize: local_storage.kurdish_tafsir_font_size),
+                      style:
+                          textTheme(context).headlineMedium!.copyWith(fontSize: local_storage.kurdish_tafsir_font_size),
                     )
                   : SizedBox.shrink()
             ],
@@ -408,13 +409,11 @@ class PageViewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(type);
-    print(isSelected);
     return Expanded(
       child: InkWell(
         onTap: () {
           if (type == "png") {
-            navigatorRouteAnimation(context: context, page: AyahPng());
+            Provider.of<LocalStorage>(context, listen: false).setQuranPageView(type);
           }
           Provider.of<LocalStorage>(context, listen: false).setQuranPageView(type);
         },
@@ -423,10 +422,8 @@ class PageViewCard extends StatelessWidget {
           decoration: BoxDecoration(
               border: Border.all(width: 3, color: isSelected! ? AppTheme.secondary : AppTheme.transparent)),
           child: Image.asset(
-            'assets/images/tafsir.jpeg',
+            'assets/images/$image',
             fit: BoxFit.fill,
-            width: 140,
-            height: 140,
           ),
         ),
       ),

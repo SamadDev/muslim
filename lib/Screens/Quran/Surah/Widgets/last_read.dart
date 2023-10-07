@@ -6,10 +6,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 class LastRead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final data = Provider.of<Saved>(context, listen: false);
+    final getSaved = Provider.of<Saved>(context, listen: false);
     return FutureBuilder(
-        future: data.getSaved(),
-        builder: (ctx, snap) => GestureDetector(
+        future: getSaved.getSaved(),
+        builder: (ctx, snap) =>Consumer<Saved>(builder: (ctx,data,_)=> GestureDetector(
               onTap: () {
                 navigatorRouteAnimation(
                     context: context,
@@ -50,7 +50,7 @@ class LastRead extends StatelessWidget {
                                     SvgPicture.asset('assets/images/octagonal_1.svg',
                                         height: 50, color: AppTheme.white),
                                     Text(
-                                      data.data!.ayah.toString(),
+                                     "${ data.data!.ayah}",
                                       style: textTheme(context).headline6!.copyWith(color: AppTheme.white),
                                     ),
                                   ],
@@ -83,6 +83,6 @@ class LastRead extends StatelessWidget {
                   ],
                 ),
               ),
-            ));
+            )));
   }
 }
