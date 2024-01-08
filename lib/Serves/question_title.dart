@@ -17,11 +17,11 @@ class QuestionTitleService with ChangeNotifier {
   Future<void> init() async {
     io.Directory applicationDirectory = await getApplicationDocumentsDirectory();
     String questionDbPath = path.join(applicationDirectory.path, "question.db");
+    print(questionDbPath);
     bool questionDb = await io.File(questionDbPath).exists();
     if (!questionDb) {
       ByteData data = await rootBundle.load(path.join("assets", "question.db"));
       List<int> bytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
-      print(bytes);
       await io.File(questionDbPath).writeAsBytes(bytes, flush: true);
     }
     _db = await openDatabase(questionDbPath);
