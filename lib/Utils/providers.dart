@@ -1,3 +1,4 @@
+import 'package:islamic360/Serves/hadis.dart';
 import 'package:islamic360/Utils/exports.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:provider/provider.dart';
@@ -14,4 +15,8 @@ List<SingleChildWidget> providers = [
   ChangeNotifierProvider(create: (_) => Azkar_title_Server()),
   ChangeNotifierProvider(create: (_) => TasbihSever()),
   ChangeNotifierProvider(create: (_) => GlyphService()),
+  ChangeNotifierProvider(create: (_) => QuestionServer()),
+  ChangeNotifierProvider(create: (_) => QuestionTitleService()),
+  ChangeNotifierProvider(create: (_) => HadisServer()),
+
 ];

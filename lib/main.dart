@@ -17,6 +17,10 @@ class MyApps extends StatelessWidget {
 
       child: Sizer(
         builder: (context, orientation, deviceType) => MaterialApp(
+             builder: (ctx, child) {
+            return Directionality(
+                textDirection: TextDirection.rtl, child: child!);
+          },
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: AppTheme.lightTheme,

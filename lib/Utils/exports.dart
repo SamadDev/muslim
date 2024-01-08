@@ -48,3 +48,5 @@ export 'package:islamic360/Screens/Dua/Widgets/customAppBar.dart';
 export 'package:islamic360/Screens/Quran/Ayah/aya_book.dart';
 export 'package:islamic360/Modules/glyph.dart';
 export 'package:islamic360/Serves/glyph.dart';
+export 'package:islamic360/Serves/question_content.dart';
+export 'package:islamic360/Serves/question_title.dart';

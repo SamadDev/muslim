@@ -23,7 +23,7 @@ dev_dependencies:
   shared_preferences:
   flutter_staggered_animations: ^1.1.1
   flutter_qiblah:
-  audioplayers:
+  # audioplayers:
   scroll_to_index: ^3.0.1
   sizer: ^2.0.15
   device_preview: ^1.1.0
@@ -33,13 +33,15 @@ dev_dependencies:
   flutter_launcher_icons:
   just_audio: ^0.9.33
   file: ^6.1.4
-#  sqflite: ^2.2.8
-#  path_provider:
+  sqflite: ^2.3.0
+  path_provider:
+  html: ^0.15.4
+  url_launcher:
 
   hijri_picker:
     git:
       url: https://github.com/SamadDev/kurdish_hirji_date.git
-      ref: main
+      ref: c473762ef1417bc52ce296b6fbae83e8be7baf0f
 
 flutter_icons:
   android: true

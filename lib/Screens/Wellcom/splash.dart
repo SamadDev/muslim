@@ -45,10 +45,11 @@ class SplashWidget extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 140.0,horizontal: 50),
-            child: Image.asset('assets/images/bsmila.png',color: AppTheme.white,fit: BoxFit.contain,),
-          )
+          Text("Islamic 360",style: textTheme(context).headline1!.copyWith(color: AppTheme.white))
+          // Padding(
+          //   padding: EdgeInsets.symmetric(vertical: 20.0,horizontal: 50),
+          //   child: Image.asset('assets/images/quran_icon.png'),
+          // )
         ],
       ),
     );

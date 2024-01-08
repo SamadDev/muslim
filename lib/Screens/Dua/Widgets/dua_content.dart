@@ -16,7 +16,7 @@ class DuaWidget extends StatelessWidget {
         color: AppTheme.white.withOpacity(0.5),
         borderRadius: BorderRadius.circular(3),
       ),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         // Container(
         //   height: 40,
         //   padding: EdgeInsets.all(2),
@@ -52,7 +52,7 @@ class DuaWidget extends StatelessWidget {
         //   ),
         // ),
         Text(
-          dua.dua!,textAlign: TextAlign.end,
+          dua.dua!,textAlign: TextAlign.start,
           style: textTheme(context).bodyText1!.copyWith(fontSize: 22),
         ),
       ]),
