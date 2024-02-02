@@ -1,10 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:islamic360/Screens/Hadis/Hadis%20Title/hadis_title.dart';
-import 'package:islamic360/Screens/Hijri/hijri_calendart.dart';
-import 'package:islamic360/Screens/Question/Question%20Title/question_title.dart';
 import 'package:islamic360/Utils/exports.dart';
-import 'package:sizer/sizer.dart';
+import 'package:islamic360/Widgets/comming_soon_Screen.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -44,40 +39,42 @@ class HomePage extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Expanded(child: CartIcon(text: 'کاتی بانگ', icon: '77.svg', route: '')),
-                        Expanded(child: CartIcon(text: 'وێردەکان', icon: '44.svg', route: DuaScreen())),
+                        Expanded(child: CartIcon(text: 'کاتی بانگ', icon: '77.svg', route: ComingSoonScreen())),
+                        Expanded(child: CartIcon(text: 'وێردەکان', icon: '44.svg', route: AzkarTitleScreen())),
                       ],
                     ),
                     Row(
                       children: [
-                        Expanded(child: CartIcon(text: 'پاڕانەوە', icon: '88.svg', route: AzkarTitleScreen())),
+                        Expanded(child: CartIcon(text: 'پاڕانەوە', icon: '88.svg', route: DuaScreen())),
                         Expanded(child: CartIcon(text: 'رۆژمێری هیجری', icon: '55.svg', route: HijriDatePicker())),
                       ],
                     ),
                     Row(
-                      children: [Expanded(child: CartIcon(text: 'تەسبیح', icon: '11.svg', route: TasbiScreen())),
-                        Expanded(child: CartIcon(text: 'قیبلە', icon: '33.svg', route: QiblahCompass()))],
+                      children: [
+                        Expanded(child: CartIcon(text: 'تەسبیح', icon: '11.svg', route: TasbiScreen())),
+                        Expanded(child: CartIcon(text: 'قیبلە', icon: '33.svg', route: QiblahCompass()))
+                      ],
                     ),
                     Row(
                       children: [
                         Expanded(child: CartIcon(text: 'فەرمودە', icon: '11.svg', route: HadisTitleScreen())),
                         Expanded(
-                          child: CartIcon(
-                            text: 'پرسیار و وڵام',
-                            icon: 'question.svg',
-                            route: QuestionTitleScreen(),
-                          ),
+                          child: CartIcon(text: 'پرسیار و وڵام', icon: 'question.svg', route: QuestionTitleScreen()),
                         ),
                       ],
                     ),
                     Row(
                       children: [
-                        Expanded(child: CartIcon(text: 'کاتی بانگ', icon: '77.svg', route: '')),
-                        Expanded(child: CartIcon(text: 'کتێبخانە', icon: 'book.svg', route: TasbiScreen())),
+                        Expanded(child: CartIcon(text: 'نزیکترین مزگەوت', icon: '66.svg', route: ComingSoonScreen())),
+                        Expanded(child: CartIcon(text: 'کتێبخانە', icon: 'book.svg', route: ComingSoonScreen()))
                       ],
                     ),
                     Row(
-                      children: [Expanded(child: CartIcon(text: 'دەربارە', icon: '22.svg', route: '')), Expanded(child: CartIcon(text: 'زەکات', icon: '33.svg', route: QiblahCompass()))],
+                      children: [
+                        Expanded(child: CartIcon(text: 'دەربارە', icon: '22.svg', route: ComingSoonScreen())),
+                        // Expanded(child: CartIcon(text: 'زەکات', icon: '33.svg', route: QiblahCompass())),
+                        Expanded(child: CartIcon(text: 'کاتی بانگ', icon: '77.svg', route: ComingSoonScreen())),
+                      ],
                     ),
                   ],
                 ),
@@ -120,7 +117,8 @@ class CartIcon extends StatelessWidget {
                   width: 45,
                   alignment: Alignment.center,
                   margin: EdgeInsets.only(right: 8, left: 8, bottom: 5, top: 10),
-                  decoration: BoxDecoration(color: AppTheme.secondary.withOpacity(0.1), borderRadius: BorderRadius.circular(8)),
+                  decoration:
+                      BoxDecoration(color: AppTheme.secondary.withOpacity(0.1), borderRadius: BorderRadius.circular(8)),
                   child: SvgPicture.asset(
                     "assets/icons/$icon",
                     width: 4.w,

@@ -1,16 +1,13 @@
-import 'package:flutter/material.dart';
-import 'package:islamic360/Modules/quesion_content.dart';
 import 'package:islamic360/Utils/exports.dart';
-import 'package:provider/provider.dart';
 
-class QuestionContentWidget extends StatelessWidget {
-  final QuestionContent question;
+class HadisContentWidget extends StatelessWidget {
+  final Muslim hadis;
 
-  QuestionContentWidget({required this.question});
+  HadisContentWidget({required this.hadis});
 
   @override
   Widget build(BuildContext context) {
-    final parseHtmlString = Provider.of<QuestionServer>(context, listen: false);
+    final parseHtmlString = Provider.of<HadisServer>(context, listen: false);
     return InkWell(
       child: Padding(
         padding: EdgeInsets.only(top: 5, bottom: 5, right: 8, left: 8),
@@ -33,15 +30,15 @@ class QuestionContentWidget extends StatelessWidget {
                       height: 20,
                     ),
                     Text(
-                      parseHtmlString.parseHtmlString(question.ask ?? 'ask').isNotEmpty
-                          ? parseHtmlString.parseHtmlString(question.ask ?? '')
-                          : parseHtmlString.parseHtmlString(question.title ?? ''),
+                      hadis.door!,
                       style: textTheme(context).headline4!.copyWith(color: AppTheme.secondary),
                     ),
                     Divider(),
                     Text(
-                      parseHtmlString.parseHtmlString(question.question!),
-                      style: textTheme(context).headline5,
+                      hadis.hadeth!,
+                      style: GoogleFonts.notoSansArabic(   color: AppTheme.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,),
                     )
                   ],
                 ),

@@ -37,6 +37,8 @@ dev_dependencies:
   path_provider:
   html: ^0.15.4
   url_launcher:
+  google_fonts:
+  lottie:
 
   hijri_picker:
     git:
