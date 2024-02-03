@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:islamic360/Utils/exports.dart';
-import 'package:provider/provider.dart';
+import 'package:islamic360/Widgets/shimmer.dart';
 
 class SurahScreen extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -18,7 +17,7 @@ class SurahScreen extends StatelessWidget {
       body: FutureBuilder(
         future: getData(),
         builder: (context, snapshot) => snapshot.connectionState == ConnectionState.waiting
-            ? Center(child: CircularProgressIndicator())
+            ? ShimmerQuranScreen()
             : CustomScrollView(
                 slivers: [
                   SliverAppBar(

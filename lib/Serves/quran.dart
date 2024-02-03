@@ -7,10 +7,7 @@ import 'package:islamic360/Utils/exports.dart';
 
 class QuranServes with ChangeNotifier {
   List<Quran> _quran = [];
-
-
   List<Quran> get quran_list => _quran;
-
   Future<void> getQuran({index}) async {
     try{
     if (_quran.isEmpty || index != null) {
@@ -30,7 +27,7 @@ class QuranServes with ChangeNotifier {
     return _quran.firstWhere((e) => e.number == index);
   }
 
-var list=[];
+
 
    groupByName(index) {
       List<Ayahs>? ayah =_quran.firstWhere((e) => e.number == index).ayahs;

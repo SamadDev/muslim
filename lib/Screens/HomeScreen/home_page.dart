@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
                     Row(
                       children: [
                         Expanded(child: CartIcon(text: 'پاڕانەوە', icon: '88.svg', route: DuaScreen())),
-                        Expanded(child: CartIcon(text: 'رۆژمێری هیجری', icon: '55.svg', route: HijriDatePicker())),
+                        Expanded(child: CartIcon(text: 'رۆژمێری هیجری', icon: '55.svg', route: DuaScreen())),
                       ],
                     ),
                     Row(
@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Expanded(child: CartIcon(text: 'نزیکترین مزگەوت', icon: '66.svg', route: ComingSoonScreen())),
+                        Expanded(child: CartIcon(text: 'مزگەوت', icon: '66.svg', route: ComingSoonScreen())),
                         Expanded(child: CartIcon(text: 'کتێبخانە', icon: 'book.svg', route: ComingSoonScreen()))
                       ],
                     ),

@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:islamic360/Utils/exports.dart';
-import 'package:provider/provider.dart';
+
 
 class CustomAppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {

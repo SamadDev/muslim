@@ -61,3 +61,9 @@ export 'package:islamic360/Screens/Hadis/Hadis%20Title/hadis_title.dart';
 export 'package:islamic360/Screens/Hijri/hijri_calendart.dart';
 export 'package:islamic360/Screens/Question/Question%20Title/question_title.dart';
 export 'package:sizer/sizer.dart';
+export 'package:scroll_to_index/scroll_to_index.dart';
+export 'package:shimmer/shimmer.dart';
+export 'package:islamic360/Screens/Quran/Surah/Widgets/choose_quran_page.dart';
+export 'package:flutter/services.dart';
+
+

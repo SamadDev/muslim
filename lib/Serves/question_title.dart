@@ -11,9 +11,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class QuestionTitleService with ChangeNotifier {
   List<QuestionTitle> question_title_list = [];
-
   Database? _db;
-
   Future<void> init() async {
     io.Directory applicationDirectory = await getApplicationDocumentsDirectory();
     String questionDbPath = path.join(applicationDirectory.path, "question.db");

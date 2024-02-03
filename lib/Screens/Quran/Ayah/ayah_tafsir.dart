@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islamic360/Utils/exports.dart';
-import 'package:provider/provider.dart';
-import 'package:scroll_to_index/scroll_to_index.dart';
+import 'package:islamic360/Widgets/shimmer.dart';
 
 class AyahScreen extends StatelessWidget {
   final index;
@@ -15,7 +12,7 @@ class AyahScreen extends StatelessWidget {
     final audio = Provider.of<Audio>(context, listen: false);
     final data = Provider.of<QuranServes>(context, listen: false);
     final tafsir = Provider.of<TafsirServes>(context, listen: false);
-    final save = Provider.of<Saved>(context, listen: false);
+
     return WillPopScope(
       onWillPop: () {
         audio.stopAudio();
@@ -24,86 +21,18 @@ class AyahScreen extends StatelessWidget {
       },
       child: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: Consumer<Audio>(
-          builder: (ctx, audio, _) => Container(
-            decoration: BoxDecoration(color: AppTheme.secondary, borderRadius: BorderRadius.circular(5)),
-            margin: EdgeInsets.only(right: 20, left: 20),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                GestureDetector(
-                    onTap: () {
-                      if (audio.state == false) {
-                        audio.play_audio_offline(
-                            type: 'play',
-                            scrollC: controller,
-                            index: audio.curent_index,
-                            list: data.ayahs(index).ayahs,
-                            surahIndex: index);
-                      } else {
-                        audio.stopAudio();
-                      }
-                    },
-                    child: audio.state == false
-                        ? Icon(
-                            Icons.play_arrow_rounded,
-                            size: 37,
-                            color: AppTheme.white,
-                          )
-                        : Icon(
-                            Icons.pause,
-                            size: 37,
-                            color: AppTheme.white,
-                          )),
-                SizedBox(
-                  width: 15,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    audio.stopAudio();
-                    Navigator.of(context).pop();
-                  },
-                  child: Icon(
-                    Icons.highlight_remove_outlined,
-                    color: AppTheme.primary,
-                    size: 30,
-                  ),
-                ),
-                SizedBox(
-                  width: 25,
-                ),
-                GestureDetector(
-                  onTap: () async {
-                    await save.removeSaved();
-                    await save.setSaved(Data(ayah: '1', index: index, surah: surah));
-                    await save.getSaved();
-                  },
-                  child: Image.asset(
-                    'assets/images/bookmark.png',
-                    width: 20,
-                    height: 25,
-                    color: AppTheme.primary,
-                  ),
-                )
-              ],
-            ),
-          ),
+        floatingActionButton: _FloatingActionOnAyah(
+          index: index,
+          surah: surah,
         ),
         body: CustomScrollView(controller: controller, slivers: [
-          AyahSliverAppBar(
-            surahName: data.ayahs(index).name!,
-          ),
+          _Appbar(surahName: data.ayahs(index).name!),
           SliverList(
             delegate: SliverChildListDelegate([
               FutureBuilder(
                   future: tafsir.getTaf(index: int.parse(index) - 1),
                   builder: (context, snapshot) => snapshot.connectionState == ConnectionState.waiting
-                      ? Center(
-                          child: CircularProgressIndicator(
-                            color: AppTheme.secondary,
-                          ),
-                        )
+                      ? ShimmerQuranScreen()
                       : SingleChildScrollView(
                           child: Column(
                             children: [
@@ -146,9 +75,9 @@ class AyahScreen extends StatelessWidget {
   }
 }
 
-class AyahSliverAppBar extends StatelessWidget {
+class _Appbar extends StatelessWidget {
   final surahName;
-  const AyahSliverAppBar({this.surahName});
+  const _Appbar({this.surahName});
 
   @override
   Widget build(BuildContext context) {
@@ -245,6 +174,86 @@ class AyahSliverAppBar extends StatelessWidget {
             surahName,
             style: textTheme(context).displaySmall!.copyWith(color: AppTheme.white),
           )),
+    );
+  }
+}
+
+class _FloatingActionOnAyah extends StatelessWidget {
+  final index;
+  final surah;
+
+  const _FloatingActionOnAyah({Key? key, this.index, this.surah}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final save = Provider.of<Saved>(context, listen: false);
+    AutoScrollController? controller = AutoScrollController();
+    final data = Provider.of<QuranServes>(context, listen: false);
+    return Consumer<Audio>(
+      builder: (ctx, audio, _) => Container(
+        decoration: BoxDecoration(color: AppTheme.secondary, borderRadius: BorderRadius.circular(5)),
+        margin: EdgeInsets.only(right: 20, left: 20),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            GestureDetector(
+                onTap: () {
+                  if (audio.state == false) {
+                    audio.play_audio_offline(
+                        type: 'play',
+                        scrollC: controller,
+                        index: audio.curent_index,
+                        list: data.ayahs(index).ayahs,
+                        surahIndex: index);
+                  } else {
+                    audio.stopAudio();
+                  }
+                },
+                child: audio.state == false
+                    ? Icon(
+                        Icons.play_arrow_rounded,
+                        size: 37,
+                        color: AppTheme.white,
+                      )
+                    : Icon(
+                        Icons.pause,
+                        size: 37,
+                        color: AppTheme.white,
+                      )),
+            SizedBox(
+              width: 15,
+            ),
+            GestureDetector(
+              onTap: () {
+                audio.stopAudio();
+                Navigator.of(context).pop();
+              },
+              child: Icon(
+                Icons.highlight_remove_outlined,
+                color: AppTheme.primary,
+                size: 30,
+              ),
+            ),
+            SizedBox(
+              width: 25,
+            ),
+            GestureDetector(
+              onTap: () async {
+                await save.removeSaved();
+                await save.setSaved(Data(ayah: '1', index: index, surah: surah));
+                await save.getSaved();
+              },
+              child: Image.asset(
+                'assets/images/bookmark.png',
+                width: 20,
+                height: 25,
+                color: AppTheme.primary,
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
@@ -356,6 +365,7 @@ class AyahWidget extends StatelessWidget {
                 TextSpan(
                   text: ayah.text,
                   style: textTheme(context).bodyLarge!.copyWith(
+                        fontFamily: "Uthmanic_Script",
                         fontSize: local_storage.quran_font_size,
                       ),
                 ),
@@ -393,36 +403,6 @@ class AyahWidget extends StatelessWidget {
                     )
                   : SizedBox.shrink()
             ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class PageViewCard extends StatelessWidget {
-  final type;
-  final image;
-  final bool? isSelected;
-  PageViewCard({this.type, this.isSelected, this.image});
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: InkWell(
-        onTap: () {
-          if (type == "png") {
-            Provider.of<LocalStorage>(context, listen: false).setQuranPageView(type);
-          }
-          Provider.of<LocalStorage>(context, listen: false).setQuranPageView(type);
-        },
-        child: Container(
-          margin: EdgeInsets.all(10),
-          decoration: BoxDecoration(
-              border: Border.all(width: 3, color: isSelected! ? AppTheme.secondary : AppTheme.transparent)),
-          child: Image.asset(
-            'assets/images/$image',
-            fit: BoxFit.fill,
           ),
         ),
       ),

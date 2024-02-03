@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:islamic360/Utils/exports.dart';
-import 'package:provider/provider.dart';
 
 
 class AyahWidget extends StatelessWidget {
